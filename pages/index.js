@@ -499,7 +499,7 @@ export default function Home() {
             </Col>
             <Col sm="2" className={styles.bg_1}>
               <h1>
-                Craigslist <span>US </span>
+                <img src="https://painting.demoapp-lc.com/wp-content/uploads/2022/05/weblisted-01.png" alt="" className="img_logo" />
               </h1>
               <p className="P_1">
               <select name="lang" id="chlang" className='js-only' >
