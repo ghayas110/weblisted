@@ -85,7 +85,33 @@ a {
 .accordion-body{
   background-color: #235789;
 }
+.Home_container{
+  background-color: #235789 !important;
+}
+.navbar{
+  background-color: #235789 !important;
+  font-family: 'Poppins', sans-serif;
 
+}
+.navbar-brand{
+  color: #fff !important;
+  font-size: 30px !important;
+}
+.nav-link{
+  color: #fff !important;
+
+}
+.input_4{
+  /* width: 80px !important; */
+}
+.img_logo{
+  width: 200px;
+}
+.back_1{
+  margin: 0;
+  padding: 0;
+  background-color: #235789 !important;
+}
 
 @media only screen and (max-width: 414px) {
   
