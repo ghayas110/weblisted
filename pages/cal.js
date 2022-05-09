@@ -8,7 +8,7 @@ export default function CalendarGfg() {
 	return (
 		<div>
 			<h1>NextJs Calendar - GeeksforGeeks</h1>
-			<Calendar className={Calendar.react-calendar__month-view__weekdays__weekday}
+			<Calendar 
 				onChange={onChange}
 				value={value}
 			/>
