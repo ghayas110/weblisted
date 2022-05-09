@@ -61,7 +61,7 @@ export default function Home() {
               <p>
                 {" "}
                 <a href="http://google.com/" className={styles.a_2}>
-                  Event calendar
+                  Event calendarR
                 </a>
               </p>
               <Calendar />
