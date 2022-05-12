@@ -1,0 +1,27 @@
+#bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+
+}
+.cg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nmn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

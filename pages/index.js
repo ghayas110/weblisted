@@ -147,7 +147,7 @@ export default function Home() {
                         <td>lost+found</td>
                       </tr>
                       <tr>
-                        <td>artists</td>
+                        <td><a href="./PostAd">artists</a></td>
                         <td>missed connections</td>
                       </tr>
                       <tr>
@@ -527,26 +527,41 @@ export default function Home() {
               <div className="accordion-item">
     <h2 className="accordion-header" id="headingTwo1">
       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
-      india
+         USA
       </button>
     </h2>
     <div id="collapseTwo1" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div className="accordion-body">
-      ahmedabad
-bangalore
-bhubaneswar
-chandigarh
-chennai
-delhi
-goa
-hyderabad
-indore
-jaipur
-kerala
-kolkata
-lucknow
-mumbai
-pune
+      adelaide
+auckland
+bangladesh
+beijing
+brisbane
+canberra
+christchurch
+darwin
+guangzhou
+hangzhou
+hong kong
+indonesia
+malaysia
+manila
+melbourne
+micronesia
+okinawa
+osaka
+perth
+seoul
+shanghai
+shenzhen
+singapore
+sydney
+taiwan
+tasmania
+thailand
+tokyo
+vietnam
+wellington
       </div>
     </div>
   </div>

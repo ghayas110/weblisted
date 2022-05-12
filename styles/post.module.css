@@ -1,7 +1,224 @@
-#header{
-    height: 40px;
+#post_sider{
+    margin: 0;
+    margin-left: 0px;
+}
+/* ---------------csssider-------- */
+
+  
+  @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+
+  
+.app {
+    padding: 2rem;
+    transition: margin-left 2.7s;
+    overflow: hidden;
+    width: 100%;
+  }
+
+#navlist li{
+    list-style: none;
+    color: white;
+  }
+  
+#ul a{
+    text-decoration: none;
+  }
+  
+  #navlist a {
+    line-height: 3;
+    display: flex;
+    color: white;
+    text-decoration: none;
+  }
+  #aside{
+    font-size: 1.5rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+  #navlist {
     background-color: #235789;
-    padding: 6px;
-    border-bottom: 1px sold black;
+    color: #fff;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    list-style: none;
+    transition: 0.7s all ease-in-out;
+  }
+  
+  #opneSidebar {
+    transition: 0.7s;
+    width: 230px;
+  }
+  
+  #close {
+    font-size: 4.3rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+  }
+  
+  #to_right {
+    margin-left: 220px;
+    margin-left: 250px;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .navlist {
+    padding: 1rem 3rem;
+  }
+  .navlist li {
+    margin: 1rem 0;
+    transition: all 300ms ease-in-out;
+  }
+  .navlist li a {
+    color: #fff;
+    font-size: 2rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .navlist li a:hover {
+    color: #2748b4;
+    padding: 0.3rem 0.2rem;
+    border-bottom: #2748b4 2px solid;
+    width: 50%;
+  }
+#right_side_post input{
+    width: 60%;
+    height: 39px;
+    border-radius: 9px;
+    margin-left: 36px;
+}
+#icon_input{
+    width: 10px;
+}
+#right_side_post{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#text{
+    margin-top: 35px;
+    background: orange;
+    margin-bottom: 1rem;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#select_option_right_side{
+    width: 84px;
+    height: 35px;
+    font-size: 17px;
+
+}
+#content_right{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#content_right button{
+    width: 103px;
+} 
+#two_btn button{
+    width: 156px;
+    height: 44px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#two_btn{
+
+    display: flex;
+    justify-content: space-between;
+}
+#content_right span{
+    border: 1px solid black !important;
+    width: 245px;
+    text-align: center;
+    border-radius: 7px;
+}
+#opneSidebar h4{
+    color: white;
+}
+#icon{
+  width: 21px;
+  color: black; 
+  position: absolute; 
     
+}
+#right_side_post a{
+    margin-left: 10px;
+    position: relative;
+    bottom: 5px;
+    text-decoration: none;
+
+}
+#search_icon{
+  width: 21px;
+  color: black;  
+    
+}
+#search_div{
+        border-radius: 6px;
+         margin-left: 15px;
+        border: 1PX solid black;
+        width: 33px;
+        height: 38px;
+        display: flex;
+        justify-content:center ;
+
+}
+
+@media screen and (max-width:786px  ) {
+  #right_side_post input{
+    width: 54%;
+    height: 29px;
+  
+} 
+#search_div{
+  margin-left: 12px;;
+  width: 26px;
+  height: 30px;
+
+}
+#search_icon{
+  width: 18px;
+}
+#right_side_post a{
+  font-size: 12px;
+
+} 
+#select_option_right_side{
+  width: 70px;
+  height: 25px;
+  font-size: 14px;
+
+}
+#content_right span{
+  width: 200px;
+ 
+}
+#text{
+  height: 30px;
+
+}
+#text p{
+  font-size: 14px;
+  margin-bottom: 6px;
+ 
+ }
+ #two_btn button{
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 }
