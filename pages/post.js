@@ -18,6 +18,7 @@ function post() {
     };
     return (
         <>
+        <div>
                     <Header />
             <div id={styles.app}>
                 <aside id={on ? styles.to_right : ''}>
@@ -58,7 +59,7 @@ function post() {
             </div>
 
 
-
+            </div>
 
         </>
 
