@@ -14,7 +14,7 @@ export default function header() {
                         <option value="Option_two">Option two</option>
                         <option value="Option_two">Option thee</option>
                         <option value="Option_two">Option four</option>
-                    </select> <span id={styles.arrow}> > </span>
+                    </select> <span id={styles.arrow}> </span>
                     <select name="select" id={styles.select_option} className="select-option">
                         <option value="">dalis</option>
                         <option value="Option_one">Option one</option>
@@ -24,7 +24,7 @@ export default function header() {
                         <option value="Option_two">Option thee</option>
                         <option value="Option_two">Option thee</option>
                         <option value="Option_two">Option four</option>
-                    </select> <span id={styles.arrow}> > </span>
+                    </select> <span id={styles.arrow}>  </span>
                     <select name="select"  className="select-option" id={styles.select_option3  }>
                         <option value="">dalis</option>
                         <option value="Option_one">Option one</option>
