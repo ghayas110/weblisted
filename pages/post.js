@@ -19,7 +19,7 @@ function post() {
     return (
         <>
         <div>
-                    <Header />
+                        
             <div id={styles.app}>
                 <aside id={on ? styles.to_right : ''}>
                     <div className='col-12'>
