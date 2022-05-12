@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/Header.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function header() {
+export default function Header() {
     return (
         <div className='container-fluid' id={styles.header}>
             <div className='row' id={styles.row_header}>
@@ -25,7 +25,7 @@ export default function header() {
                         <option value="Option_two">Option thee</option>
                         <option value="Option_two">Option four</option>
                     </select> <span id={styles.arrow}>  </span>
-                    <select name="select"  className="select-option" id={styles.select_option3  }>
+                    <select name="select"  className="select-option" id={styles.select_option3 }>
                         <option value="">dalis</option>
                         <option value="Option_one">Option one</option>
                         <option value="Option_two">Option two</option>
