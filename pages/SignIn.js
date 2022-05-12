@@ -14,7 +14,7 @@ export default function SignIn() {
                     <div className="col-lg-1"></div>
                     <div className="col-lg-11" id={styles.head_signin}>
                         <div >
-                            <h2 className={styles.Signin_text}>CraigList</h2>
+                        <h2 className={styles.Signin_text}><img src="weblisted-01.png" alt="bot"></img></h2>
                         </div>
                         <div id={styles.btn_signin}>
                             <button id={styles.btn2}><Link href="/SignIn">Sign In</Link></button>

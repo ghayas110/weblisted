@@ -15,20 +15,21 @@
 }
 
 #btn2:hover{
-    background: #235789;
-    border-color: white;
+    background: #235789 !important;
+    border-color: white !important;
     font-weight: 600;
     color: white !important;
 }
-.Signin_text{
-    color: white;
-}
+
 #btn_signin{
     display:flex ;
     width: 15%;
     justify-content:space-between;
 }
-#btn2{
-    text-decoration: none;  
-    color:#235789 ;
+#btn2 link{
+    text-decoration:none !important;  
+    color:#235789  !important;
+}
+.Signin_text img{
+    width: 200px;
 }
