@@ -7,7 +7,7 @@ import {faAnglesRight} from "@fortawesome/free-solid-svg-icons";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {Header} from './components/Header'
+import Header from './Header'
 function post() {
     const [on, setOn] = React.useState(true);
 
