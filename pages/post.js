@@ -2,7 +2,7 @@
 import React, { main } from 'react';
 import Head from "next/head";
 import Image from "next/image";
-import Header from './components/Header';
+import Header from '../pages/components/Header';
 import styles from '../styles/post.module.css'
 import Sider from './components/Sider';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,14 +18,7 @@ function post() {
     };
     return (
         <>
-
-        <Head>
-                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        </Head>
-         
-            <Header />
-      
-           
+                    <Header />
             <div id={styles.app}>
                 <aside id={on ? styles.to_right : ''}>
                     <div className='col-12'>
