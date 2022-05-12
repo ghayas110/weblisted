@@ -20,7 +20,8 @@
     align-items: center;
     justify-content: center;
 }
-.txt{
+#txt{
+    line-height: 3;
     display: flex;
     align-items: center;
     justify-content: center;

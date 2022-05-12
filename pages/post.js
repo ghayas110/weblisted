@@ -5,8 +5,9 @@ import Sider from './components/Sider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {faAnglesRight} from "@fortawesome/free-solid-svg-icons";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-
+import Header from '../pages/components/Header'
 function post() {
     const [on, setOn] = React.useState(true);
 
@@ -15,8 +16,8 @@ function post() {
     };
     return (
         <>
-        <div>
-
+        <div id={styles.body}>
+            <Header />
             <div id={styles.app}>
                 <aside id={on ? styles.to_right : ''}>
                     <div className='col-12'>
@@ -42,8 +43,20 @@ function post() {
                             <span>no results</span>
                             <button>newest</button>
                         </div>
+                        <div className='col-12' id={styles.line}></div>
                         <div className='col-lg-11 col-md-10' id={styles.text}>
-                            <p>Nothing found for that search.</p>
+                          <span>Zero local results found. Here are some from nearby – change search area</span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
+                          <span><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>3 may&nbsp;&nbsp;&nbsp;</p><a href="/PostAd"> Best chartered accountant In Usa </a></span>
                         </div>
                         <div className='col-lg-10 col-md-9 ' id={styles.two_btn}>
                             <button>back to top</button>

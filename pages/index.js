@@ -147,7 +147,7 @@ export default function Home() {
                         <td>lost+found</td>
                       </tr>
                       <tr>
-                        <td><a href="./PostAd">artists</a></td>
+                        <td><a href="./post">artists</a></td>
                         <td>missed connections</td>
                       </tr>
                       <tr>

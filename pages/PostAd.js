@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from "../styles/postadd.module.css";
-import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
 function postadd() {
     return (
         <>
-            <div id={styles.bg}>
+        <div className='container'>
+            <div className='col-lg-12 col-md-12 col-sm-12' id={styles.bg}>
                 <ul>
                     <li><a href="/post">CL</a></li>
                     <li><a href="#">indore</a></li>
@@ -49,67 +49,38 @@ function postadd() {
 
                 </table>
             </div>
-            <div className={styles.txt}>
-                <p>We are looking for a Production Technician in Wilson, NC for a 6+ months contract position. Please send me your updated resume along with rate expectations at show contact info .<br></br><br></br><br></br><br></br>
+            </div>
+            <div className='container' id={styles.txt}>
 
-
-
-                    Job Description: <br></br><br></br>
-
-                    Position: Production Technician <br></br><br></br>
-
-                    Location: Wilson, NC (2nd shift, 2:00 PM to 10:30 PM) <br></br><br></br>
-
-
-                    Duration: 6+ months contract position <br></br><br></br>
-
-                    Client: Direct Client <br></br><br></br>
-                    Description:<br></br><br></br>
-
-                    Responsible for taking multiple excipients and active raw material through a design manufacturing process that produces a finished dosage form (tablet or capsule) for the consumer. Operate and troubleshoot manufacturing equipment. Document activities as appropriate and perform specified quality checks.
-                    <br></br><br></br>
-
-                    · Demonstrates proficiency in the set-up, operation and cleaning of designated pharmaceutical equipment in the encapsulation/compression/tableting process.<br></br><br></br>
-
-                    · Performs in-process testing, which may include SPC, AQL, LOD and SIVE testing.<br></br><br></br>
-
-                    · Performs verification of processing steps and proper documents.<br></br><br></br>
-
-                    · Able to write comments, with assistance from more senior technicians.<br></br><br></br>
-
-                    · Maintains adequate right-the first-time documentation results.<br></br><br></br>
-
-                    · Properly identifies equipment and quality issues.<br></br><br></br>
-
-                    · Learns common problems with equipment through extensive use and increased knowledge. Appropriately utilizes personal protective equipment at all times.<br></br><br></br>
-
-                    · Understands protocols for resolving equipment issues. Knows and understands key department objectives, such as safety, quality, and output.<br></br><br></br>
-
-                    Requirements:<br></br><br></br><br></br><br></br>
-
-                    · Encapsulation, Compression, Solid Dose, Pharmaceutical, Bio works Certificate.<br></br><br></br>
-
-                    · HS Diploma.<br></br><br></br>
-
-                    · Documentation.<br></br><br></br>
-
-                    · SPC.<br></br><br></br>
-
-                    · Manufacturing Process.<br></br><br></br>
-
-                    · Process Testing.<br></br><br></br>
-
-                    Additional Skills:<br></br><br></br>
-
-                    · Quality Checks.<br></br><br></br>
-
-                    · Statistical Process Control.<br></br><br></br>
-
-                    OK for recruiters to contact this job poster.<br></br><br></br>
-                    do NOT contact us with unsolicited services or offers<br></br><br></br>
-
-                </p>
-
+                <span>
+                    We are looking for a Production Technician in Wilson, NC for a 6+ months contract position. Please send me your updated resume along with rate expectations at show contact info .
+                    Job Description:
+                    Position: Production Technician
+                    Location: Wilson, NC (2nd shift, 2:00 PM to 10:30 PM)
+                    Duration: 6+ months contract position
+                    Client: Direct Client
+                    Description:
+                    ponsible for taking multiple excipients and active raw material through a design manufacturing process that produces a finished dosage form (tablet or capsule) for the consumer. Operate and troubleshoot manufacturing equipment. Document activities as appropriate and perform specified quality checks.
+                    · Demonstrates proficiency in the set-up, operation and cleaning of designated pharmaceutical equipment in the encapsulation/compression/tableting process.
+                    · Performs in-process testing, which may include SPC, AQL, LOD and SIVE testing.
+                    · Perfors verification of processing steps and proper documents.
+                    · Able to write comments, with assistance from more senior technicians.
+                    · Maintains adequate right-the first-time documentation results.
+                    · Properly identifies equipment and quality issues.
+                    · Learns common problems with equipment through extensive use and increased knowledge. Appropriately utilizes personal protective equipment at all times
+                    · Understands protocols for resolving equipment issues. Knows and understands key department objectives, such as safety, quality, and output.
+                    Requirements:
+                    · Encapsulation, Compression, Solid Dose, Pharmaceutical, Bio works Certificate.
+                    · HS Diploma.
+                    · Documentation.
+                    · SPC.
+                    · Manufacturing Process.
+                    · Process Testing.
+                    Additional Skills:
+                    · Quality Checks.
+                    · Statistical Process Control.
+                    do NOT contact us with unsolicited services or offers
+                </span>
             </div>
 
             <div id={styles.bg}>
