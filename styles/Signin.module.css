@@ -1,0 +1,34 @@
+#head_signin{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.body{
+    background: #235789;
+}
+#btn_signin button{
+    background: rgb(253, 253, 253);
+    height: 30px;
+    width: 86px;
+      border-radius: 9px;
+      font-weight: 600;
+}
+
+#btn2:hover{
+    background: #235789;
+    border-color: white;
+    font-weight: 600;
+    color: white !important;
+}
+.Signin_text{
+    color: white;
+}
+#btn_signin{
+    display:flex ;
+    width: 15%;
+    justify-content:space-between;
+}
+#btn2{
+    text-decoration: none;  
+    color:#235789 ;
+}

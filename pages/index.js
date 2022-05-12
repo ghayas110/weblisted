@@ -43,7 +43,7 @@ export default function Home() {
               </p>
               <p>
                 {" "}
-                <a href="http://google.com/" className={styles.a_1}>
+                <a href="/SignIn" className={styles.a_1}>
                   My account
                 </a>
               </p>
