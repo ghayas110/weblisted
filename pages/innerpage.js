@@ -74,7 +74,7 @@ export default function Home() {
         </li>
         
         <li className="nav-item">
-          <a className="nav-link active" href="#" tabindex="-1" aria-disabled="true">Account</a>
+          <a className="nav-link active" href="#"  aria-disabled="true">Account</a>
         </li>
       </ul>
       

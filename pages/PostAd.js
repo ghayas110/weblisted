@@ -9,8 +9,8 @@ function postadd() {
             <div id={styles.bg}>
                 <ul>
                     <li><a href="/post">CL</a></li>
-                    <li><a href="#">indore></a></li>
-                    <li><a href="#">jobs></a></li>
+                    <li><a href="#">indore</a></li>
+                    <li><a href="#">jobs</a></li>
                     <li><a href="#">Science/biotech</a></li>
                 </ul>
                 <ul>
