@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../../styles/Header.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from '../styles/Header.module.css'
 
 export default function Header() {
     return (
