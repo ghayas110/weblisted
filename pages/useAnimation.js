@@ -2,7 +2,7 @@ import { useSpring, to } from "react-spring";
 
 const DEFAULT_WIDTH = 200;
 
-export function useAnimation(isOpen) {
+export default function useAnimation(isOpen) {
   const { translate } = useSpring({
     translate: [isOpen ? 0 : -100],
   });
