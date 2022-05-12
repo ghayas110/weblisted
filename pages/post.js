@@ -7,7 +7,7 @@ import {faAnglesRight} from "@fortawesome/free-solid-svg-icons";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import Header from '../pages/components/Header'
+import {Header} from './components/Header'
 function post() {
     const [on, setOn] = React.useState(true);
 
@@ -16,8 +16,9 @@ function post() {
     };
     return (
         <>
+        
         <div id={styles.body}>
-            <Header />
+        <Header />
             <div id={styles.app}>
                 <aside id={on ? styles.to_right : ''}>
                     <div className='col-12'>
