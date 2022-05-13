@@ -37,7 +37,7 @@ export default function Home() {
               </h1>
               <p>
                 {" "}
-                <a href="http://google.com/" className={styles.a_1}>
+                <a href="/Create_post" className={styles.a_1}>
                   Create a posting
                 </a>
               </p>

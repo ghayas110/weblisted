@@ -1,0 +1,13 @@
+#radio_list{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+#container{
+    padding: 55px;
+    line-height: 3;
+}
+#button_radio{
+    width: 113px;
+    height: 45px;
+}
