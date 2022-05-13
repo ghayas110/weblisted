@@ -151,7 +151,7 @@ export default function Home() {
                         <td>missed connections</td>
                       </tr>
                       <tr>
-                        <td>childcare</td>
+                        <td>Childcare</td>
                         <td>musicians</td>
                       </tr>
                       <tr>
