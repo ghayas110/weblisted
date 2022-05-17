@@ -1,3 +1,7 @@
+.body{
+overflow-x: hidden;
+}
+
 #input1{
  display: flex;
  flex-direction: column;
@@ -10,10 +14,191 @@
 
 }
 #account_section{
-    margin-top: 100px;
+    margin-top: 20px;
 }
 #input1 input{
     height: 24px;
     border: 1px solid rgb(50, 50, 73);
 
+}
+#select_account{
+    width: 201px;
+    height: 24px;
+}
+#fieldset_account{
+
+}
+#col_account{
+    background: #f7f7f7;
+}
+#check_account{
+
+}
+#form_bg{
+    background: #f7f7f7;
+}
+form #form_group{
+    width: 43%;
+    background: #f7f7f7;
+    padding: 21px;
+    border-radius: 5px;
+    position: relative;
+}
+form #form_group:before{
+    background: #f7f7f7;
+    content: "Your Details";
+    padding: 5px;
+    font-size: 14px;
+    color: black;
+    border-radius: 3px;
+    position: absolute;
+    top: -15px;
+    left: 30px;
+}
+form #form_control{
+    width: 50%;
+    margin-bottom: 10px;
+}
+form #inside{
+    width: 50%;
+    bottom: 110px;
+    margin-top: 40px;
+    position: relative;
+    float: right;
+}
+
+form #checkbox,
+form #radio,
+form #dropdown{
+    margin: 5px 0;
+}
+form #checkbox label{
+    display: block;
+    margin-bottom: 5px;
+}
+form #radio label{
+    display: inline-block;
+    margin-right: 20px;
+}
+form #radio label:last-child{
+    margin-right: 0;
+}
+form #dropdown{
+    background:#fff;
+    font-size: 14px;
+}
+#col_12{
+height: 170px;
+border: 1px solid #d3cece;
+border-radius: 2px;
+}
+#control_label{
+    width: 100% !important;
+}
+#job_title{
+    margin-top: 10px;
+}
+#job_title_label{
+    font-size: 14px;
+    font-weight: 500;
+}
+#job_title_search{
+    height: 26px;
+}
+
+/* --------------------form------------- */
+
+
+
+
+#secForm{
+    margin-top: 10px;
+}
+#secForm_row{
+    margin-top: 10px;
+}
+
+#form2{
+    width: 100%;
+    height: 250px;
+}
+#form_control2{
+    width: 100%;
+    HEIGHT: 28px;
+}
+#form_bg2{
+    background: #f7f7f7;
+    
+}
+#form_group2{
+width: 100% ;
+height: 235px;
+}
+#form_group2:before{
+    padding: 5px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    position: absolute;
+    top: -15px;
+    left: 30px;
+}
+#control_label2{
+    margin-bottom: 10px;
+}
+#inside2{
+    width: 110%;
+    height: 150px;
+    margin-top: 40px;
+    position: relative;
+    border: 1px solid #000000 !important;
+}
+#inside2:before{
+    content: "Your Preferences";
+    padding: 5px;
+    background: #f7f7f7;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 30px;
+    top: -12px;
+}
+
+#radio,
+#dropdown{
+    margin: 5px 50px;
+}
+#checkbox label{
+    display: block;
+    margin-bottom: 5px;
+}
+#radio label{
+    display: inline-block;
+    margin-right: 20px;
+}
+#radio label:last-child{
+    margin-right: 0;
+}
+#dropdown{
+    background:#fff;
+    font-size: 14px;
+}
+#form_list_input{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    float: right;
+}
+#form_list_input input{
+    width: 75%;
+    height: 20px;
+    
+}
+#form_inside_list{
+    display: grid;
+    line-height: 2;
+}
+#form_list_input2{
+     float: right;
+     display: flex;
 }

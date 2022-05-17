@@ -82,7 +82,6 @@ li{
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url('') !important;
   background-repeat: no-repeat;
   background-size: 1.25rem;
   transition: transform .2s ease-in-out;
