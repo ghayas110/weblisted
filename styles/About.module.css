@@ -7,3 +7,6 @@ background-color: gray;
 .about_th1{
 
 }
+.About_tr td{
+  line-height: normal;
+}

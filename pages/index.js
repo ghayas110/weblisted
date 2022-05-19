@@ -69,11 +69,11 @@ export default function Home() {
               <ul>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">help, faq, abuse, legal</a>{" "}
+                  <a href="/About">help, faq, abuse, legal</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">avoid scams & fraud</a>{" "}
+                  <a href="/scams">avoid scams & fraud</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
