@@ -81,15 +81,15 @@ export default function Home() {
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">terms of use</a>{" "}
+                  <a href="/termsOfUse">terms of use</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">privacy policy</a>{" "}
+                  <a href="/privacy">privacy policy</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">system status</a>{" "}
+                  <a href="/systemStatus">system status</a>{" "}
                 </li>
                 {/* <li className={styles.a_3}> <a href='' >help, faq, abuse, legal</a> </li> */}
               </ul>
@@ -97,23 +97,23 @@ export default function Home() {
               <ul>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">about craigslist</a>{" "}
+                  <a href="/About">about craigslist</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">craigslist open source</a>{" "}
+                  <a href="/opensource">craigslist open source</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">craigslist blog</a>{" "}
+                  <a href="/craigslistHiring">craigslist hiring</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">best-of-craigslist</a>{" "}
+                  <a href="/bestofcraigslist">best-of-craigslist</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">"craigslist joe"</a>{" "}
+                  <a href="/opensource">"craigslist joe"</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
