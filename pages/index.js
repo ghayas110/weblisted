@@ -113,11 +113,11 @@ export default function Home() {
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="/opensource">"craigslist joe"</a>{" "}
+                  <a href="">"craigslist joe"</a>{" "}
                 </li>
                 <li className={styles.a_3}>
                   {" "}
-                  <a href="">
+                  <a href="https://craignewmarkphilanthropies.org/">
                     craig newmark <br />
                     philanthropies
                   </a>{" "}

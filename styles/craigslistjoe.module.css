@@ -1,0 +1,164 @@
+#body {
+    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 110%;
+    background: #515151 url(/craigslist_backdrop.gif) no-repeat fixed center top;
+}
+#page {
+    width: 980px;
+    margin: 0 auto;
+    background: #f4f6fa url(/sky_background.jpg) no-repeat scroll center top;
+}
+#branding {
+    background: url(/craigslist_joe_logo.png) no-repeat scroll;
+    height: 200px;
+    border: none;
+    background-position: 35px 48px;
+}
+#branding hgroup {
+    margin: 0 7.6%;
+}
+
+
+#branding h1, #branding h2 {
+    text-indent: -3000px;
+    position: absolute;
+    margin-right: 270px;
+    padding: 3.65625em 0 0;
+}
+#main {
+    padding: 0 !important;
+}
+#site_description {
+    color: #7a7a7a;
+    font-size: 14px;
+    margin: 0 270px 3.65625em 0;
+}
+#site_title a {
+    color: #111;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    text-decoration: none;
+}
+#site_title {
+    margin-right: 270px;
+    padding: 3.65625em 0 0;
+}
+#only_search{
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+#searchform {
+    top: 5px;
+    z-index: 1;
+}
+.assistive_text{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+#s:focus {
+    width: 85%;
+}
+#branding #searchsubmit {
+    display: none;
+}
+#headerimglink{
+    display: none;
+    width: 515px;
+    height: 175px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+.two_column #content {
+    width: 670px;
+}
+#site_title a {
+    color: #111;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    text-decoration: none;
+}
+#access{
+
+        background: none;
+        box-shadow: none;
+        clear: both;
+    display: block;
+    float: left;
+    margin: 0 auto 6px;
+    width: 100%;
+}
+#access a {
+    color: #000066;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: lowercase;
+    margin: 0 0.6em;
+    padding: 0;
+    border-bottom: 2px solid transparent;
+}
+.assistive_text{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;   
+    font-size: 1.1em;
+    height: 1px;
+    width: 1px;
+}
+.skip_link{
+    margin: 0 0 0 36px;
+}
+.menu{
+    margin: 40px 0 0 560px;
+    padding: 0 !important
+}
+.menu ul {
+    font-size: 13px;
+    list-style: none;
+    margin: 0 0 0 -0.8125em;
+    padding-left: 0;
+}
+.menu li{
+    
+        float: left;
+        position: relative;
+        border: 0;
+        font-family: inherit;
+        font-size: 100%;
+        font-style: inherit;
+        font-weight: inherit;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        vertical-align: baseline;
+    
+}
+
+.current_page_item a{
+    font-weight: bold;
+    font-color: #000099;
+}
+#access li {
+    float: left;
+    position: relative;
+}
+#post_5 {
+    padding: 0 !important;
+    background: none !important;
+}
+
