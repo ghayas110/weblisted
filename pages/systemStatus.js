@@ -44,7 +44,7 @@ export default function systemStatus() {
                                 <a name="s481"></a>
                                 <div className="alert alert-md alert-warning issue-alert"  id={styles.alert} role="alert">
                                     <h2 className={styles.issue_title}>issues with paid posts</h2>
-                                    <time datetime="Fri 01 Apr 05:05:24 PM" className={styles.issue_time}>Updated Fri, Apr  1 2022 - 17:05 UTC</time>
+                                    <span className={styles.issue_time}>Updated Fri, Apr  1 2022 - 17:05 UTC</span>
                                 </div>
                                 <p>currently experiencing some issues accepting paid posts, working on it</p>
                             </li>
