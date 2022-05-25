@@ -234,3 +234,16 @@
   cursor: pointer;
 }
 }
+
+
+
+@media screen and (max-width:600px) {
+  #navlist {
+   visibility: collapse;
+  }
+  #to_right {
+margin-left: 0;
+  }
+
+
+}

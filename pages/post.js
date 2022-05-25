@@ -9,7 +9,7 @@ import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Header from './Header'
 function post() {
-    const [on, setOn] = React.useState(true);
+    const [on, setOn] = React.useState(false);
 
     const handleOn = () => {
         setOn(!on);
