@@ -52,7 +52,7 @@ export default function systemStatus() {
                                 <a name="s480"></a>
                                 <div className="alert alert-md alert-warning issue-alert" role="alert">
                                     <h2 className={styles.issue_title}>Maintenance @ 11:00 PM PST Tuesday February 22nd</h2>
-                                    <time  className={styles.issue_time}>Updated Fri, Apr  1 2022 - 16:14 UTC</time>
+                                    <span  className={styles.issue_time}>Updated Fri, Apr  1 2022 - 16:14 UTC</span>
                                 </div>
                                 <p>Posting to paid categories will be unavailable for a brief period starting around 11:00 PM PST on Tuesday February 22nd.  We apologize for the inconvenience. </p>
                             </li>
