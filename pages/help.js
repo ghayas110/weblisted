@@ -6,7 +6,7 @@ import styles from "../styles/help.module.css"
 export default function help() {
   return (
     <section >
-      < Header />
+      <Header />
       <div className="container" id={styles.help_container}>
         <div className="row">
           <div className="col-lg-6">
