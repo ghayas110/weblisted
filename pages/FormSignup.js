@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from '../bstyles/form.module.css'
+
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux';
-import { login } from '../../components/features/userSlice';
+
 export default function FormSignup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
