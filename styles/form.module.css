@@ -87,3 +87,9 @@
 #container #info span #fa {
   color: #EF3B3A;
 }
+
+@media screen and (max-width:400px) {
+  #form{
+    max-width: 275px;
+  }
+}

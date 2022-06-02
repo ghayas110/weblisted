@@ -1,35 +1,109 @@
 #head_signin{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 15px;
 }
 .body{
     background: #235789;
 }
 #btn_signin button{
+    border-color: #235789 !important;
     background: rgb(253, 253, 253);
-    height: 30px;
-    width: 86px;
-      border-radius: 9px;
-      font-weight: 600;
+    height: 37px;
+    width: 95px;
+    border-radius: 7px;
+    color: black;
+    font-weight: 700;
 }
 
-#btn2:hover{
+#btn_signin button:hover{
     background: #235789 !important;
     border-color: white !important;
     font-weight: 600;
-    color: white !important;
+    color: white;
 }
 
 #btn_signin{
     display:flex ;
-    width: 15%;
+    /* width: 15%; */
     justify-content:space-between;
 }
-#btn2 link{
-    text-decoration:none !important;  
-    color:#235789  !important;
+#btn2 a{
+    text-decoration:none ;  
+    color: black;
+}
+#btn2 a:hover{
+    color: white;
 }
 .Signin_text img{
     width: 200px;
+    position: relative;
+    right: 100px;
+}
+
+.bodySignin{
+    background: #235789 !important;
+    height: 789px;
+}
+
+@media screen and (max-width: 700px) {
+    .Signin_text img{
+        width: 150px;
+        position: relative;
+        right: 90px;
+    }
+    #btn_signin button{
+        height: 32px;
+        width: 76px;
+        margin: 3px;
+    }
+
+    
+}
+
+@media screen and (max-width:650px) {
+    #head_signin{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: center;
+        margin-top: 15px;
+        align-items: center;
+        /* line-height: 0; */
+    }
+    .Signin_text img{
+        width: 140px;
+        position: relative;
+        right: 0px;
+        margin-top: 10;
+    }
+    #btn_signin button{
+        height: 32px;
+        width: 76px;
+        margin: 3px;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width:375px) {
+    .bodySignin{
+        width: 110%;
+        height: 750px;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .bodySignin{
+        width: 110%;
+        height: 772px;
+
+    }
+}
+@media screen and (max-width:320px) {
+    .bodySignin{
+        width: 120%;
+        height: 840px;
+
+    }
 }
