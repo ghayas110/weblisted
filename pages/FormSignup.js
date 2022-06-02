@@ -1,34 +1,11 @@
 import React, { useState } from "react";
 
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
-import { useRouter } from 'next/router'
-import { useDispatch } from 'react-redux';
 
 export default function FormSignup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [name, setName] = useState("");
-  const dispatch = useDispatch();
-    const router = useRouter()
-    const handleCapacity=(e)=>{
-        setSelect(e.target.value);
-       
-      }
-      const registers = () => {
-          createUserWithEmailAndPassword(auth,email,password).then((userAuth) => {
-            dispatch(login({
-                email: userAuth.user.email,
-                uid: userAuth.user.uid,
-                displayName: name,
-               
-            }))
-          }).catch(function(error) {
-            var errorMessage = error.message;
-            alert("errorMessage: "+ errorMessage)
-          });
-        router.push('/')
-      }
+  
   return (
     <>
     <div className="login-page" id={styles.login_page}>
