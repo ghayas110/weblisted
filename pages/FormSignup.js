@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import styles from '../bstyles/form.module.css'
 
 
 export default function FormSignup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [name, setName] = useState("");
-  
+ 
   return (
     <>
     <div className="login-page" id={styles.login_page}>
