@@ -202,3 +202,36 @@ height: 235px;
      float: right;
      display: flex;
 }
+
+#postselect{
+    display: flex;
+    flex-direction: column;
+}
+
+#postselectText{
+    display: flex;
+    flex-direction: column;
+}
+.formbuttonsection{
+       margin-top: 10px;
+        display: flex;
+        justify-content: center;
+}
+.formbuttonsection button{
+    width: 179px;
+    height: 40px;
+    background: #235789;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border: 1px solid white;
+    border-radius: 19px;
+}
+
+#input{
+    margin: -13px;
+    height: 26px;
+    margin-top: -7px;
+    width: 103%;
+}
+
+

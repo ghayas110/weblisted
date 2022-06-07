@@ -12,9 +12,9 @@ export const userSlice = createSlice({
             state.user = action.payload;
         },
         logout: (state) => {
-           
+
             localStorage.removeItem('EMAIL');
-            
+
             state.user = null;
         },
     }

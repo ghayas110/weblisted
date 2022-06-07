@@ -31,7 +31,7 @@ export default function FormSignup() {
       var errorMessage = error.message;
        console.log("signup")
     });
-    router.push('/Signin')
+    router.push('/SignIn')
   }
   return (
     

@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import styles from "../styles/create_post.module.css"
+import {data} from './data'
+
 
 export default function Create_post() {
     return (
@@ -17,9 +19,11 @@ export default function Create_post() {
                                     <span className="left-side">
                                         <a href="/Job"><input type="radio" name="id"/></a>       
                                     </span> &nbsp;&nbsp;
-                                    <span className="right-side">
-                                        job offered
-                                    </span>
+                                    {data.createPost.map((post,key) =>{
+                                        return(
+                                            <span>{post.cat}</span>
+                                        )
+                                    })}
                                 </label>
                             </li>
                             <li>
