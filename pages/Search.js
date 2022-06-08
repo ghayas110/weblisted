@@ -141,7 +141,7 @@ export default function Search() {
                 <form id="searchform" className="search-form" action="/search/ret">
                     <div className="querybox">
                         <div className="form-tab js-only"><span className="search-open" title="hide search">«</span><span className="search-closed" title="show search">»</span></div>
-                        <input type="text" placeholder="search retail/wholesale" name="query" id="query" value="" autocorrect="off" className="flatinput ui-autocomplete-input" autocapitalize="off" autocomplete="off" data-autocomplete="search" />
+                        <input type="text" placeholder="search retail/wholesale" name="query" id="query" value=""  className="flatinput ui-autocomplete-input"   />
 
                         <button type="submit" className="searchbtn">
                             <span className="icon icon-search" aria-hidden="true"></span>
@@ -387,7 +387,7 @@ export default function Search() {
                                         <span className="screen-reader-text">favorite this post</span>
                                     </span>
 
-                                    <time className="result-date" datetime="2022-05-24 02:32" title="Tue 24 May 02:32:38 AM">May 24</time>
+                                    <time className="result-date"  title="Tue 24 May 02:32:38 AM">May 24</time>
 
 
                                     <h3 className="result-heading">
@@ -474,7 +474,7 @@ export default function Search() {
                     </ul>
                 </footer>
             </section>
-            <ul className="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" >
+            <ul className="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" >
             </ul>
             <span role="status" aria-live="assertive" aria-relevant="additions" className="ui-helper-hidden-accessible">
             </span>
