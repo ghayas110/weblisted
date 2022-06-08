@@ -9,7 +9,6 @@ import {faStar} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import Header from './Header'
 import {JobList} from '../components/component/JobList'
-import {jobdetail} from '../components/component/jobdetail'
 import { collection, onSnapshot, orderBy, query,where } from 'firebase/firestore'
 import { db } from '../firebase'
 function post() {

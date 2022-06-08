@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from '../styles/Signin.module.css'
-import FormSignin from './components/FormSignin'
+import FormSignin from '../components/component/FormSignin'
 
 
 
