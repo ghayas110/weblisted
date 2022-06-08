@@ -63,6 +63,11 @@
     list-style: none;
     text-decoration: none;
 }
+.logoImg{
+    width: 300px;
+    height: 100px;
+    background:#235789;
+}
 
 @media screen and (max-width: 600px) {
 

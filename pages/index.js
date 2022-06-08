@@ -253,7 +253,7 @@ export default function Home() {
                        </thead>
                        <tbody>
                          <tr>
-                           <td>account/finance</td>
+                           <td><a href="/post"> account/finance </a></td>
                            <td></td>
                          </tr>
                          <tr>

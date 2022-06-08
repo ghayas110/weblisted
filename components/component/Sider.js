@@ -8,27 +8,27 @@ const SideBar = ({ openClass }) => {
     <nav id={openClass === 'open' ? styles.opneSidebar : ''}>
     
       <ul id={styles.navlist}>
-      <h3>Artists</h3>
+      <h3>Job</h3>
         <li>
           <a id={styles.menu_item} href="/">
-            Home
+            home
           </a>
         </li>
 
         <li>
           <a id={styles.menu_item} href="/burgers">
-            Burgers
+            account/finance
           </a>
         </li>
 
         <li>
           <a id={styles.menu_item} href="/pizzas">
-            Pizzas
+            website designing
           </a>
         </li>
         <li>
           <a id={styles.menu_item} href="/desserts">
-            Desserts
+            engineering 
           </a>
         </li>
       </ul>

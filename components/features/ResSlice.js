@@ -1,24 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const ResSlice = createSlice({
-name:"Job",
+name:"resturant",
 initialState:{
-    selectedJob:null,
-    JobIsOpen:false,
+    selectedResturant:null,
+    ResturantIsOpen:false,
 },
 reducers:{
-    selectJob:(state,action)=>{
-        state.selectedJob=action.payload;
+    selectResturant:(state,action)=>{
+        state.selectedResturant=action.payload;
     },
-    openJob:(state)=>{
-        state.JobIsOpen=true;
+    openResturant:(state)=>{
+        state.ResturantIsOpen=true;
     },
-    closeJob:(state)=>{
-        state.JobIsOpen=false
+    closeResturant:(state)=>{
+        state.ResturantIsOpen=false
     }
 }
 });
-export const {selectJob,openJob,closeJob}=ResSlice.actions;
-export const selectOpenJob =(state) => state.Job.selectedJob;
-export const selectJobIsOpen =(state) => state.Job.JobIsOpen;
+export const {selectResturant,openResturant,closeResturant}=ResSlice.actions;
+export const selectOpenResturant =(state) => state.resturant.selectedResturant;
+export const selectResturantIsOpen =(state) => state.resturant.ResturantIsOpen;
 export default ResSlice.reducer;
+
+
