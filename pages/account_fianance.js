@@ -8,7 +8,7 @@ import { db, storage } from "../firebase";
 import { addDoc, collection, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../components/features/UderSlice';
-import  data  from '../components/component/data'
+import  {data}  from '../components/component/data'
 
 
 

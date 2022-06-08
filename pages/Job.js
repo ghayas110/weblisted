@@ -3,7 +3,7 @@ import Header from './Header'
 import Link from 'next/link'
 import styles from "../styles/create_post.module.css"
 import "bootstrap/dist/css/bootstrap.min.css";
-import data  from '../components/component/data'
+import {data}  from '../components/component/data'
 
 
 
