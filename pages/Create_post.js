@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Link from "next/link"
 import styles from "../styles/create_post.module.css"
 import {data} from '../components/component/data'
 
@@ -139,7 +140,7 @@ export default function Create_post() {
                                 </label>
                             </li>
                         </ul>  
-                        <button type="submit" className="pickbutton" name="go" va lue="Continue" id={styles.button_radio}><a href="/Job">continue</a></button> 
+                        <button type="submit" className="pickbutton" name="go" value="Continue" id={styles.button_radio}><a  href="/Job">continue</a></button> 
                 </div>
             </div>
 

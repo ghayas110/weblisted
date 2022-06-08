@@ -241,7 +241,8 @@ const Job = () => {
                                     </div>
                                     <div className={styles.json_form_group}>
                                         <div className={styles.submit_button}>
-                                            <button type="submit" name="go" value="Continue" className={styles.go_pickbutton}>continue</button>
+                                            <button type="submit" name="go" value="Continue" className={styles.go_pickbutton}><a href="/account_fianance">continue</a></button>
+                                            
                                         </div>
                                     </div>
                                     <input type="hidden" name="cryptedStepCheck" value="U2FsdGVkX183MDk0NTcwOaay6GKoUgbdjl6TfXV2JDiNgNBSZo8R9_mdiTaBYv58" className="cryptedStepCheck" />
