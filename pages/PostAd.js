@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { selectOpenResturant } from '../components/features/ResSlice';
 export default function postadd() {
     const selectJob = useSelector(selectOpenResturant);
+    
     return (
         <section>
             <div className='container-fluid' >

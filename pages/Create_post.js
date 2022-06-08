@@ -21,7 +21,7 @@ export default function Create_post() {
                                     </span> &nbsp;&nbsp;
                                     {data.createPost.map((post,key) =>{
                                         return(
-                                            <span>{post.cat}</span>
+                                            <span key={key}>{post.cat}</span>
                                         )
                                     })}
                                 </label>
