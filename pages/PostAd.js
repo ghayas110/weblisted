@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
 import React from 'react'
 import Link from 'next/link';
 import styles from "../styles/postadd.module.css";
@@ -6,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { selectOpenResturant } from '../components/features/ResSlice';
 export default function postadd() {
     const selectJob = useSelector(selectOpenResturant);
-    
+
     return (
         <section>
             <div className='container-fluid' >
