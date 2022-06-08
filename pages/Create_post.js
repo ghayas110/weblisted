@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import styles from "../styles/create_post.module.css"
-import {data} from '../components/component/data'
+import data from '../components/component/data'
 
 
 export default function Create_post() {
