@@ -39,7 +39,7 @@ const Job = () => {
 
                                                 {dataFetch.createPost.map((item, index) =>
                                                     <span className="option-label" key={index}>{
-                                                        item.subcat.map((innerItem, innerKey) =>
+                                                        item.jobType.map((innerItem, innerKey) =>
                                                             <span key={innerKey}>{innerItem.Accfin}</span>)}</span>
                                                 )}
                                                 
@@ -52,7 +52,7 @@ const Job = () => {
                                             <div>
                                             {dataFetch.createPost.map((item, index) =>
                                                 <span className="option-label" key={index}>{
-                                                    item.subcat.map((innerItem, innerKey) =>
+                                                    item.jobType.map((innerItem, innerKey) =>
                                                         <span key={innerKey}>{innerItem.admin}</span>)}</span>
                                             )}
 
@@ -62,176 +62,292 @@ const Job = () => {
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="48" />
                                             <div>
-                                                <span className="option-label">architect/engineer/cad</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.architect}</span>)}</span>
+                                            )}
                                                 <span className="option-label-addendum"> <span className="parenthetical">(no IT/computer jobs here please)</span></span>
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="25" />
                                             <div>
-                                                <span className="option-label">art/media/design</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.art}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="12" />
                                             <div>
-                                                <span className="option-label">business/mgmt</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.business}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="100" />
                                             <div>
-                                                <span className="option-label">customer service</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.customer}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="57" />
                                             <div>
-                                                <span className="option-label">education/teaching</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.education}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="15" />
                                             <div>
-                                                <span className="option-label">et cetera</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.etcetera}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="129" />
                                             <div>
-                                                <span className="option-label">food/beverage/hospitality</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.food}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="130" />
                                             <div>
-                                                <span className="option-label">general labor</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.general}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="61" />
                                             <div>
-                                                <span className="option-label">government</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.government}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="26" />
                                             <div>
-                                                <span className="option-label">healthcare</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.healthcare}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="54" />
                                             <div>
-                                                <span className="option-label">human resource</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.humanresource}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="47" />
                                             <div>
-                                                <span className="option-label">legal/paralegal</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.legalparalegal}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="128" />
                                             <div>
-                                                <span className="option-label">manufacturing</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.manufacturing}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="13" />
                                             <div>
-                                                <span className="option-label">marketing/advertising/pr</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.marketing}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="28" />
                                             <div>
-                                                <span className="option-label">nonprofit</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.nonprofit}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="127" />
                                             <div>
-                                                <span className="option-label">real estate</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.realestate}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="27" />
                                             <div>
-                                                <span className="option-label">retail/wholesale</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.retailwholesale}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="49" />
                                             <div>
-                                                <span className="option-label">sales</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.sales}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="126" />
                                             <div>
-                                                <span className="option-label">salon/spa/fitness</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.salon}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="75" />
                                             <div>
-                                                <span className="option-label">science/biotech</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.sciencebiotech}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="131" />
                                             <div>
-                                                <span className="option-label">security</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.security}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="59" />
                                             <div>
-                                                <span className="option-label">skilled trades/artisan</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.skilled}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="21" />
                                             <div>
-                                                <span className="option-label">software/qa/dba/etc</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.software}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="50" />
                                             <div>
-                                                <span className="option-label">systems/networking</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.systemsnetworking}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="55" />
                                             <div>
-                                                <span className="option-label">technical support</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.technical}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="125" />
                                             <div>
-                                                <span className="option-label">transportation</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.transportation}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="52" />
                                             <div>
-                                                <span className="option-label">tv/film/video/radio</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.tv}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="11" />
                                             <div>
-                                                <span className="option-label">web/html/info design</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.web}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                         <label className="radio-option">
                                             <input type="radio" className="json-form-input id" name="id" value="16" />
                                             <div>
-                                                <span className="option-label">writing/editing</span>
+                                            {dataFetch.createPost.map((item, index) =>
+                                                <span className="option-label" key={index}>{
+                                                    item.jobType.map((innerItem, innerKey) =>
+                                                        <span key={innerKey}>{innerItem.writing}</span>)}</span>
+                                            )}
                                             </div>
                                         </label>
                                     </label>

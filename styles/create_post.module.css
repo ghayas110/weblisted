@@ -7,10 +7,7 @@
     padding: 55px;
     line-height: 3;
 }
-#button_radio{
-    width: 113px;
-    height: 45px;
-}
+
 .jobpost{
     display: inline;
 }
@@ -111,8 +108,27 @@ font-size: 20px;
 border: 1px solid white;
 }
 
+.submit_button button a{
+    text-decoration: none;
+    color: white;
+}
 
 
+#button_radio{
+    width: 175px;
+height: 4   5px;
+border-radius: 5px;
+background: linear-gradient(#235789, #0a58caed);
+color: white;
+font-weight: 700;
+font-size: 15px;
+border: 1px solid white;
+}
+
+#button_radio a{
+    text-decoration: none;
+    color: white;
+}
 
 
 

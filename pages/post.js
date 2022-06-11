@@ -26,7 +26,7 @@ function post() {
         }, [])
         const renderPost = () => {
             if (job && job?.length) {
-             
+              
               // console.log('state', img)
               return job.map((item, index) => {
                 // eslint-disable-next-line react/jsx-key

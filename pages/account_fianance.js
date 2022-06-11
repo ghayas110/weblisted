@@ -9,6 +9,7 @@ import { addDoc, collection, serverTimestamp, updateDoc, doc } from 'firebase/fi
 import { useSelector } from 'react-redux';
 import { selectUser } from '../components/features/UderSlice';
 import  {data}  from '../components/component/data'
+import { setUserId } from 'firebase/analytics';
 
 
 
@@ -20,11 +21,20 @@ export default function account_fianance() {
     const [discription, setDiscription] = useState("");
     const [employetype, setEmployetype] = useState("");
     const [jobtitle, setJobtitle] = useState("");
+    const [select, setSelect] = useState("");
     const [compensation, setCompensation] = useState("");
     const [company, setCompany] = useState("");
     const [phone, setPhone] = useState("");
     const user = useSelector(selectUser) 
     const router = useRouter() 
+    
+    const handleCapacity=(e)=>{
+        setSelect(e.target.value);
+       
+      }
+    
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -40,6 +50,7 @@ export default function account_fianance() {
              compensation:compensation,
              company:company,
              phone:phone,
+             select:select
              
           })
           
@@ -66,7 +77,7 @@ export default function account_fianance() {
 
                                     {dataFetch.createPost.map((item, index) =>
                                         <span className="option-label" key={index}>{
-                                            item.subcat.map((innerItem, innerKey) =>
+                                            item.jobType.map((innerItem, innerKey) =>
                                                 <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                     <span key={mostInnerKey}>{mostInnerItem.posting}    </span>
                                                 )}</span>)}</span>
@@ -78,7 +89,7 @@ export default function account_fianance() {
                                 <div className="col-lg-5" id={styles.input1}>
                                 {dataFetch.createPost.map((item, index) =>
                                     <span className="option-label" key={index}>{
-                                        item.subcat.map((innerItem, innerKey) =>
+                                        item.jobType.map((innerItem, innerKey) =>
                                             <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                 <span key={mostInnerKey}>{mostInnerItem.city}    </span>
                                             )}</span>)}</span>
@@ -89,7 +100,7 @@ export default function account_fianance() {
                                 <div className="col-lg-2" id={styles.input1}>
                                     {dataFetch.createPost.map((item, index) =>
                                         <span className="option-label" key={index}>{
-                                            item.subcat.map((innerItem, innerKey) =>
+                                            item.jobType.map((innerItem, innerKey) =>
                                                 <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                     <span key={mostInnerKey}>{mostInnerItem.postal}    </span>
                                                 )}</span>)}</span>
@@ -103,7 +114,7 @@ export default function account_fianance() {
                                             <a href="">Please see our FAQ for job posters</a>
                                             <p><b>{dataFetch.createPost.map((item, index) =>
                                                 <span className="option-label" key={index}>{
-                                                    item.subcat.map((innerItem, innerKey) =>
+                                                    item.jobType.map((innerItem, innerKey) =>
                                                         <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                             <span key={mostInnerKey}>{mostInnerItem.description}    </span>
                                                         )}</span>)}</span>
@@ -135,18 +146,17 @@ export default function account_fianance() {
                                                 <label className=" control-label" >
                                                     {dataFetch.createPost.map((item, index) =>
                                                         <span className="option-label" key={index}>{
-                                                            item.subcat.map((innerItem, innerKey) =>
+                                                            item.jobType.map((innerItem, innerKey) =>
                                                                 <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                                     <span key={mostInnerKey}>{mostInnerItem.employetype}    </span>
                                                                 )}</span>)}</span>
                                                     )}
                                                 </label> <br />
-                                                <select name="" id={styles.control_label}>
-                                                    <option value="1">-</option>
-                                                    <option value="1">full-time</option>
-                                                    <option value="2">Part-time</option>
-                                                    <option value="3">contract</option>
-                                                    <option value="3">employee's choice</option>
+                                                <select name="" id={styles.control_label} onChange={handleCapacity}>
+                                                        <option value="full-time">full-time</option>
+                                                    <option value="Part-time">Part-time</option>
+                                                    <option value="contract">contract</option>
+                                                    <option value="employee's choice">employee's choice</option>
                                                 </select>
                                             </div>
                                             <div className="form-group inside" id={styles.inside}>
@@ -183,7 +193,7 @@ export default function account_fianance() {
                                     <label htmlFor="" id={styles.job_title_label}>
                                         {dataFetch.createPost.map((item, index) =>
                                             <span className="option-label" key={index}>{
-                                                item.subcat.map((innerItem, innerKey) =>
+                                                item.jobType.map((innerItem, innerKey) =>
                                                     <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                         <span key={mostInnerKey}>{mostInnerItem.jobtitle}    </span>
                                                     )}</span>)}</span>
@@ -199,7 +209,7 @@ export default function account_fianance() {
                                     <label htmlFor="" id={styles.job_title_label}>
                                     {dataFetch.createPost.map((item, index) =>
                                         <span className="option-label" key={index}>{
-                                            item.subcat.map((innerItem, innerKey) =>
+                                            item.jobType.map((innerItem, innerKey) =>
                                                 <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                     <span key={mostInnerKey}>{mostInnerItem.compensation}    </span>
                                                 )}</span>)}</span>
@@ -215,7 +225,7 @@ export default function account_fianance() {
                                     <label htmlFor="" id={styles.job_title_label}>
                                         {dataFetch.createPost.map((item, index) =>
                                             <span className="option-label" key={index}>{
-                                                item.subcat.map((innerItem, innerKey) =>
+                                                item.jobType.map((innerItem, innerKey) =>
                                                     <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                         <span key={mostInnerKey}>{mostInnerItem.company}    </span>
                                                     )}</span>)}</span>
@@ -250,7 +260,7 @@ export default function account_fianance() {
                                                     
                                                     {dataFetch.createPost.map((item, index) =>
                                                         <span className="option-label" key={index}>{
-                                                            item.subcat.map((innerItem, innerKey) =>
+                                                            item.jobType.map((innerItem, innerKey) =>
                                                                 <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                                     <span key={mostInnerKey}>{mostInnerItem.phone}    </span>
                                                                 )}</span>)}</span>
@@ -296,7 +306,7 @@ export default function account_fianance() {
                                                                 <label htmlFor="">
                                                                  {dataFetch.createPost.map((item, index) =>
                                                                     <span className="option-label" key={index}>{
-                                                                        item.subcat.map((innerItem, innerKey) =>
+                                                                        item.jobType.map((innerItem, innerKey) =>
                                                                             <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                                                 <span key={mostInnerKey}>{mostInnerItem.extension}    </span>
                                                                             )}</span>)}</span>
@@ -309,7 +319,7 @@ export default function account_fianance() {
 
                                                                 {dataFetch.createPost.map((item, index) =>
                                                                     <span className="option-label" key={index}>{
-                                                                        item.subcat.map((innerItem, innerKey) =>
+                                                                        item.jobType.map((innerItem, innerKey) =>
                                                                             <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                                                 <span key={mostInnerKey}>{mostInnerItem.contact}    </span>
                                                                             )}</span>)}</span>
@@ -325,7 +335,7 @@ export default function account_fianance() {
                                                                 
                                                                 {dataFetch.createPost.map((item, index) =>
                                                                     <span className="option-label" key={index}>{
-                                                                        item.subcat.map((innerItem, innerKey) =>
+                                                                        item.jobType.map((innerItem, innerKey) =>
                                                                             <span key={innerKey}>{innerItem.form.map((mostInnerItem, mostInnerKey) =>
                                                                                 <span key={mostInnerKey}>{mostInnerItem.phonenumber}    </span>
                                                                             )}</span>)}</span>
