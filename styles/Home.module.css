@@ -2,6 +2,9 @@
 .container {
   padding: 0 2rem;
 }
+.t1{
+  margin-top: -550px !important;
+}
 
 .main {
   min-height: 100vh;
@@ -39,6 +42,10 @@
 .title a:active {
   text-decoration: underline;
 }
+.logo_img{
+  width: 130px;
+  margin-top: 15px;
+}
 
 .title {
   margin: 0;
@@ -50,6 +57,100 @@
 .description {
   text-align: center;
 }
+/* --------------------------------------------rehman code----------------------------------------- */
+/* ------------------------------start here---------------------------------------- */
+
+.Head{
+  text-align: center;
+  color: white;
+  background: #235789;
+  
+}
+.comhead{
+     font-weight: 400;
+    text-align: center;
+    color: white;
+    background: #235789;
+
+    
+}
+.comlist{
+  font-size: 14px;
+  font-family: auto;
+ color: grey;
+ list-style: none;
+ border-bottom: 1px solid grey;
+ cursor: pointer;
+ position: relative;
+ right: 28px;
+}
+.comlist:hover{
+  background-color: rgb(179, 178, 178);
+}
+.img_logo{
+  width: 110px;
+}
+.calendar{
+      text-align: -webkit-center;
+     width: 100%;
+}
+
+@media screen and (max-width:992px) {
+  .form_input input{
+    width: 100px;
+  }
+  
+}
+@media screen and (max-width:1200px) {
+  .form_input input{
+    width: 172px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------code end------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .description {
   margin: 4rem 0;
@@ -115,21 +216,26 @@
     flex-direction: column;
   }
 }
-.bg_1{
+#bg_1{
    background-color: #235789 !important;
+   background-color: #235789 !important;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
    color: white;
 }
-.bg_1 h1{
+#bg_1 h1{
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   padding: 10px;
 }
-.bg_1 h1 span{
+#bg_1 h1 span{
   font-size: 17px;
   font-weight:700;
 }
-.bg_1 a{
+#bg_1 a{
   text-align: center;
 }
 .a_1{
@@ -139,7 +245,7 @@
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
 }
-.bg_1 p{
+#bg_1 p{
   text-align: center;
 }
 .a_2{
@@ -248,10 +354,10 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .bg_1 h1{
+  #bg_1 h1{
     font-size: 20px;
   }
-  .col-sm-3 .bg_1{
+   #bg_1{
     /* width: 40% !important; */
   }
   .input_1{

@@ -27,7 +27,7 @@ const Job = () => {
     console.log(category)
 
     const getData = async () => {
-        const querySnapshot = await getDocs(collection(db, "subcategory"));
+        const querySnapshot = await getDocs(collection(db, "resume"));
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
@@ -45,8 +45,23 @@ const Job = () => {
     }
     const handleSelectedData = () => {
       
-        console.log(selectData)
-        router.push({ pathname: "/account_fianance", query: { subcategory: selectData,category:category } })
+        if(selectData === "I'm an individual seeking employment"){
+            router.push({pathname: "/resume_form", query: { category: selectData }})
+        
+        }else if(selectData === "I'm offering or advertising a service"){
+            router.push({pathname: "/gigSubCategory", query: { category: selectData }})
+        
+        }else if(selectData === "I'm offering a job"){
+            router.push({pathname: "/Job", query: { category: selectData }})
+        
+        }else if(selectData === "I'm offering childcare"){
+            router.push({pathname: "/Childcar", query: { category: selectData }})
+        
+        }
+        else{
+            router.push({pathname: "/", query: { category: selectData }})
+        }
+           
 
     }
 
@@ -69,8 +84,7 @@ const Job = () => {
                                 <div className={styles.json_form}>
                                     <div className={styles.json_form_item}>
                                         <p className={styles.formnote}>
-                                            <b>please choose a category:</b>
-                                            (see <Link href="/account_fianance">prohibited</Link> list before posting.)
+                                            <b>which of these applies?</b>
                                         </p>
                                     </div>
 

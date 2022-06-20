@@ -26,7 +26,7 @@ export default function systemStatus() {
                 </nav>
             </div>
             <div className="container">
-                <div className="row">
+                <div className="row"id={styles.row}>
                 <section className={styles.simple_page_content}>
                 
 

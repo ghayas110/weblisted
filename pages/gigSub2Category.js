@@ -27,7 +27,7 @@ const Job = () => {
     console.log(category)
 
     const getData = async () => {
-        const querySnapshot = await getDocs(collection(db, "subcategory"));
+        const querySnapshot = await getDocs(collection(db, "gigsub2category"));
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
@@ -69,8 +69,7 @@ const Job = () => {
                                 <div className={styles.json_form}>
                                     <div className={styles.json_form_item}>
                                         <p className={styles.formnote}>
-                                            <b>please choose a category:</b>
-                                            (see <Link href="/account_fianance">prohibited</Link> list before posting.)
+                                            <b>please choose a category</b>
                                         </p>
                                     </div>
 

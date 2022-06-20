@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/About.module.css"
-
+import Link from "next/link"
 export default function About() {
     return (
         <div>
@@ -12,60 +12,60 @@ export default function About() {
                     <div className="row">
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
-                      
-                            <table className='mt-3'> 
-                                <tbody>
-                                    <tr className={styles.about_th}>
-                                      <td className={styles.about_th1}><strong>using craigslist</strong></td>
-                                       <td className={styles.about_th1}><strong>about craigslist</strong></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="help">CL Help Pages</a> <br/> <span>need assistance?<br/></span></td>
-                                        <td><a href="/craigslist_is_hiring">CL Jobs</a><br/><span>we're hiring in SF<br/></span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td ><a href="/faq">FAQ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a href="/faq-job">Jobs FAQ</a>) <br/><span>frequently asked questions</span></td>
-                                        <td><a href="jim_buckmaster">Jim</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="craig_newmark">Craig</a> <br/><span>CEO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; founder</span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="terms.of.use">Terms Of Use</a><br/><span>please read carefully<br/></span></td>
-                                        <td><a href="http://blog.craigslist.org/">craigslist Blog</a><br/><span>updates and etc</span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="privacy.policy">Privacy Policy</a><sup>new</sup> <br/> <span>user privacy info<br/></span></td>
-                                        <td><a href="best">Best of craigslist</a><br/><span>voted by 'readers like you'</span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="https://www.craigslist.org/contact">Contact Form</a><br/><span>send us a note</span></td>
-                                        <td><a href="https://www.youtube.com/watch?v=e2j_ZqopHC0">24 Hours on craigslist</a><br/><span>award-winning documentary</span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="https://forums.craigslist.org/?forumID=8">CL Feedback Forum</a><br/><span>suggestion box<br/></span></td>
-                                        <td><a href="/about/charitable">Charitable Fund</a><br/><span>grants for 501(c)3 orgs<br/></span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="https://forums.craigslist.org/?forumID=9">CL Help Desk Forum</a><br/><span>tips from experienced users</span></td>
-                                        <td><a href="/about/open_source">Open Source</a>&nbsp;<br/><span>it gets better</span></td>
-                                    </tr>
-                                    <br />
-                                    <tr className={styles.About_tr}>
-                                        <td><a href="scams">Avoiding Scams &amp; Fraud</a> <br/><span>rule #1 is "deal locally"</span></td>
-                                        <td><a href="https://www.craigslist.org/about/security_researcher_appreciation_page">Security Kudos</a><br/><span>responsible disclosures<br/></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
 
-                        </div>
+                            <div className='mt-3'>
+                                <ul>
+                                    <li className={styles.about_th}>
+                                        <span className={styles.about_th1}><strong>using craigslist</strong></span>
+                                        <span className={styles.about_th1}><strong>about craigslist</strong></span>
+                                    </li>
+                                    <br />
+                                    <li className={styles.About_tr}>
+                                        <span><Link href="">CL Help Pages</Link></span> <br /> <span>need assistance?<br /></span>
+                                        <span><Link href="">CL Jobs</Link></span><br /><span>we're hiring in SF<br /></span>
+                                    </li>
+                                    <br />
+                                    <li className={styles.About_tr}>
+                                        <span><Link href="">FAQ</Link></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Link href="">Jobs FAQ</Link> <br /><span>frequently asked questions</span>
+                                    <span><Link href="">Jim</Link></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Link href="">Craig</Link> <br /><span>CEO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; founder</span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">Terms Of Use</Link></span><br /><span>please read carefully<br /></span>
+                                <span><Link href="">craigslist Blog</Link></span><br /><span>updates and etc</span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">Privacy Policy</Link></span><sup>new</sup> <br /> <span>user privacy info<br /></span>
+                                <span><Link href="">Best of craigslist</Link></span><br /><span>voted by 'readers like you'</span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">Contact Form</Link></span><br /><span>send us a note</span>
+                                <span><Link href="">24 Hours on craigslist</Link></span><br /><span>award-winning documentary</span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">CL Feedback Forum</Link></span><br /><span>suggestion box<br /></span>
+                                <span><Link href="">Charitable Fund</Link></span><br /><span>grants for 501(c)3 orgs<br /></span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">CL Help Desk Forum</Link></span><br /><span>tips from experienced users</span>
+                                <span><Link href="">Open Source</Link></span>&nbsp;<br /><span>it gets better</span>
+                            </li>
+                            <br />
+                            <li className={styles.About_tr}>
+                                <span><Link href="">Avoiding Scams &amp; Fraud</Link></span> <br /><span>rule #1 is "deal locally"</span>
+                                <span><Link href="">Security Kudos</Link></span><br /><span>responsible disclosures<br /></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }

@@ -27,7 +27,7 @@ const Job = () => {
     console.log(category)
 
     const getData = async () => {
-        const querySnapshot = await getDocs(collection(db, "subcategory"));
+        const querySnapshot = await getDocs(collection(db, "gigsubcategory"));
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
@@ -46,7 +46,7 @@ const Job = () => {
     const handleSelectedData = () => {
       
         console.log(selectData)
-        router.push({ pathname: "/account_fianance", query: { subcategory: selectData,category:category } })
+        router.push({ pathname: "/gig_Form", query: { subcategory: selectData,category:category } })
 
     }
 
@@ -69,8 +69,7 @@ const Job = () => {
                                 <div className={styles.json_form}>
                                     <div className={styles.json_form_item}>
                                         <p className={styles.formnote}>
-                                            <b>please choose a category:</b>
-                                            (see <Link href="/account_fianance">prohibited</Link> list before posting.)
+                                            <b>which of these applies?</b>
                                         </p>
                                     </div>
 

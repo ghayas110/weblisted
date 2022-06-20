@@ -14,7 +14,7 @@ export default function postadd() {
     const selectJob = useSelector(selectOpenResturant);
 
     return (
-        <section>
+        <section id={styles.section}>
         <div class="navbar fixed-top navbar-expand-sm" id={styles.navhead}>
         <div class="container navContainer">
             
@@ -23,20 +23,15 @@ export default function postadd() {
             </button>
             <div class="collapse navbar-collapse justify-content-center" id={styles.navbarCollapse}>
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>CL</a>
-                    <a href="#" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Indoor</a>
-                    <a href="#" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Job</a>
-                    <a href="#" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Science / Biotech</a>
-                    <a href="#" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Account</a>
+                    <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>CL</a>
+                    <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Indoor</a>
+                    <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Job</a>
+                    <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Science / Biotech</a>
+                    <a href="" class="nav-item nav-link text-uppercase mx-1" id={styles.navlist}>Account</a>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-            
             <div className={styles.jobpost_wrapper}>
             <div className={styles.jobpost_job_postings}>
               <a href="#" className={styles.jobpost_link}></a>
@@ -66,7 +61,9 @@ export default function postadd() {
                     </p>
                     <p>{selectJob?.data().discription}</p>
                 </div>
-                <div className={styles.jobpost_nav}><p href="#" className={styles.more} data-parent="115541">Read more</p></div>
+                <div className={styles.jobpost_nav}>
+                <p  className={styles.more}><a href="/Readmore"> Read more </a></p> 
+                </div>
             </div>
         </div>
 

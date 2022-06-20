@@ -10,7 +10,7 @@
   overflow-x: hidden;
 }
   
-.app {
+#app{
     padding: 2rem;
     transition: margin-left 2.7s;
     overflow: hidden;
@@ -92,10 +92,14 @@
     width: 50%;
   }
 #right_side_post input{
-    width: 60%;
-    height: 39px;
-    border-radius: 9px;
-    margin-left: 36px;
+  width: 50%;
+  cursor: pointer;
+  height: 32px;
+  border-radius: 6px;
+  margin-left: 30px;
+}
+#right_side_post input:hover{
+  border: 2px solid #235789;
 }
 #icon_input{
     width: 10px;
@@ -107,9 +111,10 @@
 }
 
 #select_option_right_side{
-    width: 84px;
-    height: 35px;
-    font-size: 17px;
+  width: 88px;
+  border-radius: 7px;
+  height: 26px;
+  font-size: 17px;
 
 }
 #content_right{
@@ -119,18 +124,43 @@
     justify-content: space-between;
 }
 #content_right button{
-    width: 103px;
+  border-radius: 8px;
+  background-color: #235789;
+    width: 100px;
+    color: white;
+  border: none;
+    font-weight: 600;
+    font-family: monospace;
 } 
-#two_btn button{
-    width: 156px;
-    height: 44px;
-    border-radius: 5px;
-    cursor: pointer;
+#content_right button:hover{
+  border-radius: 8px;
+  background-color: white ;
+    width: 100px;
+    color: #235789;
+    font-weight: 600;
+    font-family: monospace;
 }
-#two_btn{
+#two_btn button{
+  font-weight: 600;
+    font-family: monospace;
+  width: 117px;
+  color: white;
+  background: #235789;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#two_btn button:hover{
+   background-color: white;
+   color: #235789;
 
+}
+
+#two_btn{
+    margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #content_right span{
     border: 1px solid black !important;
@@ -143,6 +173,7 @@
 }
 #icon{
   width: 21px;
+  height: 21px;
   color: black; 
   position: relative;
   top: 30px;
@@ -161,15 +192,18 @@
     
 }
 #search_div{
-        border-radius: 6px;
-         margin-left: 15px;
-        border: 1PX solid black;
-        width: 33px;
-        height: 38px;
-        display: flex;
-        justify-content:center ;
-        align-items: center;
+  border-radius: 6px;
+  margin-left: 15px;
+  border: 1PX solid black;
+  width: 41px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+#search_div:hover{
+  border: 2px solid #235789;
 }
 #line{
   margin-top:65px ;
@@ -180,13 +214,15 @@
   margin-top: 10px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+  }
 
-}
 
 #text span {
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  color: #6b93b8;
 }
 
 

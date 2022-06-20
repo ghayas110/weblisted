@@ -1,3 +1,7 @@
+#section{
+    padding: 15px;
+}
+
 #bg{
     display: flex;
     align-items: center;
@@ -302,7 +306,7 @@
     width: 100%;
 }
 
-.jobpost_nav button, .jobpost_nav p.more {
+.jobpost_nav button, .jobpost_nav span.more {
     border: 0;
     background: transparent;
     /* color: #2c3e50; */

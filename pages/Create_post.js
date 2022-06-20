@@ -1,43 +1,89 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef , useEffect} from 'react'
 import Header from './Header'
 import Link from "next/link"
 import styles from "../styles/create_post.module.css"
 import { data } from '../components/component/data'
 import { db, storage } from "../firebase";
-import { addDoc, collection, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp, updateDoc, doc ,getDocs } from 'firebase/firestore';
+import { useRouter } from 'next/router';
 
 
 export default function Create_post() {
 
-    const [select, setSelect] = useState([])
-    const [jobOffered, setJobOffered] = useState([])
-    const [resume, setResume] = useState([])
-
-    const handleChecked = async (e) => {
-        e.preventDefault()
-        try {
-            const docRef = await addDoc(collection(db, 'category'), {
-
-                jobOffer:jobOffer,
-                gigoffered:gigoffered,
-                resume: resume,
-                housingOffered:housingOffered,
-                housingWanted:housingWanted,
-                ForSaleByOwner:ForSaleByOwner,
-                ForSaleByDealer:ForSaleByDealer,
-                WantedByOwner : WantedByOwner,
-                WantedByDealer:WantedByDealer,
-                serviceOffered:  serviceOffered,    
+    const [radioData,setRadioData] = useState([])
+    const [selectData,setSelectData]= useState()
+    const router = useRouter() 
+    var data = [];
+    
+    const getData = async()=>{
+            const querySnapshot = await getDocs(collection(db, "category"));
+            querySnapshot.forEach((doc) => {
+              // doc.data() is never undefined for query doc snapshots
+            //   console.log(doc.id, " => ", doc.data());
+            //   data.push({ id: doc.id, ...doc.data() });
+              data.push( Object.values(doc.data()) );
+              // setUserData(userData=>[...userData,doc.data()])
             })
+          
+         setRadioData(data)
+            // console.log(data[0],"hello")
+    }
+    const checkData = (item)=>{
+        setSelectData(item)
+        
+    }
+    const handleSelectedData=()=>{
+        // if(item==='gigOffered'){
+        //     router.push({pathname: "/resume_Form", query: { category: selectData }})
+        // }
+if(selectData === "gigOffered"){
+    router.push({pathname: "/gigOffered", query: { category: selectData }})
 
-            alert("form submited")
+}else if(selectData === "resume"){
+    router.push({pathname: "/resume", query: { category: selectData }})
+}
+else if(selectData === "housingOffered"){
+    router.push({pathname: "/houseOffered", query: { category: selectData }})
 
-        } catch (err) {
-            alert(err)
-        }
+}
+else if(selectData === "housingWanted"){
+    router.push({pathname: "/housingWanted", query: { category: selectData }})
+
+}
+else if(selectData === "WantedByOwner"){
+    router.push({pathname: "/Childcar", query: { category: selectData }})
+
+}else if(selectData === "WantedByOwner"){
+    router.push({pathname: "/Childcar", query: { category: selectData }})
+
+}
+else if(selectData === "serviceOffered"){
+    router.push({pathname: "/gigSubCategory", query: { category: selectData }})
+
+}
+else if(selectData === "ForSaleByOwner"){
+    router.push({pathname: "/ForSaleByOwner", query: { category: selectData }})
+
+}
+else if(selectData === "ForSaleByDealer"){
+    router.push({pathname: "/ForSaleByOwner", query: { category: selectData }})
+
+}
+else if(selectData === "community"){
+    router.push({pathname: "/community", query: { category: selectData }})
+
+}
+else{
+    router.push({pathname: "/Job", query: { category: selectData }})
+}
+       
+
     }
 
-
+    useEffect(() => {
+        getData();
+        
+    },[])
     return (
         <div>
             <Header />
@@ -47,130 +93,27 @@ export default function Create_post() {
 
                 <div className="col-lg-6 col-md-8">
                     <ul className="selection-list" id={styles.radio_list}>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value=" job offer" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                   job offer
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="go" />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    gig offered
-                                    <i>(I'm hiring for a short-term, small or odd job)</i>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="resume" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    resume / job wanted
-                                </span>
-                            </label>
-                        </li>
-                        <li className="start-of-grouping">
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="ho" />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    housing offered
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="housing wanted" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    housing wanted
-                                </span>
-                            </label>
-                        </li>
-                        <li className="start-of-grouping">
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="for sale by owner" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    for sale by owner
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="for sale by dealer" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    for sale by dealer
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="wanted by owner" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    wanted by owner
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="wanted by dealer" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    wanted by dealer
-                                </span>
-                            </label>
-                        </li>
-                        <li className="start-of-grouping">
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="service offered" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    service offered
-                                </span>
-                            </label>
-                        </li>
-                        <li className="start-of-grouping">
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="community" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    community
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <span className="left-side">
-                                    <input type="radio" name="id" value="event / className" onChange={handleChecked} />
-                                </span>&nbsp;&nbsp;
-                                <span className="right-side">
-                                    event / className
-                                </span>
+                    {radioData[0] ? radioData[0].map((item, index)=>{ 
+                  
+                        return(
 
-                            </label>
+                        
+                        
+                        <li>
+                        <label>
+                        <span className="left-side">
+                        <input type="radio" name="category" id={item} onChange={()=>checkData(item)} key="{index}"  />
+                        </span>&nbsp;&nbsp;
+                        <span className="right-side">
+                        {item}
+                        </span>
+                        </label>
                         </li>
-                    </ul>
-                    <button type="submit" className="pickbutton" name="go" value="Continue" id={styles.button_radio}><a href="/Job">continue</a></button>
+                        )
+                    })
+                       : <span>waiting for data...</span> }   
+                        </ul>
+                    <button  className="pickbutton" name="go" value="Continue" id={styles.button_radio} onClick={handleSelectedData}>continue</button>
                 </div>
             </div>
 
