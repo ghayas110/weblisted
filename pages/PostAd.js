@@ -62,7 +62,6 @@ export default function postadd() {
                     <p>{selectJob?.data().discription}</p>
                 </div>
                 <div className={styles.jobpost_nav}>
-                <p  className={styles.more}><a href="/Readmore"> Read more </a></p> 
                 </div>
             </div>
         </div>

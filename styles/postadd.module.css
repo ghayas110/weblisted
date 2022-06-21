@@ -145,14 +145,11 @@
 } */
 
 .jobpost_wrapper {
-    width: 25%;
     text-align: center;
     margin-top: 5em;
     text-align: center;
     margin-top: 5em;
-    /* width: 38%; */
     margin-top: 26px;
-    box-shadow: 4px 15px 7px grey;
     display: flex;
     justify-content: center !important;
 }

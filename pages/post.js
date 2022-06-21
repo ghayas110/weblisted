@@ -14,27 +14,28 @@ import { db } from '../firebase'
 import { useRouter } from 'next/router';
 import { Category } from 'styled-icons/boxicons-regular';
 function post() {
-    const [on, setOn] = useState(false);
-    const [job, setJob] = useState([]);
-    const [selectData, setSelectData] = useState()
     const router = useRouter()
     const { openCat } = router.query;
-    console.log("category", openCat);
+    const [on, setOn] = useState(true);
+    const [job, setJob] = useState([]);
+    const [selectData, setSelectData] = useState()
+    console.log("categor", openCat);
 
-    const getPost = () => {
+    const getPost =  () => {
 
 
-        onSnapshot(
+       onSnapshot(
 
             query(collection(db, "Form"), where("subcategory", "==", openCat)), (snapshot) => {
                 setJob(snapshot.docs)
 
             })
     };
+    console.log(job)
     const renderPost = () => {
         if (job && job?.length) {
 
-            // console.log('state', img)
+            console.log('state', job)
             return job.map((item, index) => {
                 // eslint-disable-next-line react/jsx-key
                 return <JobList
@@ -46,6 +47,7 @@ function post() {
 
     useEffect(() => {
         getPost();
+        
     }, [])
 
     const handleOn = () => {

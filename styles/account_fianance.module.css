@@ -337,8 +337,8 @@ height: 235px;
 
 #property_form_fields{
     background: #f7f7f7;
-    height: 450px;
-    width: 76%;
+    height: 500px;
+    width: 78%;
     margin-top: 8px;
 }
 #property_form_fields1{
@@ -352,6 +352,7 @@ height: 235px;
 #fields_search input{
     width: 50%;
     margin-top: 5px;
+    border: none;
 }
 #fields_select{
     display: flex;
@@ -362,6 +363,8 @@ height: 235px;
 }
 #fields_select select{
     margin-top: 5px;
+    WIDTH: 199px;
+    BORDER: none;
 }
 #fields_checkbox{
     display: flex;
@@ -377,5 +380,79 @@ height: 235px;
 
 #list_pro{
     margin-top: 19px;
+    border: none;
     width: 168px;
+}
+#pro_inp_2{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:992px) {
+    #property_form_fields{
+        background: #f7f7f7;
+        height: 450px;
+        width: 81%;
+        margin-top: 8px;
+    }
+    
+}
+
+.form_content{
+  
+}
+
+.form_pro_sec::before{
+    content: "open house dates";
+    position: relative;
+    top: -12px;
+    left: 20px;
+    background: #f7f7f7;
+}
+.form_pro_sec{
+    border: 1px solid rgb(209, 204, 204);
+    margin-top: 10px;
+    border-radius: 8px;
+    
+
+}
+
+.form_pro_sec select{
+    width: 120px;
+    margin-left: 19px;
+    border: none;
+
+}
+.form_pro_sec1{
+    align-items: center;
+    height: 55px;
+    padding: 25px;
+    display:flex ;
+}
+
+.form_ooo{
+    display: flex;
+    flex-direction: column;
+}
+form #form_group_sec2{
+    width: 30%;
+    background: #f7f7f7;
+    border-radius: 5px;
+    position: relative;
+}
+
+#house_wan_pos{
+    padding: 12px;
+    margin-top: 15px;
+    width: 79%;
+    background: #f7f7f7;
+
+}
+
+#house_wan_pos::before{
+    content: "posting";
+    position: top;
+    position: relative;
+    top: -22px;
+    left: 8px;
+    background: #f7f7f7;
 }
