@@ -24,7 +24,7 @@ const Job = () => {
     const [dataFetch, setDataFetch] = useState(data)
     
 
-    console.log(category)
+    console.log("Category",category)
 
     const getData = async () => {
         const querySnapshot = await getDocs(collection(db, "subcategory"));

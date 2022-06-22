@@ -50,8 +50,8 @@ export default function account_fianance() {
     const router = useRouter()
     const { category } = router.query;
     const { subcategory } = router.query;
-    console.log(category)
-    console.log(subcategory)
+    console.log("Category",category)
+    console.log("Sub",subcategory)
     const handleCapacity = (e) => {
 
         setSelect(e.target.value);
@@ -1129,12 +1129,19 @@ export default function account_fianance() {
             <MainForm />
             {/*----------------------section Joboffered ------------>*/}
             {/*<JobOff />*/}
+            
             {/*----------------end-----------*/}
 
             {/*----------------------section gigoffered hire service computer------------>*/}
-
-            {/*<GigOffCS />*/}
-
+          
+            {(category==="WantedByDealer" && subcategory==="web/html/info design") && (
+                <GigOffCS />
+                             
+                                 )
+               
+                
+                  }
+         
             {/*----------------end-----------*/}
 
             {/*----------------------section housing offer room & share------------>*/}

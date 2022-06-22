@@ -46,7 +46,7 @@ const Job = () => {
     const handleSelectedData = () => {
       
         console.log(selectData)
-        router.push({ pathname: "/gig_Form", query: { subcategory: selectData,category:category } })
+        router.push({ pathname: "/account_fianance", query: { subcategory: selectData,category:category } })
 
     }
 
