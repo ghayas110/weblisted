@@ -111,11 +111,116 @@ export default function account_fianance() {
         }
     }
 
+    function JobOff() {
+        return (
+            <section id={styles.account_section} >
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <div className="col-lg-10" id={styles.col_account}>
+                            <div className="form-bg" id={styles.form_bg}>
+                                <div className="row">
+                                    <div className="col-md-offset-3 col-md-12" id={styles.col_12}>
+                                        <form>
+                                            <div className="form-group" id={styles.form_group}>
+                                                <label className=" control-label" >
+                                                    <span className="option-label">
+                                                        <span >
+                                                            <span>Employee Type</span>
+                                                        </span></span>
 
+                                                </label> <br />
+                                                <select name="" id={styles.control_label} onChange={handleCapacity}>
+                                                    <option value="full-time">full-time</option>
+                                                    <option value="Part-time">Part-time</option>
+                                                    <option value="contract">contract</option>
+                                                    <option value="employee's choice">employee's choice</option>
+                                                </select>
+                                            </div>
+                                            <div className="form-group inside" id={styles.inside}>
+                                                <div className="checkbox" id={styles.checkbox}>
+                                                    <label>
+                                                        <input type="checkbox" value="contactbyrecruiters" onClick={(e) => setContactbyrecruiters(e.target.value)} /> direct contact by recruiters is ok
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" value="internship" onClick={(e) => setInternship(e.target.value)} /> internship
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" value="nonprofit" onClick={(e) => setNonprofit(e.target.value)} /> non-profit organization
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" value="elecommuting" onClick={(e) => setElecommuting(e.target.value)} /> elecommuting ok
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
 
-    return (
-        <div className={styles.body}>
-            <Header />
+    function Job() {
+        return (
+
+            <section id={styles.job_title}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <div className="col-lg-10">
+                            <div className="row">
+                                <div className='form-group'>
+                                    <label htmlFor="" id={styles.job_title_label}>
+                                        <span className="option-label">
+                                            <span >
+                                                <span>Job Title</span>
+                                            </span></span>
+                                    </label>
+                                    <div className='form-control' id={styles.job_title_search}>
+                                        <input type="text" id={styles.input} className='form-control' value={jobtitle} placeholder="job tittle" onChange={(e) => setJobtitle(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="" id={styles.job_title_label}>
+                                        <span className="option-label" >
+                                            <span >
+                                                <span >compensation </span>
+                                            </span></span>
+                                    </label>
+                                    <div className='form-control' id={styles.job_title_search}>
+                                        <input type="text" id={styles.input} className='form-control' value={compensation} placeholder="compensation" onChange={(e) => setCompensation(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className='form-group'>
+                                    <label htmlFor="" id={styles.job_title_label}>
+                                        <span className="option-label" >
+                                            <span >
+                                                <span >Company</span>
+                                            </span></span>
+                                    </label>
+                                    <div className='form-control' id={styles.job_title_search}>
+                                        <input type="text" id={styles.input} className='form-control' value={company} placeholder="Company" onChange={(e) => setCompany(e.target.value)} />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        )
+
+    }
+
+    function MainForm() {
+        return (
+
             <section id={styles.account_section}>
 
                 <div className="container">
@@ -179,56 +284,11 @@ export default function account_fianance() {
                 </div>
             </section>
 
-            <section id={styles.account_section} >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-1"></div>
-                        <div className="col-lg-10" id={styles.col_account}>
-                            <div className="form-bg" id={styles.form_bg}>
-                                <div className="row">
-                                    <div className="col-md-offset-3 col-md-12" id={styles.col_12}>
-                                        <form>
-                                            <div className="form-group" id={styles.form_group}>
-                                                <label className=" control-label" >
-                                                    <span className="option-label">
-                                                        <span >
-                                                            <span>Employee Type</span>
-                                                        </span></span>
+        )
+    }
 
-                                                </label> <br />
-                                                <select name="" id={styles.control_label} onChange={handleCapacity}>
-                                                    <option value="full-time">full-time</option>
-                                                    <option value="Part-time">Part-time</option>
-                                                    <option value="contract">contract</option>
-                                                    <option value="employee's choice">employee's choice</option>
-                                                </select>
-                                            </div>
-                                            <div className="form-group inside" id={styles.inside}>
-                                                <div className="checkbox" id={styles.checkbox}>
-                                                    <label>
-                                                        <input type="checkbox" value="contactbyrecruiters" onClick={(e) => setContactbyrecruiters(e.target.value)} /> direct contact by recruiters is ok
-                                                    </label>
-                                                    <label>
-                                                        <input type="checkbox" value="internship" onClick={(e) => setInternship(e.target.value)} /> internship
-                                                    </label>
-                                                    <label>
-                                                        <input type="checkbox" value="nonprofit" onClick={(e) => setNonprofit(e.target.value)} /> non-profit organization
-                                                    </label>
-                                                    <label>
-                                                        <input type="checkbox" value="elecommuting" onClick={(e) => setElecommuting(e.target.value)} /> elecommuting ok
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/*----------------------section gigoffered hire service computer------------>*/}
-
+    function GigOffCS() {
+        return (
             <section id={styles.account_section} >
                 <div className="container">
                     <div className="row">
@@ -266,11 +326,12 @@ export default function account_fianance() {
                     </div>
                 </div>
             </section>
+        )
 
-            {/*----------------end-----------*/}
+    }
 
-            {/*----------------------section housing offer room & share------------>*/}
-
+    function HousingOffRS() {
+        return (
 
             <section>
                 <div className="container" id={styles.property_form_fields}>
@@ -384,10 +445,11 @@ export default function account_fianance() {
                     </div>
                 </div>
             </section>
+        )
+    }
 
-            {/*----------------end-----------*/}
-
-            {/*----------------------section housing offer appartment / house------------>*/}
+    function HousingOffAH() {
+        return (
             <section>
                 <div className="container" id={styles.property_form_fields}>
                     <div className="row">
@@ -500,127 +562,136 @@ export default function account_fianance() {
                             <span >
                                 <input type="text" id={styles.pro_inp_2} />
                             </span>
-                           
+
                             <div className={styles.form_pro_sec}>
                                 <label htmlFor="" className={styles.form_pro_sec1}>
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select> 
-                                 <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select> 
-                                 <select name="" id="">
-                                    <option value="">-  </option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">-  </option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            {/*----------------end-----------*/}
-            
-            {/*----------------------section housing offer office and commercial------------>*/}
+        )
+    }
+
+    function HousingOffOC() {
+        return (
             <section id={styles.account_section} >
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-1"></div>
-                    <div className="col-lg-10" id={styles.col_account}>
-                        <div className="form-bg" id={styles.form_bg}>
-                            <div className="row">
-                                <div className="col-md-offset-3 col-md-12" id={styles.col_12}>
-                                    <form>
-                                        <div className="form-group" id={styles.form_group_sec2}>
-                                            <label className=" control-label" >
-                                                <span className="option-label">
-                                                <span>rent</span>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-1"></div>
+                        <div className="col-lg-10" id={styles.col_account}>
+                            <div className="form-bg" id={styles.form_bg}>
+                                <div className="row">
+                                    <div className="col-md-offset-3 col-md-12" id={styles.col_12}>
+                                        <form>
+                                            <div className="form-group" id={styles.form_group_sec2}>
+                                                <label className=" control-label" >
+                                                    <span className="option-label">
+                                                        <span>rent</span>
 
                                                     </span>
 
-                                            </label> <br />
-                                            <select name="" id={styles.control_label} onChange={handleCapacity}>
-                                                <option value="full-time">-</option>
-                                                <option value="Part-time"></option>
-                                                <option value="contract">contract</option>
-                                                <option value="employee's choice">employee's choice</option>
-                                            </select>
-                                            <span>per</span>
-                                            <select name="" id={styles.control_label} onChange={handleCapacity}>
-                                            <option value="full-time">-</option>
-                                            <option value="Part-time"></option>
-                                            <option value="contract">contract</option>
-                                            <option value="employee's choice">employee's choice</option>
-                                        </select>
+                                                </label> <br />
+                                                <select name="" id={styles.control_label} onChange={handleCapacity}>
+                                                    <option value="full-time">-</option>
+                                                    <option value="Part-time"></option>
+                                                    <option value="contract">contract</option>
+                                                    <option value="employee's choice">employee's choice</option>
+                                                </select>
+                                                <span>per</span>
+                                                <select name="" id={styles.control_label} onChange={handleCapacity}>
+                                                    <option value="full-time">-</option>
+                                                    <option value="Part-time"></option>
+                                                    <option value="contract">contract</option>
+                                                    <option value="employee's choice">employee's choice</option>
+                                                </select>
 
-                                        
-                                        <span className={styles.form_ooo}>
-                                        <span>sqft</span>
-                                        <input type="number" name='number'/>
-                                        </span>
-                                        </div>
-                                        <div className="form-group inside" id={styles.inside}>
-                                            <div className="checkbox" id={styles.checkbox}>
-                                                <label>
-                                                    <input type="checkbox" value="contactbyrecruiters" onClick={(e) => setContactbyrecruiters(e.target.value)} /> air conditioning  
-                                                </label>
-                                        
+
+                                                <span className={styles.form_ooo}>
+                                                    <span>sqft</span>
+                                                    <input type="number" name='number' />
+                                                </span>
                                             </div>
-                                        </div>
-                                    </form>
+                                            <div className="form-group inside" id={styles.inside}>
+                                                <div className="checkbox" id={styles.checkbox}>
+                                                    <label>
+                                                        <input type="checkbox" value="contactbyrecruiters" onClick={(e) => setContactbyrecruiters(e.target.value)} /> air conditioning
+                                                    </label>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        )
+    }
 
-            {/*----------------end-----------*/}
-            {/*----------------------section housing want  wanted apts------------>*/}
+    function HousingWanWAp() {
+        return (
             <section>
-            <div className="container" id={styles.house_wan_pos} >
-                <div className="row" id={styles.house_wan_pos2}>
-                    <div className="col-lg-12" id={styles.house_wan_pos3}>
-                                <input type="checkbox" name="" id="" /> &nbsp; cats ok <br />
-                                <input type="checkbox" name="" id="" /> &nbsp;dogs ok <br />                       
-                                <input type="checkbox" name="" id="" /> &nbsp;air conditioning <br />                       
+                <div className="container" id={styles.house_wan_pos} >
+                    <div className="row" id={styles.house_wan_pos2}>
+                        <div className="col-lg-12" id={styles.house_wan_pos3}>
+                            <input type="checkbox" name="" id="" /> &nbsp; cats ok <br />
+                            <input type="checkbox" name="" id="" /> &nbsp;dogs ok <br />
+                            <input type="checkbox" name="" id="" /> &nbsp;air conditioning <br />
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>  
-            {/*----------------end-----------*/}
-            {/*----------------------section housing want  wanted real estate------------>*/}
-            <section>
-            <div className="container" id={styles.house_wan_pos} >
-                <div className="row" id={styles.house_wan_pos2}>
-                    <div className="col-lg-12" id={styles.house_wan_pos3}>
-                                <input type="checkbox" name="" id="" /> &nbsp; air conditioning<br />
-                                              
+            </section>
+        )
+    }
 
+    function HousingWanRE() {
+        return (
+            <section>
+                <div className="container" id={styles.house_wan_pos} >
+                    <div className="row" id={styles.house_wan_pos2}>
+                        <div className="col-lg-12" id={styles.house_wan_pos3}>
+                            <input type="checkbox" name="" id="" /> &nbsp; air conditioning<br />
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>  
-            {/*----------------end-----------*/}
+            </section>
+        )
 
+    }
 
-            {/*----------------------section resume I'm an individual seeking employment------------>*/}
+    function ResumeSE() {
+        return (
             <section>
                 <div className="container" id={styles.container_res} >
                     <div className="row" id={styles.resume_1}>
@@ -667,57 +738,12 @@ export default function account_fianance() {
                     </div>
                 </div>
             </section>
-            {/*----------------end-----------*/}
 
-            <section id={styles.job_title}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-1"></div>
-                        <div className="col-lg-10">
-                            <div className="row">
-                                <div className='form-group'>
-                                    <label htmlFor="" id={styles.job_title_label}>
-                                        <span className="option-label">
-                                            <span >
-                                                <span>Job Title</span>
-                                            </span></span>
-                                    </label>
-                                    <div className='form-control' id={styles.job_title_search}>
-                                        <input type="text" id={styles.input} className='form-control' value={jobtitle} placeholder="job tittle" onChange={(e) => setJobtitle(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor="" id={styles.job_title_label}>
-                                        <span className="option-label" >
-                                            <span >
-                                                <span >compensation </span>
-                                            </span></span>
-                                    </label>
-                                    <div className='form-control' id={styles.job_title_search}>
-                                        <input type="text" id={styles.input} className='form-control' value={compensation} placeholder="compensation" onChange={(e) => setCompensation(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor="" id={styles.job_title_label}>
-                                        <span className="option-label" >
-                                            <span >
-                                                <span >Company</span>
-                                            </span></span>
-                                    </label>
-                                    <div className='form-control' id={styles.job_title_search}>
-                                        <input type="text" id={styles.input} className='form-control' value={company} placeholder="Company" onChange={(e) => setCompany(e.target.value)} />
-                                    </div>
+        )
+    }
 
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            {/*subcategory === I'm an individual seeking employmen section*/}
-
+    function MainFooter() {
+        return (
             <section id={styles.secForm}>
                 <div className="container">
                     <div className="row">
@@ -817,6 +843,351 @@ export default function account_fianance() {
                 </div>
 
             </section>
+        )
+    }
+
+    function ForSaleAO() {
+        return (
+            <section>
+                <div className="container">
+                    <div className="row" id={styles.Forsale_form_row}>
+                        <div action="" id={styles.Forsale_form}>
+                            <div className="row">
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>make / manufacturer</span> <br />
+                                    <input type="text" /><br />
+                                    <span>model name / number</span> <br />
+                                    <input type="text" /><br />
+                                    <span>size / dimensions</span> <br />
+                                    <input type="text" placeholder='length x width x height' />
+                                </div>
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>condition</span><br />
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                    </select> <br />
+                                    <span>language of posting</span><br />
+
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp;  delivery available <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
+                                    </span>
+                                    <label htmlFor=""></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    function ForSaleAUSM() {
+        return (
+            <section>
+                <div className="container">
+                    <div className="row" id={styles.Forsale_form_row}>
+                        <div action="" id={styles.Forsale_form}>
+                            <div className="row">
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>make / manufacturer</span> <br />
+                                    <input type="text" /><br />
+                                    <span>model name / number</span> <br />
+                                    <input type="text" /><br />
+                                    <span>size / dimensions</span> <br />
+                                    <input type="text" placeholder='length x width x height' /><br />
+                                    <span>size / dimensions</span> <br />
+                                    <input type="text" placeholder='length x width x height' /><br />
+                                    <span>size / dimensions</span> <br />
+                                    <input type="text" placeholder='(e.g 42,000)' /><br />
+                                    <input type="checkbox" name="" id="" /> &nbsp; odometer broken <br />
+                                    <input type="checkbox" name="" id="" /> &nbsp; odometer rolled over
+                                </div>
+
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>condition</span><br />
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                    </select> <br />
+                                    <span>language of posting</span><br />
+
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp;  delivery available <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
+                                    </span>
+                                    <label htmlFor=""></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        )
+
+    }
+
+    function ForSaleAWT(){
+        return(
+
+            <section>
+            <div className="container">
+                <div className="row" id={styles.ForsaleAuto_wheel_row}>
+                    <div className={styles.ForsaleAuto_wheel}>
+                        <div className="row">
+                            <div className="col-md-6" id={styles.ForsaleAuto_wheel_col}>
+                                <span>language of posting</span><br />
+                                <select name="" id="">
+                                    <option value="">english</option>
+                                    <option value="">afrikaans</option>
+                                    <option value="">catala</option>
+                                    <option value="">dansk</option>
+                                    <option value="">-italio</option>
+                                    <option value="">norsk</option>
+                                </select>
+                            </div>
+                            <div className="col-md-6">
+                            <input type="checkbox" name="" id="" />&nbsp;cryptocurrency ok <br />
+                            <input type="checkbox" name="" id="" />&nbsp;delivery available <br />
+                            <input type="checkbox" />&nbsp;include "more ads by this user" link <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        )
+
+    }
+
+    function ForSaleBi(){
+        return(
+            <section>
+            <div className="container">
+                <div className="row" id={styles.Forsale_form_row}>
+                    <div action="" id={styles.Forsale_form}>
+                        <div className="row">
+                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                <span>frame size</span> <br />
+                                <input type="text" /><br />
+                                <span>make / manufacturer</span> <br />
+                                <input type="text" /><br />
+                                <span>model name / number</span> <br />
+                                <input type="text"  /><br />
+                                <span>serial number</span> <br />
+                                <input type="text"  />
+                            </div>
+                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                <span>bicycle type</span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br /> 
+                                <span>bicycle frame material </span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                     
+                                <span>wheel size</span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                     
+                                <span>suspension</span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                     
+                                <span>brake type</span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                     
+                                <span>handlebar type</span><br /> 
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                      
+                                <span>electric assist</span><br /> 
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                    
+                                <span>condition</span><br /> 
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select> <br />                                                     
+                                <span>language of posting</span><br />
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                    <option value="">-</option>
+                                </select>
+
+                            </div>
+                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                <span>
+                                    <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
+                                </span>
+                                <span>
+                                    <input type="checkbox" /> &nbsp;  delivery available <br />
+                                </span>
+                                <span>
+                                    <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
+                                </span>
+                                <label htmlFor=""></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        )
+    }
+
+    return (
+
+        <div className={styles.body}>
+            <Header />
+            <MainForm />
+            {/*----------------------section Joboffered ------------>*/}
+            {/*<JobOff />*/}
+            {/*----------------end-----------*/}
+
+            {/*----------------------section gigoffered hire service computer------------>*/}
+
+            {/*<GigOffCS />*/}
+
+            {/*----------------end-----------*/}
+
+            {/*----------------------section housing offer room & share------------>*/}
+
+            {/*<HousingOffRS />*/}
+
+            {/*----------------end-----------*/}
+
+            {/*----------------------section housing offer appartment / house------------>*/}
+            {/*<HousingOffAH />*/}
+            {/*----------------end-----------*/}
+
+            {/*----------------------section housing offer office and commercial------------>*/}
+            {/*<HousingOffOC />*/}
+
+            {/*----------------end-----------*/}
+            {/*----------------------section housing want  wanted apts------------>*/}
+            {/*<HousingWanWAp />*/}
+            {/*----------------end-----------*/}
+            {/*----------------------section housing want  wanted real estate------------>*/}
+            {/*<HousingWanRE />*/}
+            {/*----------------end-----------*/}
+
+
+            {/*----------------------section resume I'm an individual seeking employment------------>*/}
+            {/*<ResumeSE />*/}
+            {/*----------------end-----------*/}
+            {/*----------------------section JOB------------>*/}
+            {/*<Job />*/}
+            {/*----------------end-----------*/}
+            {/*----------------------section For Sale antique ------------>*/}
+            {/*<ForSaleAO />*/}
+            {/*----------------end-----------*/}
+            {/*----------------------sectionfor sale atvs, utvs, snowmobiles - by owner ------------>*/}
+            {/*<ForSaleAUSM />*/}
+
+            {/*----------------end-----------*/}
+            {/*----------------------section for sale  auto wheels & tires - by owner------------>*/}
+                 {/*<ForSaleAWT />*/}
+
+            {/*----------------end-----------*/}
+            {/*----------------------section for sale  bicycle------------>*/}
+                 {/*<ForSaleBi />*/}
+            {/*----------------end-----------*/}
+
+
+
+
+            {/*subcategory === I'm an individual seeking employmen section*/}
+
+
+            <MainFooter />
+
 
             <section className={styles.formbuttonsection}>
                 <button onClick={handleSubmit} >Form   Submit</button>

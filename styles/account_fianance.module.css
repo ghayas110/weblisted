@@ -456,3 +456,69 @@ form #form_group_sec2{
     left: 8px;
     background: #f7f7f7;
 }
+
+#Forsale_form{
+    background: #f7f7f7;
+    width: 81.5%;
+}
+#Forsale_form_row{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#Forsale_form::before{
+    position: relative;
+    content: "posting";
+    top: -14px;
+    background: transparent;
+    background: #f7f7f7;
+
+    
+
+}
+
+#Forsale_col{
+    padding: 18px;
+   
+}
+
+#Forsale_col select{
+    width:190px;
+    border: none;
+}
+
+#Forsale_col input{
+    border: none;
+}
+
+#ForsaleAuto_wheel_row{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ForsaleAuto_wheel{
+    margin-top: 15px;
+    background: #f7f7f7;
+
+ width: 81.5%;
+ border: 1px solid black;
+
+}
+
+#ForsaleAuto_wheel_col select{
+    width: 151px;
+}
+#ForsaleAuto_wheel_col{
+    padding: 40px;
+}
+.ForsaleAuto_wheel::before{
+    content: "posting details";
+    position: relative;
+    top:-14px ;
+    background: #f7f7f7;
+
+}
