@@ -12,7 +12,7 @@ import { Government } from 'styled-icons/remix-line';
 
 
 
-const Job = () => {
+const resume = () => {
     
     const router = useRouter()
     const { category } = router.query
@@ -24,7 +24,7 @@ const Job = () => {
     const [dataFetch, setDataFetch] = useState(data)
     
 
-    console.log(category)
+    console.log("category",category)
 
     const getData = async () => {
         const querySnapshot = await getDocs(collection(db, "resume"));
@@ -46,16 +46,16 @@ const Job = () => {
     const handleSelectedData = () => {
       
         if(selectData === "I'm an individual seeking employment"){
-            router.push({pathname: "/resume_form", query: { category: selectData }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         
         }else if(selectData === "I'm offering or advertising a service"){
-            router.push({pathname: "/gigSubCategory", query: { category: selectData }})
+            router.push({pathname: "/gigSubCategory", query: { subcategory: selectData,category:category  }})
         
         }else if(selectData === "I'm offering a job"){
-            router.push({pathname: "/Job", query: { category: selectData }})
+            router.push({pathname: "/Job", query: { subcategory: selectData,category:category  }})
         
         }else if(selectData === "I'm offering childcare"){
-            router.push({pathname: "/Childcar", query: { category: selectData }})
+            router.push({pathname: "/Childcar", query: { subcategory: selectData,category:category  }})
         
         }
         else{
@@ -124,4 +124,4 @@ const Job = () => {
 
 
 
-export default Job;
+export default resume;

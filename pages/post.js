@@ -18,15 +18,25 @@ function post() {
     const { openCat } = router.query;
     const [on, setOn] = useState(true);
     const [job, setJob] = useState([]);
-    const [selectData, setSelectData] = useState()
+    const [selectData, setSelectData] = useState();
+    const [cityName,setCityName] = useState();
     console.log("categor", openCat);
 
-    const getPost =  () => {
+    const city =()=>{
+
+        fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
+        .then(response =>response.json())
+        .then((data) => setCityName(data.city))
+        .catch((error) => console.error(error))
+        
+    }
+    
+    const getPost = () => {
 
 
-       onSnapshot(
+        onSnapshot(
 
-            query(collection(db, "Form"), where("subcategory", "==", openCat)), (snapshot) => {
+            query(collection(db, "Form"), where("subcategory", "==", openCat), where("city", "==", cityName)), (snapshot) => {
                 setJob(snapshot.docs)
 
             })
@@ -46,13 +56,23 @@ function post() {
     };
 
     useEffect(() => {
-        getPost();
-        
-    }, [])
+        city();
+        // getPost(); 
+
+    }, [0])
+    useEffect(() => {
+    
+        if(cityName){
+            getPost();
+        }
+
+    }, [cityName])
 
     const handleOn = () => {
         setOn(!on);
     };
+
+    console.log(cityName, "city")
     return (
         <>
             <div id={styles.body}>

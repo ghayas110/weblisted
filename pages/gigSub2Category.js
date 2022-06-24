@@ -12,7 +12,7 @@ import { Government } from 'styled-icons/remix-line';
 
 
 
-const Job = () => {
+const gigSub2Category = () => {
     
     const router = useRouter()
     const { category } = router.query
@@ -46,7 +46,7 @@ const Job = () => {
     const handleSelectedData = () => {
       
         console.log(selectData)
-        router.push({ pathname: "/account_fianance", query: { subcategory: selectData,category:category } })
+        router.push({ pathname: "/Account_fianance", query: { subcategory: selectData,category:category } })
 
     }
 
@@ -109,4 +109,4 @@ const Job = () => {
 
 
 
-export default Job;
+export default gigSub2Category;

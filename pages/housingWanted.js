@@ -12,7 +12,7 @@ import { Government } from 'styled-icons/remix-line';
 
 
 
-const Job = () => {
+const housingWanted = () => {
     
     const router = useRouter()
     const { category } = router.query
@@ -46,10 +46,16 @@ const Job = () => {
     const handleSelectedData = () => {
       
         if(selectData === "wanted: apts"){
-            router.push({pathname: "/housingWanted_form", query: { category: selectData }})
-        
-        }else{
-            router.push({pathname: "/housingWanted_form", query: { category: selectData }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        }
+        if(selectData === "wanted: real estate"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        }
+        if(selectData === "wanted: room/share"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        }
+        if(selectData === "wanted: sublet/temp"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
            
 
@@ -114,4 +120,4 @@ const Job = () => {
 
 
 
-export default Job;
+export default housingWanted;

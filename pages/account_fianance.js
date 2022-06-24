@@ -13,17 +13,37 @@ import { setUserId } from 'firebase/analytics';
 
 
 
-export default function account_fianance() {
+const Account_fianance = () => {
 
+
+
+    const [frameSize, setFrameSize] = useState("");
+    const [serialNumber, setSerialNumber] = useState("");
+    const [rolledOver, setRolledOver] = useState("");
+    const [broken, setBroken] = useState("");
+    const [cryptocurrency, setCryptocurrency] = useState('');
+    const [deliveryAvailable, setDeliveryAvailable] = useState('');
+    const [includeMoreAds, setIncludeMoreAds] = useState('');
+    const [modelName, setModelName] = useState('');
+    const [dimensions, setDimensions] = useState('');
+    const [manufacturer, setManufacturer] = useState('');
+    const [Available, setAvailable] = useState('');
+    const [evcharging, setEvCharging] = useState("");
+    const [airconditioning, setAirConditioning] = useState('');
+    const [wheelchairaccessible, setWheelChairaccessible] = useState("");
+    const [furnished, setFurnished] = useState("");
+    const [nosmoking, setNoSmoking] = useState("");
+    const [dogsok, setDogsOk] = useState("");
+    const [catsok, setCatsOk] = useState("");
     const [individual, setIndividual] = useState(true);
-    const [Weekends, setWeekends] = useState('');
-    const [Weekdays, setWeekdays] = useState('');
-    const [Overnight, setOvernight] = useState('');
-    const [Evening, setEvening] = useState('');
-    const [Afternoon, setAfternoon] = useState('');
-    const [morning, setMorning] = useState('');
-    const [NoPay, setNoPay] = useState('');
-    const [pay, setPay] = useState('');
+    const [Weekends, setWeekends] = useState("");
+    const [Weekdays, setWeekdays] = useState("");
+    const [Overnight, setOvernight] = useState("");
+    const [Evening, setEvening] = useState("");
+    const [Afternoon, setAfternoon] = useState("");
+    const [morning, setMorning] = useState("");
+    const [NoPay, setNoPay] = useState("");
+    const [pay, setPay] = useState("");
     const [section, setSection] = useState(false);
     const [elecommuting, setElecommuting] = useState("");
     const [nonprofit, setNonprofit] = useState("");
@@ -50,8 +70,9 @@ export default function account_fianance() {
     const router = useRouter()
     const { category } = router.query;
     const { subcategory } = router.query;
-    console.log("Category",category)
-    console.log("Sub",subcategory)
+    console.log("Category", category)
+    console.log("Sub", subcategory)
+    console.log("Sub", posttitle)
     const handleCapacity = (e) => {
 
         setSelect(e.target.value);
@@ -72,6 +93,25 @@ export default function account_fianance() {
         e.preventDefault()
         try {
             const docRef = await addDoc(collection(db, 'Form'), {
+
+                serialNumber: serialNumber,
+                frameSize: frameSize,
+                rolledOver: rolledOver,
+                broken: broken,
+                includeMoreAds: includeMoreAds,
+                deliveryAvailable: deliveryAvailable,
+                cryptocurrency: cryptocurrency,
+                dimensions: dimensions,
+                modelName: modelName,
+                manufacturer: manufacturer,
+                Available: Available,
+                evcharging: evcharging,
+                airconditioning: airconditioning,
+                wheelchairaccessible: wheelchairaccessible,
+                nosmoking: nosmoking,
+                furnished: furnished,
+                dogsok: dogsok,
+                catsok: catsok,
                 Weekends: Weekends,
                 Weekdays: Weekdays,
                 Overnight: Overnight,
@@ -111,7 +151,7 @@ export default function account_fianance() {
         }
     }
 
-    function JobOff() {
+    const JobOff = () => {
         return (
             <section id={styles.account_section} >
                 <div className="container">
@@ -164,7 +204,7 @@ export default function account_fianance() {
         )
     }
 
-    function Job() {
+    const Job = () => {
         return (
 
             <section id={styles.job_title}>
@@ -218,7 +258,7 @@ export default function account_fianance() {
 
     }
 
-    function MainForm() {
+    const MainForm = () => {
         return (
 
             <section id={styles.account_section}>
@@ -233,7 +273,7 @@ export default function account_fianance() {
                                         <span>posting</span>
                                     </span>
 
-                                    <input value={posttitle} type="text" placeholder="post title" onChange={(e) => setPosttitle(e.target.value)} />
+                                    <input type="text" value={posttitle} placeholder="post title" onChange={(e) => setPosttitle(e.target.value)} />
                                 </div>
 
                                 <div className="col-lg-5" id={styles.input1}>
@@ -287,7 +327,7 @@ export default function account_fianance() {
         )
     }
 
-    function GigOffCS() {
+    const GigOffCS = () => {
         return (
             <section id={styles.account_section} >
                 <div className="container">
@@ -330,7 +370,7 @@ export default function account_fianance() {
 
     }
 
-    function HousingOffRS() {
+    const HousingOffRS = () => {
         return (
 
             <section>
@@ -339,105 +379,103 @@ export default function account_fianance() {
                         <div className="container" id={styles.property_form_fields1}>
                             <div className="row">
                                 <div className="col-md-3 col-sm-3 col-lg-3 " id={styles.fields_search}>
-                                    price
+                                    per
                                     <input type="number" />
-                                    <select name="housing type" id={styles.list_pro}>
-                                        <option value="">housing type </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id={styles.list_pro} onChange={handleCapacity}>
+                                        <option value="-">- </option>
+                                        <option value="day">day</option>
+                                        <option value="week">week</option>
+                                        <option value="duplex">month</option>
+
                                     </select>
                                     sqft
                                     <input type="number" />
                                 </div>
                                 <div className="col-md-3 col-sm-3 col-lg-3" id={styles.fields_select}>
                                     <span>private room</span>
-                                    <select name="housing type" id="">
-                                        <option value=""> </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="">-</option>
+                                        <option value="">Room Not Private</option>
+                                        <option value="">Room private</option>
                                     </select>
                                     <span>housing type</span>
-                                    <select name="housing type" id="">
-                                        <option value="">housing type </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="land">land</option>
+                                        <option value="condo">condo</option>
+                                        <option value="appartment">appartment</option>
+                                        <option value="flat">flat</option>
+                                        <option value="duplex">duplex</option>
                                     </select>
                                     <span>laundry</span>
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="w/d im unit">w/d im unit</option>
+                                        <option value="w/d hookups">w/d hookups</option>
+                                        <option value="laundry in bldg">laundry in bldg</option>
+                                        <option value="laundry in site">laundry in site</option>
+                                        <option value="laundry in site">laundry in site</option>
                                     </select>
                                     <span>parking</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="carport">carport</option>
+                                        <option value="attacted garage">attacted garage</option>
+                                        <option value="detached garage">detached garage</option>
+                                        <option value="off-street parking">off-street parking</option>
+                                        <option value="valet parking">valet parking</option>
                                     </select>
                                     <span>bedrooms</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
-                                    <span>bathroos</span>
+                                    <span>bathrooms</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity} >
+                                        <option value="-">-</option>
+                                        <option value="shared">shared</option>
+                                        <option value="split">split</option>
+                                        <option value="1.5">1.5</option>
+                                        <option value="2.5">2.5</option>
+                                        <option value="4.5">4.5</option>
                                     </select>
                                 </div>
                                 <div className="col-md-3 col-sm-3 col-lg-3" id={styles.fields_checkbox}>
                                     <span>
-                                        <input type="checkbox" name="" id="" />cats ok
+                                        <input type="checkbox" name="" id="" value="cats ok" onClick={(e) => setCatsOk(e.target.value)} />&nbsp; cats ok
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />dogs ok
+                                        <input type="checkbox" name="" id="" value="dogs ok" onClick={(e) => setDogsOk(e.target.value)} />&nbsp; dogs ok
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />furnished
+                                        <input type="checkbox" name="" id="" value="furnished" onClick={(e) => setFurnished(e.target.value)} />&nbsp; furnished
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />no smoking
+                                        <input type="checkbox" name="" id="" value="no smoking" onClick={(e) => setNoSmoking(e.target.value)} />&nbsp; no smoking
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />wheelchair accessible
+                                        <input type="checkbox" name="" id="" value="wheelchair accessible" onClick={(e) => setWheelChairaccessible(e.target.value)} />&nbsp; wheelchair accessible
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />air conditioning
+                                        <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} />&nbsp; air conditioning
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />EV charging
+                                        <input type="checkbox" name="" id="" value="EV charging" onClick={(e) => setEvCharging(e.target.value)} />&nbsp; EV charging
                                     </span>
 
                                 </div>
                                 <div className="col-md-3 col-sm-3 col-lg-3" >
+
                                     <span >
-                                        <input type="text" id={styles.pro_inp_2} />
+                                        Available <br />
+                                        <input type="text" id={styles.pro_inp_2} value={Available} onChange={(e) => setAvailable(e.target.value)} />
                                     </span>
                                 </div>
                             </div>
@@ -448,7 +486,7 @@ export default function account_fianance() {
         )
     }
 
-    function HousingOffAH() {
+    const HousingOffAH = () => {
         return (
             <section>
                 <div className="container" id={styles.property_form_fields}>
@@ -458,99 +496,94 @@ export default function account_fianance() {
                                 <div className="col-md-4 col-sm-4 col-lg-4  " id={styles.fields_search}>
                                     price
                                     <input type="number" />
-                                    <select name="housing type" id={styles.list_pro}>
-                                        <option value="">housing type </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+
+                                    <select name="housing type" id={styles.list_pro} onChange={handleCapacity}>
+                                        <option value="-">- </option>
+                                        <option value="day">day</option>
+                                        <option value="week">week</option>
+                                        <option value="duplex">month</option>
                                     </select>
                                     sqft
                                     <input type="number" />
                                 </div>
                                 <div className="col-md-4 col-sm-4 col-lg-4" id={styles.fields_select}>
                                     <span>private room</span>
-                                    <select name="housing type" id="">
-                                        <option value=""> </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="">-</option>
+                                        <option value="">Room Not Private</option>
+                                        <option value="">Room private</option>
                                     </select>
                                     <span>housing type</span>
-                                    <select name="housing type" id="">
-                                        <option value="">housing type </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="land">land</option>
+                                        <option value="condo">condo</option>
+                                        <option value="appartment">appartment</option>
+                                        <option value="flat">flat</option>
+                                        <option value="duplex">duplex</option>
                                     </select>
                                     <span>laundry</span>
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="w/d im unit">w/d im unit</option>
+                                        <option value="w/d hookups">w/d hookups</option>
+                                        <option value="laundry in bldg">laundry in bldg</option>
+                                        <option value="laundry in site">laundry in site</option>
+                                        <option value="laundry in site">laundry in site</option>
                                     </select>
                                     <span>parking</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="carport">carport</option>
+                                        <option value="attacted garage">attacted garage</option>
+                                        <option value="detached garage">detached garage</option>
+                                        <option value="off-street parking">off-street parking</option>
+                                        <option value="valet parking">valet parking</option>
                                     </select>
                                     <span>bedrooms</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
-                                    <span>bathroos</span>
+                                    <span>bathrooms</span>
 
-                                    <select name="" id="">
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="shared">shared</option>
+                                        <option value="split">split</option>
+                                        <option value="1.5">1.5</option>
+                                        <option value="2.5">2.5</option>
+                                        <option value="4.5">4.5</option>
                                     </select>
                                 </div>
                                 <div className="col-md-4 col-sm-4 col-lg-4" id={styles.fields_checkbox}>
                                     <span>
-                                        <input type="checkbox" name="" id="" />cats ok
+                                        <input type="checkbox" name="" id="" value="cats ok" onClick={(e) => setCatsOk(e.target.value)} />&nbsp; cats ok
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />dogs ok
+                                        <input type="checkbox" name="" id="" value="dogs ok" onClick={(e) => setDogsOk(e.target.value)} />&nbsp; dogs ok
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />furnished
+                                        <input type="checkbox" name="" id="" value="furnished" onClick={(e) => setFurnished(e.target.value)} />&nbsp; furnished
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />no smoking
+                                        <input type="checkbox" name="" id="" value="no smoking" onClick={(e) => setNoSmoking(e.target.value)} />&nbsp; no smoking
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />wheelchair accessible
+                                        <input type="checkbox" name="" id="" value="wheelchair accessible" onClick={(e) => setWheelChairaccessible(e.target.value)} />&nbsp; wheelchair accessible
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />air conditioning
+                                        <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} />&nbsp; air conditioning
                                     </span>
                                     <span>
-                                        <input type="checkbox" name="" id="" />EV charging
+                                        <input type="checkbox" name="" id="" value="EV charging" onClick={(e) => setEvCharging(e.target.value)} />&nbsp; EV charging
                                     </span>
-
                                 </div>
 
                             </div>
@@ -560,34 +593,35 @@ export default function account_fianance() {
                         <span></span>
                         <div className="col-md-12 col-sm-12 col-lg-12" >
                             <span >
-                                <input type="text" id={styles.pro_inp_2} />
+                                Available <br />
+                                <input type="text" id={styles.pro_inp_2} value={Available} placeholder="select date" onChange={(e) => setAvailable(e.target.value)} />
                             </span>
 
                             <div className={styles.form_pro_sec}>
                                 <label htmlFor="" className={styles.form_pro_sec1}>
-                                    <select name="" id="">
+                                    <select name="" id="" onChange={handleCapacity}>
                                         <option value="">-</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                        <option value="Monday 2022-6-24">Monday 2022-6-24</option>
+                                        <option value="tuesday 2022-6-24">tuesday 2022-6-24</option>
+                                        <option value="wednesday 2022-6-24">wednesday 2022-6-24</option>
+                                        <option value="thursday 2022-6-24">thursday 2022-6-24</option>
+                                        <option value="friday 2022-6-24">friday 2022-6-24</option>
                                     </select>
-                                    <select name="" id="">
+                                    <select name="" id="" onChange={handleCapacity}>
                                         <option value="">-</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                        <option value="Monday 2022-6-24">Monday 2022-6-24</option>
+                                        <option value="tuesday 2022-6-24">tuesday 2022-6-24</option>
+                                        <option value="wednesday 2022-6-24">wednesday 2022-6-24</option>
+                                        <option value="thursday 2022-6-24">thursday 2022-6-24</option>
+                                        <option value="friday 2022-6-24">friday 2022-6-24</option>
                                     </select>
-                                    <select name="" id="">
-                                        <option value="">-  </option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="">-</option>
+                                        <option value="Monday 2022-6-24">Monday 2022-6-24</option>
+                                        <option value="tuesday 2022-6-24">tuesday 2022-6-24</option>
+                                        <option value="wednesday 2022-6-24">wednesday 2022-6-24</option>
+                                        <option value="thursday 2022-6-24">thursday 2022-6-24</option>
+                                        <option value="friday 2022-6-24">friday 2022-6-24</option>
                                     </select>
                                 </label>
                             </div>
@@ -598,7 +632,7 @@ export default function account_fianance() {
         )
     }
 
-    function HousingOffOC() {
+    const HousingOffOC = () => {
         return (
             <section id={styles.account_section} >
                 <div className="container">
@@ -634,7 +668,7 @@ export default function account_fianance() {
 
                                                 <span className={styles.form_ooo}>
                                                     <span>sqft</span>
-                                                    <input type="number" name='number' />
+                                                    <input type="number" name='number' onChange={(e) => setAvailable(e.target.value)} />
                                                 </span>
                                             </div>
                                             <div className="form-group inside" id={styles.inside}>
@@ -656,15 +690,15 @@ export default function account_fianance() {
         )
     }
 
-    function HousingWanWAp() {
+    const HousingWanWAp = () => {
         return (
             <section>
                 <div className="container" id={styles.house_wan_pos} >
                     <div className="row" id={styles.house_wan_pos2}>
                         <div className="col-lg-12" id={styles.house_wan_pos3}>
-                            <input type="checkbox" name="" id="" /> &nbsp; cats ok <br />
-                            <input type="checkbox" name="" id="" /> &nbsp;dogs ok <br />
-                            <input type="checkbox" name="" id="" /> &nbsp;air conditioning <br />
+                            <input type="checkbox" name="" id="" value="cats ok" onClick={(e) => setCatsOk(e.target.value)} /> &nbsp; cats ok <br />
+                            <input type="checkbox" name="" id="" value="dogs ok" onClick={(e) => setDogsOk(e.target.value)} /> &nbsp;dogs ok <br />
+                            <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} /> &nbsp;air conditioning <br />
 
                         </div>
                     </div>
@@ -673,13 +707,13 @@ export default function account_fianance() {
         )
     }
 
-    function HousingWanRE() {
+    const HousingWanRE = () => {
         return (
             <section>
                 <div className="container" id={styles.house_wan_pos} >
                     <div className="row" id={styles.house_wan_pos2}>
                         <div className="col-lg-12" id={styles.house_wan_pos3}>
-                            <input type="checkbox" name="" id="" /> &nbsp; air conditioning<br />
+                            <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} /> &nbsp; air conditioning<br />
 
 
                         </div>
@@ -690,7 +724,7 @@ export default function account_fianance() {
 
     }
 
-    function ResumeSE() {
+    const ResumeSE = () => {
         return (
             <section>
                 <div className="container" id={styles.container_res} >
@@ -742,7 +776,7 @@ export default function account_fianance() {
         )
     }
 
-    function MainFooter() {
+    const MainFooter = () => {
         return (
             <section id={styles.secForm}>
                 <div className="container">
@@ -846,7 +880,7 @@ export default function account_fianance() {
         )
     }
 
-    function ForSaleAO() {
+    const ForSaleAO = () => {
         return (
             <section>
                 <div className="container">
@@ -855,42 +889,42 @@ export default function account_fianance() {
                             <div className="row">
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>make / manufacturer</span> <br />
-                                    <input type="text" /><br />
+                                    <input type="text" value="make / manufacturer" onChange={(e) => setManufacturer(e.target.value)} /><br />
                                     <span>model name / number</span> <br />
-                                    <input type="text" /><br />
+                                    <input type="text" value="model name / number" onChange={(e) => setModelName(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='length x width x height' />
+                                    <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} />
                                 </div>
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>condition</span><br />
-                                    <select name="" id="">
+                                    <select name="" id="" onChange={handleCapacity}>
                                         <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
+                                        <option value="new">new</option>
+                                        <option value="liked new">liked new</option>
+                                        <option value="excellent">excellent</option>
+                                        <option value="good">good</option>
+                                        <option value="fair">fair</option>
                                     </select> <br />
                                     <span>language of posting</span><br />
 
-                                    <select name="" id="">
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="english">english</option>
+                                        <option value="espanol">espanol</option>
+                                        <option value="deutsch">deutsch</option>
+                                        <option value="italiano">italiano</option>
+                                        <option value="nederlands">nederlands</option>
                                     </select>
                                 </div>
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>
-                                        <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
+                                        <input type="checkbox" value="cryptocurrency ok" onClick={(e) => setCryptocurrency(e.target.value)} /> &nbsp; cryptocurrency ok <br />
                                     </span>
                                     <span>
-                                        <input type="checkbox" /> &nbsp;  delivery available <br />
+                                        <input type="checkbox" value="delivery available" onClick={(e) => setDeliveryAvailable(e.target.value)} /> &nbsp;  delivery available <br />
                                     </span>
                                     <span>
-                                        <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
+                                        <input type="checkbox" value="include more ads by this user link" onClick={(e) => setIncludeMoreAds(e.target.value)} /> &nbsp; include "more ads by this user" link <br />
                                     </span>
                                     <label htmlFor=""></label>
                                 </div>
@@ -902,7 +936,7 @@ export default function account_fianance() {
         )
     }
 
-    function ForSaleAUSM() {
+    const ForSaleAUSM = () => {
         return (
             <section>
                 <div className="container">
@@ -911,49 +945,48 @@ export default function account_fianance() {
                             <div className="row">
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>make / manufacturer</span> <br />
-                                    <input type="text" /><br />
+                                    <input type="text" value="make / manufacturer" onChange={(e) => setManufacturer(e.target.value)} /><br />
                                     <span>model name / number</span> <br />
-                                    <input type="text" /><br />
+                                    <input type="text" value="model name / number" onChange={(e) => setModelName(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='length x width x height' /><br />
+                                    <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='length x width x height' /><br />
+                                    <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='(e.g 42,000)' /><br />
-                                    <input type="checkbox" name="" id="" /> &nbsp; odometer broken <br />
-                                    <input type="checkbox" name="" id="" /> &nbsp; odometer rolled over
+                                    <input type="text" placeholder='(e.g 42,000)' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
+                                    <input type="checkbox" name="" id="" value="odometer broken" onClick={(e) => setBroken(e.target.value)} /> &nbsp; odometer broken <br />
+                                    <input type="checkbox" name="" id="" value="odometer rolled over" onClick={(e) => setRolledOver(e.target.value)} /> &nbsp; odometer rolled over
                                 </div>
 
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>condition</span><br />
-                                    <select name="" id="">
+                                    <select name="" id="" onChange={handleCapacity}>
                                         <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
+                                        <option value="new">new</option>
+                                        <option value="liked new">liked new</option>
+                                        <option value="excellent">excellent</option>
+                                        <option value="good">good</option>
+                                        <option value="fair">fair</option>
                                     </select> <br />
                                     <span>language of posting</span><br />
-
-                                    <select name="" id="">
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
-                                        <option value="">-</option>
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="english">english</option>
+                                        <option value="espanol">espanol</option>
+                                        <option value="deutsch">deutsch</option>
+                                        <option value="italiano">italiano</option>
+                                        <option value="nederlands">nederlands</option>
                                     </select>
                                 </div>
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>
-                                        <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
+                                        <input type="checkbox" value="cryptocurrency ok" onClick={(e) => setCryptocurrency(e.target.value)} /> &nbsp; cryptocurrency ok <br />
                                     </span>
                                     <span>
-                                        <input type="checkbox" /> &nbsp;  delivery available <br />
+                                        <input type="checkbox" value="delivery available" onClick={(e) => setDeliveryAvailable(e.target.value)} /> &nbsp;  delivery available <br />
                                     </span>
                                     <span>
-                                        <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
+                                        <input type="checkbox" value="include more ads by this user link" onClick={(e) => setIncludeMoreAds(e.target.value)} /> &nbsp; include "more ads by this user" link <br />
                                     </span>
                                     <label htmlFor=""></label>
                                 </div>
@@ -968,223 +1001,691 @@ export default function account_fianance() {
 
     }
 
-    function ForSaleAWT(){
-        return(
+    const ForSaleAWT = () => {
+        return (
 
             <section>
-            <div className="container">
-                <div className="row" id={styles.ForsaleAuto_wheel_row}>
-                    <div className={styles.ForsaleAuto_wheel}>
-                        <div className="row">
-                            <div className="col-md-6" id={styles.ForsaleAuto_wheel_col}>
-                                <span>language of posting</span><br />
-                                <select name="" id="">
-                                    <option value="">english</option>
-                                    <option value="">afrikaans</option>
-                                    <option value="">catala</option>
-                                    <option value="">dansk</option>
-                                    <option value="">-italio</option>
-                                    <option value="">norsk</option>
-                                </select>
-                            </div>
-                            <div className="col-md-6">
-                            <input type="checkbox" name="" id="" />&nbsp;cryptocurrency ok <br />
-                            <input type="checkbox" name="" id="" />&nbsp;delivery available <br />
-                            <input type="checkbox" />&nbsp;include "more ads by this user" link <br />
+                <div className="container">
+                    <div className="row" id={styles.ForsaleAuto_wheel_row}>
+                        <div className={styles.ForsaleAuto_wheel}>
+                            <div className="row">
+                                <div className="col-md-6" id={styles.ForsaleAuto_wheel_col}>
+                                    <span>language of posting</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="english">english</option>
+                                        <option value="afrikaans">afrikaans</option>
+                                        <option value="catala">catala</option>
+                                        <option value="dansk">dansk</option>
+                                        <option value="italiano">-italiano</option>
+                                        <option value="norsk">norsk</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6">
+                                    <input type="checkbox" name="" id="" value="cryptocurrency ok" onClick={(e) => setCryptocurrency(e.target.value)} />&nbsp;cryptocurrency ok <br />
+                                    <input type="checkbox" name="" id="" value="delivery available" onClick={(e) => setDeliveryAvailable(e.target.value)} />&nbsp;delivery available <br />
+                                    <input type="checkbox" value="include more ads by this user link" onClick={(e) => setIncludeMoreAds(e.target.value)} />&nbsp;include "more ads by this user" link <br />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         )
 
     }
 
-    function ForSaleBi(){
-        return(
+    const ForSaleBi = () => {
+        return (
             <section>
-            <div className="container">
-                <div className="row" id={styles.Forsale_form_row}>
-                    <div action="" id={styles.Forsale_form}>
-                        <div className="row">
-                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
-                                <span>frame size</span> <br />
-                                <input type="text" /><br />
-                                <span>make / manufacturer</span> <br />
-                                <input type="text" /><br />
-                                <span>model name / number</span> <br />
-                                <input type="text"  /><br />
-                                <span>serial number</span> <br />
-                                <input type="text"  />
-                            </div>
-                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
-                                <span>bicycle type</span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br /> 
-                                <span>bicycle frame material </span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                     
-                                <span>wheel size</span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                     
-                                <span>suspension</span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                     
-                                <span>brake type</span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                     
-                                <span>handlebar type</span><br /> 
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                      
-                                <span>electric assist</span><br /> 
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                    
-                                <span>condition</span><br /> 
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select> <br />                                                     
-                                <span>language of posting</span><br />
-                                <select name="" id="">
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                    <option value="">-</option>
-                                </select>
+                <div className="container">
+                    <div className="row" id={styles.Forsale_form_row}>
+                        <div action="" id={styles.Forsale_form}>
+                            <div className="row">
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>frame size</span> <br />
+                                    <input type="text" value="frame size" onChange={(e) => setFrameSize(e.target.value)} /><br />
+                                    <span>make / manufacturer</span> <br />
+                                    <input type="text" value="make / manufacturer" onChange={(e) => setManufacturer(e.target.value)} /><br />
+                                    <span>model name / number</span> <br />
+                                    <input type="text" value="model name / number" onChange={(e) => setModelName(e.target.value)} /><br />
+                                    <span>serial number</span> <br />
+                                    <input type="text" value="serial number" onChange={(e) => setSerialNumber(e.target.value)} />
+                                </div>
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>bicycle type</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="bmx">bmx</option>
+                                        <option value="cruiser">cruiser</option>
+                                        <option value="cyclocross">cyclocross</option>
+                                        <option value="kids">kids</option>
+                                        <option value="mountain">mountain</option>
+                                    </select> <br />
+                                    <span>bicycle frame material </span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="steel">steel</option>
+                                        <option value="alloy">alloy</option>
+                                        <option value="carbon fiber">carbon fiber</option>
+                                        <option value="composite">composite</option>
+                                        <option value="titanium">titanium</option>
+                                    </select> <br />
+                                    <span>wheel size</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="10 inch">10 inch</option>
+                                        <option value="20 inch">20 inch</option>
+                                        <option value="12 inch">12 inch</option>
+                                        <option value="14 inch">14 inch</option>
+                                        <option value="16 inch">16 inch</option>
+                                    </select> <br />
+                                    <span>suspension</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="non rigid">non rigid</option>
+                                        <option value="suspension fork">suspension fork</option>
+                                        <option value="frame and fork">frame and fork</option>
+                                        <option value="other">other</option>
+                                        <option value="">-</option>
+                                    </select> <br />
+                                    <span>brake type</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="">-</option>
+                                        <option value="caliper">caliper</option>
+                                        <option value="coaster">coaster</option>
+                                        <option value="drum">drum</option>
+                                        <option value="hydraulic">hydraulic</option>
+                                        <option value="u-brakes">u-brakes</option>
+                                    </select> <br />
+                                    <span>handlebar type</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="aero">aero</option>
+                                        <option value="bmx">bmx</option>
+                                        <option value="bullhorn">bullhorn</option>
+                                        <option value="drop">drop</option>
+                                        <option value="flat">flat</option>
+                                    </select> <br />
+                                    <span>electric assist</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="none">none</option>
+                                        <option value="pedal assist">pedal assist</option>
+                                        <option value="throttle">throttle</option>
+                                        <option value="other">other</option>
+                                        <option value="">-</option>
+                                    </select> <br />
+                                    <span>condition</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="">-</option>
+                                        <option value="new">new</option>
+                                        <option value="liked new">liked new</option>
+                                        <option value="excellent">excellent</option>
+                                        <option value="good">good</option>
+                                        <option value="fair">fair</option>
+                                    </select><br />
+                                    <span>language of posting</span><br />
+                                    <select name="" id="" onChange={handleCapacity}>
+                                        <option value="-">-</option>
+                                        <option value="english">english</option>
+                                        <option value="espanol">espanol</option>
+                                        <option value="deutsch">deutsch</option>
+                                        <option value="italiano">italiano</option>
+                                        <option value="nederlands">nederlands</option>
+                                    </select>
 
-                            </div>
-                            <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
-                                <span>
-                                    <input type="checkbox" /> &nbsp; cryptocurrency ok <br />
-                                </span>
-                                <span>
-                                    <input type="checkbox" /> &nbsp;  delivery available <br />
-                                </span>
-                                <span>
-                                    <input type="checkbox" /> &nbsp; include "more ads by this user" link <br />
-                                </span>
-                                <label htmlFor=""></label>
+                                </div>
+                                <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
+                                    <span>
+                                        <input type="checkbox" value="cryptocurrency ok" onClick={(e) => setCryptocurrency(e.target.value)} /> &nbsp; cryptocurrency ok <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" value="delivery available" onClick={(e) => setDeliveryAvailable(e.target.value)} /> &nbsp;  delivery available <br />
+                                    </span>
+                                    <span>
+                                        <input type="checkbox" value="include more ads by this user link" onClick={(e) => setIncludeMoreAds(e.target.value)} /> &nbsp; include "more ads by this user" link <br />
+                                    </span>
+                                    <label htmlFor=""></label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         )
     }
 
     return (
+        <span>
+            {Header()}
 
-        <div className={styles.body}>
-            <Header />
-            <MainForm />
+            {MainForm()}
             {/*----------------------section Joboffered ------------>*/}
-            {/*<JobOff />*/}
-            
+            {/**/}
+            {(category === "jobOffer" && subcategory === "account/finance") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "healthcare") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "human resource") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "marketing/advertising/pr") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "retail/wholesale") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "salon/spa/fitness") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "security") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "skilled trades/artisan") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "admin") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "architect/engineer/cad (no IT/computer jobs here please)") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "art/media/design") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "business/mgmt") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "customer service") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "et cetera") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "food/beverage/hospitality") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "general labor") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "legal/paralegal") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}{(category === "jobOffer" && subcategory === "manufacturing") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "nonprofit") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "real estate") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "sales") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "science/biotech") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "software/qa/dba/etc") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "systems/networking") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "technical support") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "transportation") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "tv/film/video/radio") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "jobOffer" && subcategory === "web/html/info design") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )} {(category === "jobOffer" && subcategory === "writing/editing") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
             {/*----------------end-----------*/}
 
             {/*----------------------section gigoffered hire service computer------------>*/}
-          
-            {(category==="WantedByDealer" && subcategory==="web/html/info design") && (
-                <GigOffCS />
-                             
-                                 )
-               
-                
-                  }
-         
+            <div>
+                {(category === "I want to hire someone" && subcategory === "domestic gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "creative gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "crew gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "computer gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "writing gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "talent gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "labor gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+                {(category === "I want to hire someone" && subcategory === "event gigs") && (
+                    <span>
+                        {GigOffCS()}
+                    </span>
+                )}
+            </div>
             {/*----------------end-----------*/}
 
             {/*----------------------section housing offer room & share------------>*/}
-
-            {/*<HousingOffRS />*/}
+            {(category === "housingOffered" && subcategory === "rooms & shares") && (
+                <span>
+                    {HousingOffRS()}
+                </span>
+            )}
+            {(category === "housingOffered" && subcategory === "housing swap") && (
+                <span>
+                    {HousingOffRS()}
+                </span>
+            )}
+            {(category === "housingOffered" && subcategory === "vacation rentals") && (
+                <span>
+                    {HousingOffRS()}
+                </span>
+            )}
+            {/**/}
 
             {/*----------------end-----------*/}
 
             {/*----------------------section housing offer appartment / house------------>*/}
-            {/*<HousingOffAH />*/}
+
+            {(category === "housingOffered" && subcategory === "apartments / housing for rent") && (
+                <span>
+                    {HousingOffAH()}
+                </span>
+            )}
+            {(category === "housingOffered" && subcategory === "real estate - by broker") && (
+                <span>
+                    {HousingOffAH()}
+                </span>
+            )}
+            {(category === "housingOffered" && subcategory === "real estate - by owner") && (
+                <span>
+                    {HousingOffAH()}
+                </span>
+            )}
+            {(category === "housingOffered" && subcategory === "sublets & temporary") && (
+                <span>
+                    {HousingOffAH()}
+                </span>
+            )}
+            {/**/}
             {/*----------------end-----------*/}
 
             {/*----------------------section housing offer office and commercial------------>*/}
-            {/*<HousingOffOC />*/}
+            {(category === "housingOffered" && subcategory === "office & commercial") && (
+                <span></span>
+            )}
+            {(category === "housingOffered" && subcategory === "parking & storage") && (
+                <span>{HousingOffOC()}</span>
+            )}
+            {/**/}
 
             {/*----------------end-----------*/}
             {/*----------------------section housing want  wanted apts------------>*/}
-            {/*<HousingWanWAp />*/}
+            {(category === "housingWanted" && subcategory === "wanted: apts") && (
+                <span>{HousingWanWAp()}</span>
+            )}
+            {/**/}
             {/*----------------end-----------*/}
             {/*----------------------section housing want  wanted real estate------------>*/}
-            {/*<HousingWanRE />*/}
+            {(category === "housingWanted" && subcategory === "wanted: real estate") && (
+                <HousingWanRE />
+            )}
+            {(category === "housingWanted" && subcategory === "wanted: sublet/temp") && (
+                <span>{HousingWanWAp()}</span>
+            )}{(category === "housingWanted" && subcategory === "wanted: room/share") && (
+                <span>{HousingWanWAp()}</span>
+            )}
+            {/**/}
             {/*----------------end-----------*/}
 
 
             {/*----------------------section resume I'm an individual seeking employment------------>*/}
-            {/*<ResumeSE />*/}
+            {(category === "resume" && subcategory === "I'm an individual seeking employment") && (
+                <ResumeSE />
+            )}
+
+            {(category === "resume" && subcategory === "account/finance") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "healthcare") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "human resource") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "marketing/advertising/pr") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "retail/wholesale") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "salon/spa/fitness") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "security") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "skilled trades/artisan") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "admin") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "architect/engineer/cad (no IT/computer jobs here please)") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "art/media/design") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "business/mgmt") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "customer service") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "et cetera") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "food/beverage/hospitality") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "general labor") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "legal/paralegal") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}{(category === "resume" && subcategory === "manufacturing") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "nonprofit") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "real estate") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "sales") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "science/biotech") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "software/qa/dba/etc") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "systems/networking") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "technical support") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "transportation") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "tv/film/video/radio") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+            {(category === "resume" && subcategory === "web/html/info design") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )} {(category === "resume" && subcategory === "writing/editing") && (
+                <div>
+                    {JobOff()}
+                    {Job()}
+                </div>
+            )}
+
             {/*----------------end-----------*/}
             {/*----------------------section JOB------------>*/}
-            {/*<Job />*/}
+            {/*{Job()}*/}
             {/*----------------end-----------*/}
             {/*----------------------section For Sale antique ------------>*/}
-            {/*<ForSaleAO />*/}
+            {(category === "ForSaleByOwner" && subcategory === "antiques") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "appliances") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "arts & crafts") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "auto parts") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "baby & kid stuff") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "bicycle parts") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "boat parts") && (
+                <span>{ForSaleAO()}</span>
+            )}
+            {/**/}
             {/*----------------end-----------*/}
             {/*----------------------sectionfor sale atvs, utvs, snowmobiles - by owner ------------>*/}
-            {/*<ForSaleAUSM />*/}
+            {(category === "ForSaleByOwner" && subcategory === "atvs/utvs/snowmobiles") && (
+                <span>{ForSaleAUSM()}</span>
+            )}
+            {/**/}
 
             {/*----------------end-----------*/}
             {/*----------------------section for sale  auto wheels & tires - by owner------------>*/}
-                 {/*<ForSaleAWT />*/}
+            {(category === "ForSaleByOwner" && subcategory === "auto wheels & tires") && (
+                <span>{ForSaleAWT()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "aviation") && (
+                <span>{ForSaleAWT()}</span>
+            )}
+            {(category === "ForSaleByOwner" && subcategory === "barter") && (
+                <span>{ForSaleAWT()}</span>
+            )}
+            {/**/}
 
             {/*----------------end-----------*/}
             {/*----------------------section for sale  bicycle------------>*/}
-                 {/*<ForSaleBi />*/}
+            {(category === "ForSaleByOwner" && subcategory === "bicycles") && (
+                <ForSaleBi />
+            )}
+            {/**/}
             {/*----------------end-----------*/}
 
 
@@ -1193,7 +1694,7 @@ export default function account_fianance() {
             {/*subcategory === I'm an individual seeking employmen section*/}
 
 
-            <MainFooter />
+            {MainFooter()}
 
 
             <section className={styles.formbuttonsection}>
@@ -1203,6 +1704,9 @@ export default function account_fianance() {
 
 
 
-        </div>
+
+        </span>
     )
 };
+
+export default Account_fianance;

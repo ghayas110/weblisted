@@ -22,7 +22,7 @@ export const JobList = ({obj}) => {
 
   <div className="s">
        
-       <span onClick={openJob}><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>&nbsp;&nbsp;&nbsp;</p> {obj?.data().jobtitle}</span>
+       <span onClick={openJob}><FontAwesomeIcon icon={faStar}/>&nbsp;&nbsp;&nbsp;<p>&nbsp;&nbsp;&nbsp;</p> {obj?.data().posttitle}</span>
 </div>
 
 

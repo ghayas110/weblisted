@@ -12,7 +12,7 @@ import { Government } from 'styled-icons/remix-line';
 
 
 
-const Job = () => {
+const GigOffered = () => {
     
     const router = useRouter()
     const { category } = router.query
@@ -114,4 +114,4 @@ const Job = () => {
 
 
 
-export default Job;
+export default GigOffered;

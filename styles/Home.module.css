@@ -92,7 +92,7 @@
   width: 110px;
 }
 .calendar{
-      text-align: -webkit-center;
+      /* text-align: -webkit-center; */
      width: 100%;
 }
 
@@ -115,21 +115,65 @@
   flex-direction: row;
 }
 
+.home_select{
+ width: 100%;
+}
+.home_select_div{
+  width: 150px;
+  line-height: 2;
+}
+.home_ul{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  right: 36px;
+  margin-top: 15px;
+}
+
+.home_ul a:hover{
+  border: 0.3px solid rgb(120, 171, 248);
+}
+
+.calendar1{
+
+}
 
 
+.react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
+    box-sizing: border-box;
+}
+.react_calendar{
+    /* width: 350px; */
+    line-height: 1 !important;
+    font-size: 9px !important;
+    max-width: 100%;
+    background: white;
+    /* border: 1px solid #a0a096; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* line-height: 1.125em; */
+}
 
+#footer{
+  background: #235789;
+}
+.clfooter_home li{
+  list-style: none;
 
+}
 
-
-
-
-
-
-
-
-
-
-
+.clfooter_home{
+  display: flex;
+  margin-bottom: 0;
+  justify-content: center;
+}
+.clfooter_home li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
 
 
 
@@ -271,9 +315,7 @@
   width: 230px;
   margin-bottom: 6px;
 }
-.react-calendar {
-  font-size: 14px !important;
-}
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
   color: #006edc !important;

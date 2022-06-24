@@ -36,7 +36,7 @@ export default function postadd() {
             <div className={styles.jobpost_job_postings}>
               <a href="#" className={styles.jobpost_link}></a>
                 <div className={styles.jobpost_image}>
-                  <h3>{selectJob?.data().jobtitle}</h3>
+                  <h3>{selectJob?.data().posttitle}</h3>
                   <div  className={styles._overlay}></div>
                 </div>
                 <div className={styles.jobpost_body}>
@@ -52,7 +52,7 @@ export default function postadd() {
                       </span>
                       <span className={styles.jovalue}><span className={styles.jobclass_type_job_type}>
                         </span> 
-                        <span className={styles.jovalue}><FontAwesomeIcon icon={faHeader} />{selectJob?.data().jobtitle}</span>
+                        <span className={styles.jovalue}><FontAwesomeIcon icon={faHeader} />{selectJob?.data().posttitle}</span>
                       </span>
                       <span className={styles.jobclass}><span className={styles.jobclass_type_working_hours}>
                         </span> 

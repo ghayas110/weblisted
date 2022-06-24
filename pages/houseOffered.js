@@ -12,7 +12,7 @@ import { Government } from 'styled-icons/remix-line';
 
 
 
-const Job = () => {
+const houseOffered = () => {
     
     const router = useRouter()
     const { category } = router.query
@@ -46,11 +46,41 @@ const Job = () => {
     const handleSelectedData = () => {
       
         if(selectData === "rooms & shares"){
-            router.push({pathname: "/property_form", query: { category: selectData }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         
-        }else{  
-            router.push({pathname: "/property_form", query: { category: selectData }})
         }
+        if(selectData === "apartments / housing for rent"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }   if(selectData === "housing swap"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "office & commercial"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "parking & storage"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "real estate - by broker"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "real estate - by owner"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "sublets & temporary"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+        if(selectData === "vacation rentals"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        
+        }
+           
            
 
     }
@@ -114,4 +144,4 @@ const Job = () => {
 
 
 
-export default Job;
+export default houseOffered;
