@@ -92,15 +92,24 @@
   width: 110px;
 }
 .calendar{
-      /* text-align: -webkit-center; */
+      text-align: -webkit-center;
      width: 100%;
 }
 
 @media screen and (max-width:992px) {
-  .form_input input{
-    width: 100px;
-  }
-  
+
+  .calendar{
+     width: 100%;
+}
+.form_input input{
+    width: 60% !important;
+}
+.form_input{
+  display: flex;
+  justify-content: center;
+}
+
+         
 }
 @media screen and (max-width:1200px) {
   .form_input input{
@@ -174,8 +183,103 @@
   font-weight: 600;
   font-size: 16px;
 }
+.home_row{
+  width: 100%;
+}
+#footer{
+  margin-top: 1px;
+}
+@media screen and (max-width:992px) {
+  .list_001{
+  
+    display: flex;
+   
+  }
+  .list_001 ul li{
+  
+    display: flex;
+   
+  }
 
+ .Home_Head__emGWQ {
+  margin-top: 5px;
+}
+.calendar1 {
+  width: 100% !important;
+}
+#index_content{
+  margin-top: 5px;
+}
 
+}
+
+@media screen and (max-width:600px) {
+
+  #fluid{
+    width: 110%;
+  }
+  #footer{
+    width: 110%;
+
+  }
+  
+}
+
+@media screen and (max-width:500px) {
+
+  #fluid{
+    width: 110%;
+ 
+  }
+  #footer{
+    width: 110%;
+
+  }
+  
+}
+@media screen and (max-width:400px) {
+
+  #fluid{
+    width: 140%;
+ 
+  }
+  #footer{
+    width: 140%;
+
+  }
+  
+}
+@media screen and (max-width:320px) {
+
+  #fluid{
+    width: 145%;
+ 
+  }
+  #footer{
+    width: 145%;
+
+  }
+  
+}
+@media screen and (max-width:360px) {
+
+  #fluid{
+    width: 145%;
+ 
+  }
+  #footer{
+    width: 145%;
+
+  }
+  
+}
+@media screen and (max-width:1200px) {
+  #bg_1{
+    width: 250px;
+  }
+
+  
+}
 
 
 

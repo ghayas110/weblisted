@@ -38,12 +38,16 @@ export default function FormSignin() {
     signInWithEmailAndPassword(auth, email, password).then((userAuth) => {
       dispatch(login({
         email: userAuth.user.email,
+        password: userAuth.user.passwordm,
       }))
     })
-    if (auth.currentUser !== null) {
+    if (auth.currentUser != null) {
       router.push('/')
 
+    }else{
+      alert("wro")
     }
+    
   }
   return (
 

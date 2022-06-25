@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <>
 
-      <div className="container-fluid">
+      <div className="container" id={styles.fluid}>
         <div className='row' id={styles.home_row}>
           <div className='col-lg-2 col-md-12 col-sm-12' id={styles.bg_1}>
             <span>
@@ -125,9 +125,9 @@ export default function Home() {
             </span>
             <span>
 
-              <form className={styles.form_input}>
-                <input type="text" />
-              </form>
+              <span className={styles.form_input}>
+                <input type="text"  />
+              </span>
               <br />
             </span>
             <span>
@@ -139,7 +139,7 @@ export default function Home() {
             <div className={styles.calendar}>
               <Calendar className={styles.calendar1} />
             </div>
-
+            <div className={styles.list_001}>
             <ul className={styles.home_ul}>
               <li className={styles.a_3}>
 
@@ -197,11 +197,12 @@ export default function Home() {
                 </a>
               </li>
             </ul>
+            </div>
           </div>
 
           {/*-------rehman code-----*/}
 
-          <div className="col-lg-8 col-md-12 col-sm-8">
+          <div className="col-lg-8 col-md-12 col-sm-12" id={styles.index_content}>
             <h1 className={styles.Head}>DALLAS</h1>
             <div className="row">
               <div className="col-lg-9">
@@ -654,7 +655,7 @@ export default function Home() {
           {/*-------end code-----*/}
 
 
-          <div className='col-lg-2 col-md-12 col-sm-2' id={styles.bg_1}>
+          <div className='col-lg-2 col-md-12 col-sm-12' id={styles.bg_1}>
             <span >
               <img src="https://painting.demoapp-lc.com/wp-content/uploads/2022/05/weblisted-01.png" alt="" className={styles.logo_img} />
             </span>
@@ -778,7 +779,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid" id={styles.footer}>
+      <div className="container" id={styles.footer}>
         <div className={styles.footer_home}>
           <ul className={styles.clfooter_home}>
             <li>© 2022  <span className={styles.desktop}>craigslist </span><span className={styles.mobile}>CL</span></li>&nbsp;&nbsp;
@@ -788,9 +789,7 @@ export default function Home() {
             <li className={styles.desktop}><a href="">feedback</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="">terms</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="">about</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-            <li><a href="">craigslist app</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-            <li><a href="">cl is hiring</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-          </ul>
+            </ul>
         </div>
       </div>
     </>
