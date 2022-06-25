@@ -241,4 +241,4 @@ const ForSaleByOwner = () => {
 
 
 
-export default Job;
+export default ForSaleByOwner;
