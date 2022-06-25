@@ -6,6 +6,8 @@ const SideBar = ({ openClass }) => {
       <div>
   
     <nav id={openClass === 'open' ? styles.opneSidebar : ''}>
+
+ 
     
       <ul id={styles.navlist}>
       <h3>Job</h3>

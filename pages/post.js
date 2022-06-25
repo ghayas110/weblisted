@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { main, useState, useEffect } from 'react';
 import styles from '../styles/post.module.css'
+import media from 'react-media';
 import Sider from '../components/component/Sider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +17,7 @@ import { Category } from 'styled-icons/boxicons-regular';
 function post() {
     const router = useRouter()
     const { openCat } = router.query;
-    const [on, setOn] = useState(true);
+    const [on, setOn] = useState(false);
     const [job, setJob] = useState([]);
     const [selectData, setSelectData] = useState();
     const [cityName,setCityName] = useState();
@@ -70,6 +71,7 @@ function post() {
 
     const handleOn = () => {
         setOn(!on);
+
     };
 
     console.log(cityName, "city")
@@ -109,6 +111,7 @@ function post() {
                         </div>
                     </aside>
                     {on && <Sider openClass="open" />}
+            
                 </div>
 
 
