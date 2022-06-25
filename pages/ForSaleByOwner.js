@@ -46,135 +46,135 @@ const ForSaleByOwner = () => {
     const handleSelectedData = () => {
       
         if(selectData === "antiques"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         
         }
         if(selectData === "general for sale"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "bicycles"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "motorcycles/scooter"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "cell phones"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "motorcycle parts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "boats"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "cds/dvds/vhs"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "barter"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "wanted"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "tickets"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "heavy equipment"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "clothing & accessories"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "computers"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
 
         if(selectData === "computer parts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "auto parts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "arts & crafts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "collectibles"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "aviation"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "jewelry"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "furniture"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "auto wheels & tires"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "books & magazines"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "musical instruments"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "boat parts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "tools"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "electronics"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "business/commercial"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "cars & trucks"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "household items"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "appliances"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "atvs/utvs/snowmobiles"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "garage & moving sales"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "video gaming"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "trailers"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "free stuff"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }if(selectData === "materials"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "baby & kid stuff"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "toys & games"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "farm & garden"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "motorcycle parts"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
         if(selectData === "rvs"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
 
         if(selectData === "photo/video"){
-            router.push({pathname: "/account_fianance", query: { subcategory: selectData,category:category }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
 
 
