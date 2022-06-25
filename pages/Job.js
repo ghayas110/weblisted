@@ -70,7 +70,7 @@ const Job = () => {
                                     <div className={styles.json_form_item}>
                                         <p className={styles.formnote}>
                                             <b>please choose a category:</b>
-                                            (see <Link href="/account_fianance">prohibited</Link> list before posting.)
+                                            (see <span>prohibited</span> list before posting.)
                                         </p>
                                     </div>
 

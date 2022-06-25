@@ -8,7 +8,7 @@ export default function Header() {
             <div className='row' id={styles.row_header}>
                 <div className='col-6' id={styles.head_name}>
                     <span id={styles.name_span}><a href="/">CL</a></span> &nbsp;&nbsp;
-                    <select name="select" id={styles.select_option} className="select-option">
+                    {/*<select name="select" id={styles.select_option} className="select-option">
                         <option value="">Country</option>
                         <option value="United State">United State</option>
                         <option value="Austailia">Austailia</option>
@@ -34,7 +34,7 @@ export default function Header() {
                         <option value="artists">artists</option>
                         <option value="volunteers">volunteers</option>
                         <option value="groups">groups</option>
-                    </select> 
+    </select> */}
                 </div>
                 <div className='col 6' >
                     <div id={styles.header_rightside}>
