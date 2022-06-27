@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { db, storage } from "../firebase";
 import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'firebase/firestore';
 import styles from "../styles/Home.module.css";
+import style from "../styles/calendar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
@@ -103,6 +104,7 @@ export default function Home() {
 
 
 
+
   return (
     <>
 
@@ -126,7 +128,7 @@ export default function Home() {
             <span>
 
               <span className={styles.form_input}>
-                <input type="text"  />
+                <input type="text"  className={styles.homesidebar} />
               </span>
               <br />
             </span>
@@ -137,8 +139,8 @@ export default function Home() {
               </a>
             </span>
             <div className={styles.calendar}>
-              <Calendar className={styles.calendar1} />
-            </div>
+                <Calendar className={styles.calendar1} />
+              </div>
             <div className={styles.list_001}>
             <ul className={styles.home_ul}>
               <li className={styles.a_3}>
@@ -266,7 +268,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-md-6" id={styles.home_list01}>
                     <h6 className={styles.comhead}>Housing</h6>
                     <ul>
 
@@ -304,11 +306,11 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <div className="col-lg-12">
+                  <div className="col-lg-12" id={styles.home_list01}>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-6">
+                  <div className="col-md-6" id={styles.home_list01}>
                     <h6 className={styles.comhead}>Services</h6>
                     <ul>
                       <li onClick={(e) => postdata(e)} id="automotive" className={styles.comlist}>
@@ -375,7 +377,7 @@ export default function Home() {
 
                     </ul>
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6" id={styles.home_list01}>
                     <div className="row">
                       <h6 className={styles.comhead}>For Sale</h6>
                       <div className="col-md-6">
@@ -465,7 +467,7 @@ export default function Home() {
                           </li>
                         </ul>
                       </div>
-                      <div className="col-md-6">
+                      <div className="col-md-6" id={styles.home_list01}>
                         <ul>
 
                           <li onClick={(e) => postdata} id="rvs" className={styles.comlist}>
@@ -546,7 +548,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3" id={styles.home_list01}>
                 <div className="col-md-12">
                   <h6 className={styles.comhead}>Jobs</h6>
                   <ul>

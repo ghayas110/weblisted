@@ -71,12 +71,13 @@
     text-align: center;
     color: white;
     background: #235789;
+    font-weight: 600;
+    font-size: 18px;
 
     
 }
 .comlist{
-  font-size: 14px;
-  font-family: auto;
+  font-size: 11px;
   font-weight: 600;
  color: rgb(61, 61, 61);
  list-style: none;
@@ -119,17 +120,21 @@
 }
 
 #homecat1{
-
+ line-height: 2;
   display: flex;
   flex-direction: row;
+}
+#homecat1 ul{
+  line-height: 2 !important;
 }
 
 .home_select{
  width: 100%;
 }
 .home_select_div{
-  width: 150px;
+  width: 134px;
   line-height: 2;
+  font-size: 12px;
 }
 .home_ul{
   cursor: pointer;
@@ -148,7 +153,10 @@
 .calendar1{
 
 }
-
+.homesidebar{
+  width: 140px;
+  height: 21px;
+}
 
 .react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
     box-sizing: border-box;
@@ -374,6 +382,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+ line-height: 2;
    color: white;
 }
 #bg_1 h1{
@@ -388,6 +397,7 @@
 }
 #bg_1 a{
   text-align: center;
+  font-size: 12px;
 }
 .a_1{
   text-align: center;
@@ -528,4 +538,8 @@
   .col-sm-3 .a1{
     width: 104.333% !important;
   }
+}
+
+#home_list01{
+  line-height: 2;
 }

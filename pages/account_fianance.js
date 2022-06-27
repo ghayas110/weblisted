@@ -25,7 +25,9 @@ const Account_fianance = () => {
     const [deliveryAvailable, setDeliveryAvailable] = useState('');
     const [includeMoreAds, setIncludeMoreAds] = useState('');
     const [modelName, setModelName] = useState('');
-    const [dimensions, setDimensions] = useState('');
+    const [dimensions1, setDimensions1] = useState('');
+    const [dimensions2, setDimensions2] = useState('');
+    const [dimensions3, setDimensions3] = useState('');
     const [manufacturer, setManufacturer] = useState('');
     const [Available, setAvailable] = useState('');
     const [evcharging, setEvCharging] = useState("");
@@ -101,7 +103,9 @@ const Account_fianance = () => {
                 includeMoreAds: includeMoreAds,
                 deliveryAvailable: deliveryAvailable,
                 cryptocurrency: cryptocurrency,
-                dimensions: dimensions,
+                dimensions1: dimensions1,
+                dimensions2: dimensions2,
+                dimensions3: dimensions3,
                 modelName: modelName,
                 manufacturer: manufacturer,
                 Available: Available,
@@ -155,7 +159,7 @@ const Account_fianance = () => {
         return (
             <section id={styles.account_section} >
                 <div className="container">
-                    <div className="row">
+                    <div className="row" id={styles.roww5}>
                         <div className="col-lg-1"></div>
                         <div className="col-lg-10" id={styles.col_account}>
                             <div className="form-bg" id={styles.form_bg}>
@@ -198,6 +202,8 @@ const Account_fianance = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-lg-1"></div>
+
                     </div>
                 </div>
             </section>
@@ -695,12 +701,15 @@ const Account_fianance = () => {
             <section>
                 <div className="container" id={styles.house_wan_pos} >
                     <div className="row" id={styles.house_wan_pos2}>
-                        <div className="col-lg-12" id={styles.house_wan_pos3}>
+                <div className="col-lg-1 "></div>
+                        <div className="col-lg-10 col-md-12 col-sm-12" id={styles.house_wan_pos3}>
                             <input type="checkbox" name="" id="" value="cats ok" onClick={(e) => setCatsOk(e.target.value)} /> &nbsp; cats ok <br />
                             <input type="checkbox" name="" id="" value="dogs ok" onClick={(e) => setDogsOk(e.target.value)} /> &nbsp;dogs ok <br />
                             <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} /> &nbsp;air conditioning <br />
 
                         </div>
+                <div className="col-lg-1  "></div>
+
                     </div>
                 </div>
             </section>
@@ -710,12 +719,10 @@ const Account_fianance = () => {
     const HousingWanRE = () => {
         return (
             <section>
-                <div className="container" id={styles.house_wan_pos} >
+                <div className="container" id={styles.house_wan_pos}>
                     <div className="row" id={styles.house_wan_pos2}>
-                        <div className="col-lg-12" id={styles.house_wan_pos3}>
+                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12" id={styles.house_wan_pos3}>
                             <input type="checkbox" name="" id="" value="air conditioning" onClick={(e) => setAirConditioning(e.target.value)} /> &nbsp; air conditioning<br />
-
-
                         </div>
                     </div>
                 </div>
@@ -729,7 +736,8 @@ const Account_fianance = () => {
             <section>
                 <div className="container" id={styles.container_res} >
                     <div className="row" id={styles.resume_1}>
-                        <div className="col-lg-10" id={styles.col_resume}>
+                           <div className="col-lg-1"></div>
+                        <div className="col-lg-10 col-sm-10 col-xs-10 col-md-10" id={styles.col_resume}>
                             <div className="form-control" id={styles.resume_input}>
                                 <input type="checkbox" value="morning" onClick={(e) => setMorning(e.target.value)} />
                                 <label htmlFor="">morning</label>
@@ -745,6 +753,8 @@ const Account_fianance = () => {
                                 <label htmlFor="">Weekends</label>
                             </div>
                         </div>
+                        <div className="col-lg-1 col-lg-1 col-xs-1 col-md-1"></div>
+
                     </div>
                     <br />
                     <div className="row" id={styles.resume_post}>
@@ -872,10 +882,9 @@ const Account_fianance = () => {
                                 </div>
                             </div>
                         </div>
-
+                        <div className="col-lg-1"></div>
                     </div>
                 </div>
-
             </section>
         )
     }
@@ -945,15 +954,15 @@ const Account_fianance = () => {
                             <div className="row">
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>make / manufacturer</span> <br />
-                                    <input type="text" value="make / manufacturer" onChange={(e) => setManufacturer(e.target.value)} /><br />
+                                    <input type="text" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)} /><br />
                                     <span>model name / number</span> <br />
-                                    <input type="text" value="model name / number" onChange={(e) => setModelName(e.target.value)} /><br />
+                                    <input type="text" value={modelName} onChange={(e) => setModelName(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
-                                    <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
-                                    <span>size / dimensions</span> <br />
-                                    <input type="text" placeholder='(e.g 42,000)' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} /><br />
+                                    <input type="text" value={dimensions1} onChange={(e) => setDimensions1(e.target.value)} /><br />
+                                    <span>size2 / dimensions</span> <br />
+                                    <input type="text"  value={dimensions2} onChange={(e) => setDimensions2(e.target.value)} /><br />
+                                    <span>size3 / dimensions</span> <br />
+                                    <input type="text" placeholder='(e.g 42,000)' value={dimensions3} onChange={(e) => setDimensions3(e.target.value)} /><br />
                                     <input type="checkbox" name="" id="" value="odometer broken" onClick={(e) => setBroken(e.target.value)} /> &nbsp; odometer broken <br />
                                     <input type="checkbox" name="" id="" value="odometer rolled over" onClick={(e) => setRolledOver(e.target.value)} /> &nbsp; odometer rolled over
                                 </div>
@@ -1156,7 +1165,7 @@ const Account_fianance = () => {
     }
 
     return (
-        <span>
+        <div className={styles.body}>
             {Header()}
 
             {MainForm()}
@@ -1705,7 +1714,7 @@ const Account_fianance = () => {
 
 
 
-        </span>
+        </div>
     )
 };
 
