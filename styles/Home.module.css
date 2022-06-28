@@ -77,7 +77,7 @@
     
 }
 .comlist{
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
  color: rgb(61, 61, 61);
  list-style: none;
@@ -297,6 +297,8 @@ margin-bottom: 0px;
 
 }
 .Calendar_tr li{
+  display:flex ;
+  justify-content: center;
 list-style: none;
 font-size: 12px;
 font-weight: 600;

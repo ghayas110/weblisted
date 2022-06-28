@@ -10,7 +10,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
 import Script from 'next/script';
-import Calendar from "react-calendar/dist/umd/Calendar";
 // import JobList from "../components/component/JobList";
 
 export default function Home() {
@@ -148,73 +147,68 @@ export default function Home() {
                 <li><a href="">S</a></li>
                 </ul>
                 <ul className={styles.Calendar_tr}>
+                <li><a href="">27</a></li>
+                <li><a href="">28</a></li>
+                <li><a href="">29</a></li>
+                <li><a href="">30</a></li>
                 <li><a href="">1</a></li>
                 <li><a href="">2</a></li>
                 <li><a href="">3</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
                 <li><a href="">4</a></li>
                 <li><a href="">5</a></li>
                 <li><a href="">6</a></li>
                 <li><a href="">7</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
                 <li><a href="">8</a></li>
                 <li><a href="">9</a></li>
                 <li><a href="">10</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
                 <li><a href="">11</a></li>
                 <li><a href="">12</a></li>
                 <li><a href="">13</a></li>
                 <li><a href="">14</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
                 <li><a href="">15</a></li>
                 <li><a href="">16</a></li>
                 <li><a href="">17</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
                 <li><a href="">18</a></li>
                 <li><a href="">19</a></li>
                 <li><a href="">20</a></li>
                 <li><a href="">21</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
                 <li><a href="">22</a></li>
                 <li><a href="">23</a></li>
                 <li><a href="">24</a></li>
-                <li><a href="">25</a></li>
-                <li><a href="">26</a></li>
-                <li><a href="">27</a></li>
-                <li><a href="">28</a></li>
                 </ul>
-                <ul className={styles.Calendar_tr2} >
-                <li><a href="">29</a></li>
-                <li><a href="">30</a></li>
-                </ul>
-                
                 </div>
               </div>
             <div className={styles.list_001}>
             <ul className={styles.home_ul}>
               <li className={styles.a_3}>
 
-                <a href="/About">help, faq, abuse, legal</a>
+                <a href="/About">Help, Faq, Abuse, Legal</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/scams">avoid scams & fraud</a>
+                <a href="/scams">Avoid Scams & Fraud</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="">personal safety tips</a>
+                <a href="">Personal Safety Tips</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/termsOfUse">terms of use</a>
+                <a href="/termsOfUse">Terms Of Use</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/privacy">privacy policy</a>
+                <a href="/privacy">Privacy Policy</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/systemStatus">system status</a>
+                <a href="/systemStatus">System Status</a>
               </li>
               {/* <li className={styles.a_3}> <a href='' >help, faq, abuse, legal</a> </li> */}
             </ul>
@@ -222,29 +216,29 @@ export default function Home() {
             <ul className={styles.home_ul}>
               <li className={styles.a_3}>
 
-                <a href="/About">about craigslist</a>
+                <a href="/About">About Craigslist</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/opensource">craigslist open source</a>
+                <a href="/opensource">Craigslist Open Source</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/craigslistHiring">craigslist hiring</a>
+                <a href="/craigslistHiring">Craigslist Hiring</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="/bestofcraigslist">best-of-craigslist</a>
+                <a href="/bestofcraigslist">Best-Of-Craigslist</a>
               </li>
               <li className={styles.a_3}>
 
-                <a href="">"craigslist joe"</a>
+                <a href="">"Craigslist Joe"</a>
               </li>
               <li className={styles.a_3}>
 
                 <a href="https://craignewmarkphilanthropies.org/">
-                  craig newmark <br />
-                  philanthropies
+                  Craig newmark <br />
+                  Philanthropies
                 </a>
               </li>
             </ul>
@@ -715,7 +709,7 @@ export default function Home() {
                 <option value="?lang=da&amp;setlang=1">dansk</option>
                 <option value="?lang=de&amp;setlang=1">deutsch</option>
                 <option selected="" value="?lang=en&amp;setlang=1">
-                  english
+                  English
                 </option>
                 <option value="?lang=es&amp;setlang=1">español</option>
                 <option value="?lang=fr&amp;setlang=1">français</option>
@@ -770,7 +764,7 @@ export default function Home() {
               </div>
               <div className={styles.home_select_div}>
                 <span>
-                  asia/pacific
+                  Asia Pacific
                 </span> <br />
                 <select id="" className={styles.home_select}>
                   <option value=""> adelaide</option>
@@ -806,7 +800,7 @@ export default function Home() {
 
               <div className={styles.home_select_div}>
                 <span>
-                  cl worldwide
+                  Cl Worldwide
                 </span> <br />
                 <select name="" id="" className={styles.home_select}>
                   <option value="">africa</option>
@@ -845,4 +839,4 @@ export default function Home() {
       </div>
     </>
   );
-}
+}  
