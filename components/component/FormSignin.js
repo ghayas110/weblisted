@@ -17,19 +17,7 @@ export default function FormSignin() {
   const auth = getAuth(app);
 
 
-  useEffect(() => {
-    auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        dispatch(login({
-          email: userAuth.email,
-          password: userAuth.password,
-        }))
 
-      } else {
-        dispatch(logout)
-      }
-    })
-  }, [])
 
 
   const logintoApp = (e) => {
@@ -38,10 +26,12 @@ export default function FormSignin() {
     signInWithEmailAndPassword(auth, email, password).then((userAuth) => {
       dispatch(login({
         email: userAuth.user.email,
-        password: userAuth.user.passwordm,
+        password: userAuth.user.password,
+
       }))
     })
     if (auth.currentUser != null) {
+      alert("loged in")
       router.push('/')
 
     }else{

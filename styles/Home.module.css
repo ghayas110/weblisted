@@ -92,10 +92,10 @@
 .img_logo{
   width: 110px;
 }
-.calendar{
+/* .calendar{
       text-align: -webkit-center;
      width: 100%;
-}
+} */
 
 @media screen and (max-width:992px) {
 
@@ -103,13 +103,15 @@
      width: 100%;
 }
 .form_input input{
-    width: 60% !important;
+    width: 60%;
 }
 .form_input{
   display: flex;
   justify-content: center;
 }
-
+.homesidebar{
+  width: 100% !important;
+}
          
 }
 @media screen and (max-width:1200px) {
@@ -150,9 +152,7 @@
   border: 0.3px solid rgb(120, 171, 248);
 }
 
-.calendar1{
 
-}
 .homesidebar{
   width: 140px;
   height: 21px;
@@ -212,9 +212,7 @@
  .Home_Head__emGWQ {
   margin-top: 5px;
 }
-.calendar1 {
-  width: 100% !important;
-}
+
 #index_content{
   margin-top: 5px;
 }
@@ -287,8 +285,75 @@
   
 }
 
+.Calendar_tr{
+  display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+justify-content: space-between;
+margin-bottom: 0px;
 
 
+
+}
+.Calendar_tr li{
+list-style: none;
+font-size: 12px;
+font-weight: 600;
+border:1px solid rgb(207, 207, 207);
+width: 28px;
+color: black;
+height: 20px;
+background: white;
+}
+.Calendar_tr li:hover{
+  background-color: #9e9393;
+  cursor: pointer;
+}
+.Calendar_tr2 li:hover{
+  background-color: #9e9393;
+  cursor: pointer;
+}
+
+.calendar_main{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -16px;
+  margin-bottom: -16px;
+}
+.Calendar_tr2 li{
+font-size: 12px;
+font-weight: 600;
+  list-style: none;
+  border:1px solid rgb(207, 207, 207);
+  width: 28px;
+  height: 20px;
+background: white;
+
+}
+.Calendar_tr2 {
+  margin: 0;
+  display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+}
+
+.Calendar_tr2 li a{
+color: black;
+
+  text-decoration: none;
+  font-family: 600;
+
+}
+.Calendar_tr li a{
+color: black;
+
+  text-decoration: none;
+  font-weight: 600;
+}
 /* -------------------------------code end------------------------- */
 
 
@@ -428,10 +493,10 @@
   margin-bottom: 6px;
 }
 
-.react-calendar__month-view__weekdays__weekday {
+/* .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
   color: #006edc !important;
-}
+} */
 .a_3{
   text-align: center;
   color: #fafafa !important;
@@ -522,12 +587,12 @@
   .input_1{
     width: 130px;
   }
-  .react-calendar button {
+  /* .react-calendar button {
     margin: 0;
     border: 0;
     outline: none;
     font-size: 12px !important;
-  }
+  } */
   .a_3 a{
     font-size: 10px;
     margin-left: -15px;

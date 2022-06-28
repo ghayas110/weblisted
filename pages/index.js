@@ -6,11 +6,10 @@ import { useRouter } from 'next/router';
 import { db, storage } from "../firebase";
 import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'firebase/firestore';
 import styles from "../styles/Home.module.css";
-import style from "../styles/calendar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
-import Script from 'next/script'
+import Script from 'next/script';
 import Calendar from "react-calendar/dist/umd/Calendar";
 // import JobList from "../components/component/JobList";
 
@@ -103,8 +102,6 @@ export default function Home() {
   // }
 
 
-
-
   return (
     <>
 
@@ -138,8 +135,60 @@ export default function Home() {
                 Event calendar
               </a>
             </span>
-            <div className={styles.calendar}>
-                <Calendar className={styles.calendar1} />
+            <div className={styles.calendar_main}>
+                {/*<Calendar className={styles.calendar1} />*/}
+                <div className={styles.Calendar}>
+                <ul className={styles.Calendar_tr}>
+                <li><a href="">M</a></li>
+                <li><a href="">T</a></li>
+                <li><a href="">W</a></li>
+                <li><a href="">T</a></li>
+                <li><a href="">F</a></li>
+                <li><a href="">S</a></li>
+                <li><a href="">S</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
+                <li><a href="">8</a></li>
+                <li><a href="">9</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">12</a></li>
+                <li><a href="">13</a></li>
+                <li><a href="">14</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
+                <li><a href="">15</a></li>
+                <li><a href="">16</a></li>
+                <li><a href="">17</a></li>
+                <li><a href="">18</a></li>
+                <li><a href="">19</a></li>
+                <li><a href="">20</a></li>
+                <li><a href="">21</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr}>
+                <li><a href="">22</a></li>
+                <li><a href="">23</a></li>
+                <li><a href="">24</a></li>
+                <li><a href="">25</a></li>
+                <li><a href="">26</a></li>
+                <li><a href="">27</a></li>
+                <li><a href="">28</a></li>
+                </ul>
+                <ul className={styles.Calendar_tr2} >
+                <li><a href="">29</a></li>
+                <li><a href="">30</a></li>
+                </ul>
+                
+                </div>
               </div>
             <div className={styles.list_001}>
             <ul className={styles.home_ul}>
