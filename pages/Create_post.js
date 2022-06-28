@@ -70,7 +70,7 @@ else if(selectData === "ForSaleByDealer"){
 
 }
 else if(selectData === "community"){
-    router.push({pathname: "/community", query: { category: selectData }})
+    router.push({pathname: "/Community", query: { category: selectData }})
 
 }
 else{

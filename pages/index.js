@@ -1,16 +1,28 @@
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
+import Head from "next/head";
+import Image from "next/image";
+import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { db, storage } from "../firebase";
-// import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'firebase/firestore';
-import {styles} from "../styles/Home.module.css";
+import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'firebase/firestore';
+import styles from "../styles/Home.module.css";
+import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
-// import Script from 'next/script';
+import Script from 'next/script';
 // import JobList from "../components/component/JobList";
 
 export default function Home() {
 
   const router = useRouter()
+  const [housingOffered, setHousingOffered] = useState([])
+  const [community, setCommunity] = useState([])
+  const [radioData, setRadioData] = useState([])
+  const [services, setServices] = useState([])
+  const [sale, setSale] = useState([])
+  const [selectData, setSelectData] = useState()
+  const [subcat, setSubcat] = useState()
+  var data = [];
 
 
   const postdata = (e) => { 
