@@ -25,7 +25,7 @@ export default function Home() {
   var data = [];
 
 
-  const postdata = (e) => {
+  const postdata = (e) => { 
     // setSubcat(e.target.id)
     console.log(e.target.id)
     router.push({ pathname: '/post', query: { openCat: e.target.id } })
