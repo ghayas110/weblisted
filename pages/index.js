@@ -214,7 +214,7 @@ export default function Home() {
             </ul>
 
             <ul className={styles.home_ul}>
-              <li className={styles.a_3}>
+              <li className={styles.a_3}> 
 
                 <a href="/About">About Craigslist</a>
               </li>
