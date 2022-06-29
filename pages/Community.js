@@ -45,7 +45,7 @@ const Community = () => {
     }
     const handleSelectedData = () => {
             console.log(selectData)
-            router.push({pathname: "/Account_fianance", query: { category: selectData }})
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         
      
            

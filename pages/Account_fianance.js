@@ -1707,7 +1707,7 @@ const Account_fianance = () => {
 
 
             <section className={styles.formbuttonsection}>
-                <button onClick={handleSubmit} >Form   Submit</button>
+                <button onClick={handleSubmit} >Form Submit</button>
             </section>
 
 

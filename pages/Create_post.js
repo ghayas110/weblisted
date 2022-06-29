@@ -37,7 +37,7 @@ export default function Create_post() {
         //     router.push({pathname: "/resume_Form", query: { category: selectData }})
         // }
 if(selectData === "gigOffered"){
-    router.push({pathname: "/GigOffered", query: { category: selectData }})
+    router.push({pathname: "/gigOffered", query: { category: selectData }})
 
 }else if(selectData === "resume"){
     router.push({pathname: "/resume", query: { category: selectData }})

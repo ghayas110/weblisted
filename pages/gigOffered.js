@@ -46,10 +46,10 @@ const GigOffered = () => {
     const handleSelectedData = () => {
       
         if(selectData === "I have a service to offer"){
-            router.push({pathname: "/gigSubCategory", query: { category: selectData }})
+            router.push({pathname: "/gigSubCategory", query: { subcategory: selectData,category:category }})
         
         }else{
-            router.push({pathname: "/gigSub2Category", query: { category: selectData }})
+            router.push({pathname: "/gigSub2Category", query: { subcategory: selectData,category:category }})
         }
            
 
