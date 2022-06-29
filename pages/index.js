@@ -257,7 +257,7 @@ export default function Home() {
                     <div className="row" id={styles.homecat1}>
                       <div className="col-md-6">
                         <ul>
-                          <li onClick={(e) => postdata(e)} id="activites" className={styles.comlist}>
+                          <li onClick={(e) => postdata(e)} id="activity partners" className={styles.comlist}>
                             activites
                           </li><li onClick={(e) => postdata(e)} id="artists" className={styles.comlist}>
                             artists
@@ -273,10 +273,10 @@ export default function Home() {
                             general
                           </li>
                           <li onClick={(e) => postdata(e)} id="groups" className={styles.comlist}>
-                            groups
+                          groups
                           </li>
-                          <li onClick={(e) => postdata(e)} id="local news" className={styles.comlist}>
-                            local news
+                          <li onClick={(e) => postdata(e)} id="local news and views" className={styles.comlist}>
+                          local news and views
                           </li>
                         </ul>
                       </div>
@@ -304,7 +304,7 @@ export default function Home() {
                             rideshare
                           </li>
                           <li onClick={(e) => postdata(e)} id="volunteers" className={styles.comlist}>
-                            volunteers
+                          volunteers
                           </li>
                         </ul>
                       </div>
@@ -316,20 +316,20 @@ export default function Home() {
                     <ul>
 
 
-                      <li onClick={(e) => postdata(e)} id="apts / housing" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="apartments / housing for rent" className={styles.comlist}>
                         apts / housing
                       </li> <li onClick={(e) => postdata(e)} id="housing swap" className={styles.comlist}>
                         housing swap
                       </li> <li onClick={(e) => postdata(e)} id="housing wanted" className={styles.comlist}>
                         housing wanted
                       </li>
-                      <li onClick={(e) => postdata(e)} id="office / commercial" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="office & commercial" className={styles.comlist}>
                         office / commercial
                       </li>
-                      <li onClick={(e) => postdata(e)} id="parking / storage" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="parking & storage" className={styles.comlist}>
                         parking / storage
                       </li>
-                      <li onClick={(e) => postdata(e)} id="real estate for sale" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="real estate - by broker" className={styles.comlist}>
                         real estate for sale
                       </li>
                       <li onClick={(e) => postdata(e)} id="rooms & shares" className={styles.comlist}>
@@ -338,10 +338,10 @@ export default function Home() {
                       <li onClick={(e) => postdata(e)} id="rooms wanted" className={styles.comlist}>
                         rooms wanted
                       </li>
-                      <li onClick={(e) => postdata(e)} id="sublet / temporary" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="sublets & temporary" className={styles.comlist}>
                         sublet / temporary
                       </li>
-                      <li onClick={(e) => postdata(e)} id="vocation rentals" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="vacation rentals" className={styles.comlist}>
                         vocation rentals
                       </li>
 
@@ -356,66 +356,66 @@ export default function Home() {
                   <div className="col-md-6" id={styles.home_list01}>
                     <h6 className={styles.comhead}>Services</h6>
                     <ul>
-                      <li onClick={(e) => postdata(e)} id="automotive" className={styles.comlist}>
-                        automotive
+                      <li onClick={(e) => postdata(e)} id="automotive services" className={styles.comlist}>
+                      automotive services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="beauty" className={styles.comlist}>
-                        beauty
+                      <li onClick={(e) => postdata(e)} id="beauty services" className={styles.comlist}>
+                      beauty services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="cell/mobile" className={styles.comlist}>
-                        cell/mobile
+                      <li onClick={(e) => postdata(e)} id="cell phone / mobile services" className={styles.comlist}>
+                      cell phone / mobile services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="computer" className={styles.comlist}>
-                        computer
+                      <li onClick={(e) => postdata(e)} id="computer services" className={styles.comlist}>
+                      computer services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="creative" className={styles.comlist}>
-                        <span >creative</span>
-                      </li> <li onClick={(e) => postdata(e)} id="cycle" className={styles.comlist}>
-                        cycle
+                      <li onClick={(e) => postdata(e)} id="creative services" className={styles.comlist}>
+                        <span >creative services</span>
+                      </li> <li onClick={(e) => postdata(e)} id="cycle services" className={styles.comlist}>
+                      cycle services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="event" className={styles.comlist}>
-                        event
+                      <li onClick={(e) => postdata(e)} id="event services" className={styles.comlist}>
+                      event services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="farm+garden" className={styles.comlist}>
-                        farm+garden
+                      <li onClick={(e) => postdata(e)} id="farm & garden services" className={styles.comlist}>
+                      farm & garden services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="financial" className={styles.comlist}>
-                        financial
+                      <li onClick={(e) => postdata(e)} id="financial services" className={styles.comlist}>
+                      financial services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="health / well" className={styles.comlist}>
-                        health / well
+                      <li onClick={(e) => postdata(e)} id="health/wellness services" className={styles.comlist}>
+                      health/wellness services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="household" className={styles.comlist}>
-                        household
+                      <li onClick={(e) => postdata(e)} id="household services" className={styles.comlist}>
+                      household services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="labor/move" className={styles.comlist}>
-                        labor/move
+                      <li onClick={(e) => postdata(e)} id="labor / hauling / moving" className={styles.comlist}>
+                      labor / hauling / moving
                       </li>
-                      <li onClick={(e) => postdata(e)} id="legal" className={styles.comlist}>
-                        legal
-                      </li> <li onClick={(e) => postdata(e)} id="lessons" className={styles.comlist}>
-                        lessons
+                      <li onClick={(e) => postdata(e)} id="legal services" className={styles.comlist}>
+                      legal services
+                      </li> <li onClick={(e) => postdata(e)} id="lessons & tutoring " className={styles.comlist}>
+                      lessons & tutoring 
                       </li>
-                      <li onClick={(e) => postdata(e)} id="marine" className={styles.comlist}>
-                        marine
+                      <li onClick={(e) => postdata(e)} id="marine services" className={styles.comlist}>
+                      marine services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="pet" className={styles.comlist}>
+                      <li onClick={(e) => postdata(e)} id="pets" className={styles.comlist}>
                         pet
                       </li>
-                      <li onClick={(e) => postdata(e)} id="real estate" className={styles.comlist}>
-                        real estate
+                      <li onClick={(e) => postdata(e)} id="real estate services" className={styles.comlist}>
+                      real estate services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="skilled trade" className={styles.comlist}>
-                        skilled trade
+                      <li onClick={(e) => postdata(e)} id="skilled trade services" className={styles.comlist}>
+                      skilled trade services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="sm biz ads" className={styles.comlist}>
-                        sm biz ads
+                      <li onClick={(e) => postdata(e)} id="small biz ads" className={styles.comlist}>
+                      small biz ads
                       </li>
-                      <li onClick={(e) => postdata(e)} id="travel/vac" className={styles.comlist}>
-                        travel/vac
+                      <li onClick={(e) => postdata(e)} id="travel/vacation services" className={styles.comlist}>
+                      travel/vacation services
                       </li>
-                      <li onClick={(e) => postdata(e)} id="write/ed/tran" className={styles.comlist}>
-                        write/ed/tran
+                      <li onClick={(e) => postdata(e)} id="writing / editing / translation" className={styles.comlist}>
+                      writing / editing / translation
                       </li>
 
                     </ul>
@@ -611,7 +611,7 @@ export default function Home() {
                       food/beverage/hospitality
                     </li>
                     <li onClick={(e) => postdata(e)} id="real estate" className={styles.comlist}>
-                      real estate
+                    real estate
                     </li>
                     <li onClick={(e) => postdata(e)} id="skilled trades/artisan" className={styles.comlist}>
                       skilled trades/artisan
@@ -632,7 +632,7 @@ export default function Home() {
                       general labor
                     </li>
                     <li onClick={(e) => postdata(e)} id="government" className={styles.comlist}>
-                      government
+                    government
                     </li>
                     <li onClick={(e) => postdata(e)} id="manufacturing" className={styles.comlist}>
                       manufacturing

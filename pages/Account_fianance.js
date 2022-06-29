@@ -898,9 +898,9 @@ const Account_fianance = () => {
                             <div className="row">
                                 <div className="col-md-4 col-lg-4" id={styles.Forsale_col}>
                                     <span>make / manufacturer</span> <br />
-                                    <input type="text" value="make / manufacturer" onChange={(e) => setManufacturer(e.target.value)} /><br />
+                                    <input type="text"  onChange={(e) => setManufacturer(e.target.value)} /><br />
                                     <span>model name / number</span> <br />
-                                    <input type="text" value="model name / number" onChange={(e) => setModelName(e.target.value)} /><br />
+                                    <input type="text"  onChange={(e) => setModelName(e.target.value)} /><br />
                                     <span>size / dimensions</span> <br />
                                     <input type="text" placeholder='length x width x height' value="size / dimensions" onChange={(e) => setDimensions(e.target.value)} />
                                 </div>
@@ -1347,42 +1347,42 @@ const Account_fianance = () => {
 
             {/*----------------------section gigoffered hire service computer------------>*/}
             <div>
-                {(category === "I want to hire someone" && subcategory === "domestic gigs") && (
+                {(category === "gigOffered" && subcategory === "domestic gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "creative gigs") && (
+                {(category === "gigOffered" && subcategory === "creative gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "crew gigs") && (
+                {(category === "gigOffered" && subcategory === "crew gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "computer gigs") && (
+                {(category === "gigOffered" && subcategory === "computer gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "writing gigs") && (
+                {(category === "gigOffered" && subcategory === "writing gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "talent gigs") && (
+                {(category === "gigOffered" && subcategory === "talent gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "labor gigs") && (
+                {(category === "gigOffered" && subcategory === "labor gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
                 )}
-                {(category === "I want to hire someone" && subcategory === "event gigs") && (
+                {(category === "gigOffered" && subcategory === "event gigs") && (
                     <span>
                         {GigOffCS()}
                     </span>
@@ -1437,7 +1437,9 @@ const Account_fianance = () => {
 
             {/*----------------------section housing offer office and commercial------------>*/}
             {(category === "housingOffered" && subcategory === "office & commercial") && (
-                <span></span>
+                <span>
+                {HousingOffOC()}
+                </span>
             )}
             {(category === "housingOffered" && subcategory === "parking & storage") && (
                 <span>{HousingOffOC()}</span>
@@ -1453,7 +1455,10 @@ const Account_fianance = () => {
             {/*----------------end-----------*/}
             {/*----------------------section housing want  wanted real estate------------>*/}
             {(category === "housingWanted" && subcategory === "wanted: real estate") && (
-                <HousingWanRE />
+                <>
+                {HousingWanRE()}
+                
+                </>
             )}
             {(category === "housingWanted" && subcategory === "wanted: sublet/temp") && (
                 <span>{HousingWanWAp()}</span>

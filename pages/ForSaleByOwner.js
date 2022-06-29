@@ -176,6 +176,9 @@ const ForSaleByOwner = () => {
         if(selectData === "photo/video"){
             router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
         }
+        if(selectData === "bicycle parts"){
+            router.push({pathname: "/Account_fianance", query: { subcategory: selectData,category:category }})
+        }
 
 
            
