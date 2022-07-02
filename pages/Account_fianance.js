@@ -1,5 +1,5 @@
 // eslint-disable-next-line react-hooks/exhaustive-deps
-import React, { textarea, useState, useRef } from 'react'
+import React, { textarea, useState, useRef, useEffect} from 'react'
 import Header from './Header'
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/account_fianance.module.css"
@@ -15,7 +15,7 @@ import { setUserId } from 'firebase/analytics';
 
 const Account_fianance = () => {
 
-
+    
 
     const [frameSize, setFrameSize] = useState("");
     const [serialNumber, setSerialNumber] = useState("");
@@ -89,9 +89,17 @@ const Account_fianance = () => {
         }
     }
 
+    const [usersName, setUsersName ] = useState("");
 
+    useEffect(() => {
+      // Perform localStorage action
+      const users = localStorage.getItem('email')
+      console.log(users,"local storage")
+      setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
+    }, [])
+  
     const handleSubmit = async (e) => {
-
+        
         e.preventDefault()
         try {
             const docRef = await addDoc(collection(db, 'Form'), {
@@ -135,7 +143,7 @@ const Account_fianance = () => {
                 internship: internship,
                 contactbyrecruiters: contactbyrecruiters,
                 posttitle: posttitle,
-                city: city,
+                city: city.toLowerCase().replace(/\s/g, ''),
                 postalcode: postalcode,
                 discription: discription,
                 employetype: employetype,
@@ -146,6 +154,8 @@ const Account_fianance = () => {
                 select: select,
                 subcategory, subcategory,
                 category: category,
+                timestamp:serverTimestamp(),
+                cuser:usersName,
             })
             alert("form submited")
             console.log(docRef)
@@ -288,7 +298,7 @@ const Account_fianance = () => {
                                             <span>city</span>
                                         </span>
                                     </span>
-                                    <input value={city} type="text" placeholder="city" onChange={(e) => setCity(e.target.value)} />
+                                    <input value={city} type="text" placeholder="city" onChange={(e) => setCity((e.target.value))} />
                                 </div>
 
                                 <div className="col-lg-2" id={styles.input1}>

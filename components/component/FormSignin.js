@@ -22,15 +22,17 @@ export default function FormSignin() {
 
   const logintoApp = (e) => {
     e.preventDefault()
-    let EMAIL = localStorage.getItem('EMAIL');
     signInWithEmailAndPassword(auth, email, password).then((userAuth) => {
       dispatch(login({
         email: userAuth.user.email,
         password: userAuth.user.password,
 
       }))
+      localStorage.setItem("email",email)
+      console.log('userAuth',email)
     })
     if (auth.currentUser != null) {
+     
       alert("loged in")
       router.push('/')
 

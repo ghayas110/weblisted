@@ -11,26 +11,59 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
 import Script from 'next/script';
 // import JobList from "../components/component/JobList";
-
+import { auth } from '../firebase';
+import { useSelector,useDispatch } from 'react-redux';
+import { logout, selectUser } from '../components/features/UderSlice.js';
 export default function Home() {
-
-  const router = useRouter()
+ 
+  const router = useRouter();
   const [housingOffered, setHousingOffered] = useState([])
   const [community, setCommunity] = useState([])
   const [radioData, setRadioData] = useState([])
   const [services, setServices] = useState([])
+  const [cityName,setCityName] = useState();
   const [sale, setSale] = useState([])
   const [selectData, setSelectData] = useState()
   const [subcat, setSubcat] = useState()
   var data = [];
+  const dispatch = useDispatch();
+  const user =useSelector(selectUser);
 
+  const [usersName, setUsersName ] = useState("");
+
+  useEffect(() => {
+    // Perform localStorage action
+    const users = localStorage.getItem('email')
+    console.log(users,"local storage")
+    setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
+  }, [])
 
   const postdata = (e) => { 
     // setSubcat(e.target.id)
     console.log(e.target.id)
     router.push({ pathname: '/post', query: { openCat: e.target.id } })
   }
+  const signOut=()=>{
+    auth.signOut().then(()=>{
+      localStorage.clear()
+      dispatch(logout())
 
+        router.push("/SignIn");
+    })
+}
+const city =()=>{
+
+  fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
+  .then(response =>response.json())
+  .then((data) => setCityName(data.city.toUpperCase().replace(/\s/g, '')))
+  .catch((error) => console.error(error))
+  
+}
+useEffect(() => {
+  city();
+  // getPost(); 
+
+}, [0])
   // useEffect(() => {
   //   try {
   //     getData();
@@ -100,6 +133,7 @@ export default function Home() {
   //   setServices(servicesdata)
   // }
 
+  
 
   return (
     <>
@@ -111,15 +145,37 @@ export default function Home() {
               <img src="https://painting.demoapp-lc.com/wp-content/uploads/2022/05/weblisted-01.png" alt="" className={styles.img_logo} />
             </span>
             <span>
-              <a href="/Create_post" className={styles.a_1}>
-                Create a posting
-              </a>
+            {((usersName!==null)&&(usersName!=="")) ?
+            <a href="/Create_post" className={styles.a_1}>
+            Create a posting
+          </a>
+            : 
+            
+            <a href="/SignIn" className={styles.a_1}>
+            Create a posting
+          </a> }
+          <br/>
+          {((usersName!==null)&&(usersName!=="")) ?
+          <a href="/SignIn" className={styles.a_1}>
+       My Post
+          </a>
+          : 
+          ""
+          }
             </span>
             <span>
-
+            {((usersName!==null)&&(usersName!=="")) ?
+              <p onClick={signOut} className={styles.a_1}>
+              {usersName}
+              <br/>
+              Logout
+            </p>
+              : 
+              
               <a href="/SignIn" className={styles.a_1}>
-                My account
-              </a>
+           My account
+              </a> }
+             
             </span>
             <span>
 
@@ -248,7 +304,7 @@ export default function Home() {
           {/*-------rehman code-----*/}
 
           <div className="col-lg-8 col-md-12 col-sm-12" id={styles.index_content}>
-            <h1 className={styles.Head}>DALLAS</h1>
+            <h1 className={styles.Head}>{cityName}</h1>
             <div className="row">
               <div className="col-lg-9">
                 <div className="row">

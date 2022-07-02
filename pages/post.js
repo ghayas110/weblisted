@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { main, useState, useEffect } from 'react';
 import styles from '../styles/post.module.css'
-import media from 'react-media';
 import Sider from '../components/component/Sider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
@@ -27,7 +26,7 @@ function post() {
 
         fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
         .then(response =>response.json())
-        .then((data) => setCityName(data.city))
+        .then((data) => setCityName(data.city.toLowerCase().replace(/\s/g, '')))
         .catch((error) => console.error(error))
         
     }
@@ -82,6 +81,7 @@ function post() {
                 <div id={styles.app}>
                     <aside id={on ? styles.to_right : ''}>
                         <div className='col-md-12'>
+                        <h1>{cityName}</h1>
                             <a href="#" onClick={handleOn}>
                                 <FontAwesomeIcon icon={faAnglesRight} id={styles.icon} />
                             </a>
