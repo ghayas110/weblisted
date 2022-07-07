@@ -10,6 +10,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-calendar/dist/Calendar.css";
 import Script from 'next/script';
+import DatePicker from 'sassy-datepicker';
 // import JobList from "../components/component/JobList";
 import { auth } from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
@@ -64,6 +65,14 @@ useEffect(() => {
   // getPost(); 
 
 }, [0])
+
+
+
+
+const onChange = (date) => {
+  
+  console.log(date.toString());
+};
   // useEffect(() => {
   //   try {
   //     getData();
@@ -140,7 +149,7 @@ useEffect(() => {
 
       <div className="container" id={styles.fluid}>
         <div className='row' id={styles.home_row}>
-          <div className='col-lg-2 col-md-12 col-sm-12' id={styles.bg_1}>
+          <div className='col-lg-3 col-md-12 col-sm-12' id={styles.bg_1}>
             <span>
               <img src="https://painting.demoapp-lc.com/wp-content/uploads/2022/05/weblisted-01.png" alt="" className={styles.img_logo} />
             </span>
@@ -191,55 +200,8 @@ useEffect(() => {
               </a>
             </span>
             <div className={styles.calendar_main}>
-                {/*<Calendar className={styles.calendar1} />*/}
-                <div className={styles.Calendar}>
-                <ul className={styles.Calendar_tr}>
-                <li><a href="">M</a></li>
-                <li><a href="">T</a></li>
-                <li><a href="">W</a></li>
-                <li><a href="">T</a></li>
-                <li><a href="">F</a></li>
-                <li><a href="">S</a></li>
-                <li><a href="">S</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
-                <li><a href="">27</a></li>
-                <li><a href="">28</a></li>
-                <li><a href="">29</a></li>
-                <li><a href="">30</a></li>
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li><a href="">6</a></li>
-                <li><a href="">7</a></li>
-                <li><a href="">8</a></li>
-                <li><a href="">9</a></li>
-                <li><a href="">10</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
-                <li><a href="">11</a></li>
-                <li><a href="">12</a></li>
-                <li><a href="">13</a></li>
-                <li><a href="">14</a></li>
-                <li><a href="">15</a></li>
-                <li><a href="">16</a></li>
-                <li><a href="">17</a></li>
-                </ul>
-                <ul className={styles.Calendar_tr}>
-                <li><a href="">18</a></li>
-                <li><a href="">19</a></li>
-                <li><a href="">20</a></li>
-                <li><a href="">21</a></li>
-                <li><a href="">22</a></li>
-                <li><a href="">23</a></li>
-                <li><a href="">24</a></li>
-                </ul>
-                </div>
-              </div>
+            <DatePicker onChange={onChange}  className={styles.calendardate} />
+                         </div>
             <div className={styles.list_001}>
             <ul className={styles.home_ul}>
               <li className={styles.a_3}>
@@ -303,7 +265,7 @@ useEffect(() => {
 
           {/*-------rehman code-----*/}
 
-          <div className="col-lg-8 col-md-12 col-sm-12" id={styles.index_content}>
+          <div className="col-lg-7 col-md-12 col-sm-12" id={styles.index_content}>
             <h1 className={styles.Head}>{cityName}</h1>
             <div className="row">
               <div className="col-lg-9">

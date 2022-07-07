@@ -318,11 +318,7 @@ background: white;
 }
 
 .calendar_main{
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: -16px;
-  margin-bottom: -16px;
+
 }
 .Calendar_tr2 li{
 font-size: 12px;
@@ -356,25 +352,27 @@ color: black;
   text-decoration: none;
   font-weight: 600;
 }
+
+
+
+.calendardate{
+
+  display: grid;
+  width: 1rem;
+}
+
+.sdp--dates-grid .stp--dates-grid {
+  display: grid !important;
+  gap: 0px !important;
+  grid-template-columns: repeat(7,1fr) !important;
+  justify-items: center !important;
+  /* margin: 0.5rem 0 0 !important; */
+  color: red !important;
+  background-color: red !important;
+}
+
+
 /* -------------------------------code end------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
