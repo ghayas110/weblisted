@@ -8,7 +8,7 @@ import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'fi
 import styles from "../styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "react-calendar/dist/Calendar.css";
+// import "react-calendar/dist/Calendar.css";
 import Script from 'next/script';
 import DatePicker from 'sassy-datepicker';
 // import JobList from "../components/component/JobList";
