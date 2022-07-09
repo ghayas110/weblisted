@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import { login, logout, } from "../../components/features/UderSlice";
 import { onAuthStateChanged, signInWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { db } from '../../firebase';
+import { updateDoc, collection, onSnapshot, orderBy, query, doc, getDocs, where, getDoc, addDoc, deleteDoc } from 'firebase/firestore'
 import { app } from '../../firebase';
 
 
@@ -15,31 +17,50 @@ export default function FormSignin() {
   const dispatch = useDispatch();
   const router = useRouter();
   const auth = getAuth(app);
-
+  const data=[]
 
 
 
 
   const logintoApp = (e) => {
     e.preventDefault()
-    signInWithEmailAndPassword(auth, email, password).then((userAuth) => {
+    signInWithEmailAndPassword(auth, email, password).then(async (userAuth) => {
       dispatch(login({
         email: userAuth.user.email,
         password: userAuth.user.password,
 
       }))
-      localStorage.setItem("email",email)
-      console.log('userAuth',email)
-    })
-    if (auth.currentUser != null) {
-     
-      alert("loged in")
-      router.push('/')
-
-    }else{
-      alert("wro")
-    }
+      const querySnapshot =  await getDocs(collection(db, "userid"));
+     await querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        data.push({ id: doc.id, ...doc.data() })
+        // setUserData(userData=>[...userData,doc.data()])
+      })
+      try{
+      const filterData =  data.filter((item) => item.email === email  )
+      if (filterData) {
+        if((filterData.length>0) &&(filterData[0].email === email)&&(filterData[0].password === password) )
+        {
+           localStorage.setItem('email', filterData[0].email);
+          localStorage.setItem('accid', filterData[0].accId);
+           localStorage.setItem('displayName', filterData[0].name);
+         router.push('/')
     
+          }
+          else{
+            setError('Wrong Email or Password') // if email or password is wrong
+          }
+        
+      }
+  
+    }
+   catch(e){
+     console.log(e)
+   }
+    
+    })
+
   }
   return (
 

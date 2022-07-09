@@ -42,8 +42,9 @@
 }
 
 .bodySignin{
-    background: #235789 !important;
+    background: #235789;
     height: 789px;
+    
 }
 
 @media screen and (max-width: 700px) {

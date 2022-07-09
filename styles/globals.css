@@ -52,7 +52,14 @@ li{
 }
 .js-only{
   margin-top: 10px;
-  width: 150px !important;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 12px;
+
+  width: 137px !important;
+}
+.js-only option{
+  font-size: 12px;
 }
 
 .accordion-item:first-of-type .accordion-button {

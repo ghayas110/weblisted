@@ -38,6 +38,7 @@
   }
   
   #navlist {
+    font-size: 14px;
     background-color: #235789;
     color: #fff;
     height: 100%;
@@ -114,7 +115,7 @@
   width: 88px;
   border-radius: 7px;
   height: 26px;
-  font-size: 17px;
+  font-size: 12px;
 
 }
 #content_right{
@@ -130,7 +131,8 @@
     color: white;
   border: none;
     font-weight: 600;
-    font-family: monospace;
+      font-family: 'Poppins', sans-serif;
+
 } 
 #content_right button:hover{
   border-radius: 8px;
@@ -138,11 +140,14 @@
     width: 100px;
     color: #235789;
     font-weight: 600;
-    font-family: monospace;
+    font-size: 12px;
+      font-family: 'Poppins', sans-serif;
+
 }
 #two_btn button{
   font-weight: 600;
-    font-family: monospace;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
   width: 117px;
   color: white;
   background: #235789;
@@ -167,6 +172,8 @@
     width: 245px;
     text-align: center;
     border-radius: 7px;
+    font-size: 12px;
+
 }
 #opneSidebar h4{
     color: white;
@@ -184,6 +191,9 @@
     position: relative;
     bottom: 5px;
     text-decoration: none;
+    font-size: 12px;
+    color: black; 
+
 
 }
 #search_icon{
@@ -225,7 +235,9 @@
   color: #6b93b8;
 }
 
-
+#cityName h1{
+  font-size: 24px;
+}
 
 /* ---------------------MEDIA QUery------------------------ */
 
@@ -269,6 +281,10 @@
   height: 30px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.opneSidebar{
+  width: 100px;
 }
 }
 

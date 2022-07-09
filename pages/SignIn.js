@@ -17,7 +17,6 @@ export default function SignIn() {
                                 <span className={styles.Signin_text}><img src="weblisted-01.png" alt="bot"></img></span>
                             </div>
                             <div id={styles.btn_signin}>
-                                <button id={styles.btn2}><Link href="/SignIn">Sign In</Link></button>
                                 <button id={styles.btn2}><Link href="/Signup">Sign Up</Link></button>
                             </div>
                         </div>

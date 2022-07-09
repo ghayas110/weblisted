@@ -14,9 +14,10 @@ import { db } from '../firebase'
 import { useRouter } from 'next/router';
 import { Category } from 'styled-icons/boxicons-regular';
 function post() {
+
     const router = useRouter()
     const { openCat } = router.query;
-    const [on, setOn] = useState(false);
+    const [on, setOn] = useState(true);
     const [job, setJob] = useState([]);
     const [selectData, setSelectData] = useState();
     const [cityName,setCityName] = useState();
@@ -80,7 +81,7 @@ function post() {
                 <Header />
                 <div id={styles.app}>
                     <aside id={on ? styles.to_right : ''}>
-                        <div className='col-md-12'>
+                        <div className='col-md-12' id={styles.cityName}> 
                         <h1>{cityName}</h1>
                             <a href="#" onClick={handleOn}>
                                 <FontAwesomeIcon icon={faAnglesRight} id={styles.icon} />

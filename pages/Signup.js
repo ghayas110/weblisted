@@ -18,7 +18,7 @@ export default function Signup() {
                             </div>
                             <div id={styles.btn_signin}>
                                 <button id={styles.btn2} > <Link href="/SignIn">Sign In</Link></button>
-                                <button id={styles.btn2} > <Link href="/Signup">Sign Up</Link> </button>
+                            
                             </div>
                         </div>
 

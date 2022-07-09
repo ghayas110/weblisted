@@ -61,30 +61,51 @@
 /* ------------------------------start here---------------------------------------- */
 
 .Head{
+  font-weight:600;
   text-align: center;
   color: white;
-  background: #235789;
+  /* background: #235789; */
+  background: linear-gradient(to right top, #235789, #2b5f90, #326697, #3a6e9f, #4176a6);
+  display: flex;
+  font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  letter-spacing: 3px;
+  box-shadow: 0px 10px 15px -17px rgba(0,0,0,0.1);
+
   
 }
 .comhead{
-     font-weight: 400;
-    text-align: center;
-    color: white;
-    background: #235789;
-    font-weight: 600;
-    font-size: 18px;
+  background: linear-gradient(to right top, #235789, #2b5f90, #326697, #3a6e9f, #4176a6);
+  font-weight: 400;
+  box-shadow: 0px 10px 15px -17px rgba(0,0,0,0.1);
+  text-align: center;
+  color: white;
+  /* background: #235789; */
+  font-weight: 600;
+  font-size: 16px;
+  height: 30px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 
     
 }
 .comlist{
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
  color: rgb(61, 61, 61);
  list-style: none;
  border-bottom: 1px solid grey;
  cursor: pointer;
  position: relative;
  right: 28px;
+ font-family: 'Poppins', sans-serif;
+
 }
 .comlist:hover{
   background-color: rgb(179, 178, 178);
@@ -132,11 +153,16 @@
 
 .home_select{
  width: 100%;
+ height: 30px;
+ border-radius: 6px;
+ overflow-y: auto;
 }
 .home_select_div{
   width: 134px;
   line-height: 2;
   font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+
 }
 .home_ul{
   cursor: pointer;
@@ -154,8 +180,9 @@
 
 
 .homesidebar{
-  width: 140px;
-  height: 21px;
+  width: 156px;
+  height: 30px;
+  border-radius: 6px;
 }
 
 .react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
@@ -177,6 +204,7 @@
 }
 .clfooter_home li{
   list-style: none;
+  font-weight: 600 !important;
 
 }
 
@@ -305,6 +333,8 @@ font-weight: 600;
 border:1px solid rgb(207, 207, 207);
 width: 28px;
 color: black;
+font-family: 'Poppins', sans-serif;
+
 height: 20px;
 background: white;
 }
@@ -327,6 +357,8 @@ font-weight: 600;
   border:1px solid rgb(207, 207, 207);
   width: 28px;
   height: 20px;
+  font-family: 'Poppins', sans-serif;
+
 background: white;
 
 }
@@ -441,8 +473,9 @@ color: black;
   }
 }
 #bg_1{
-   background-color: #235789 !important;
-   background-color: #235789 !important;
+   /* background-color: #235789 !important; */
+   /* background-color: #235789 !important; */
+   background: linear-gradient(to right top, #235789, #2b5f90, #326697, #3a6e9f, #4176a6);
     color: white;
     display: flex;
     flex-direction: column;
@@ -461,14 +494,16 @@ color: black;
   font-weight:700;
 }
 #bg_1 a{
-  text-align: center;
+  /* text-align: center; */
   font-size: 12px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
 }
 .a_1{
-  text-align: center;
+  text-align: center !important;
   color: #fafafa !important;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
 }
 #bg_1 p{
@@ -478,14 +513,14 @@ color: black;
   text-align: center;
   color: #fafafa !important;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   margin: 19px !important;
   font-family: 'Poppins', sans-serif;
 }
 .input_1::placeholder{
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   
 }
 .input_1{
@@ -502,7 +537,7 @@ color: black;
   color: #fafafa !important;
   text-decoration: none;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   
 }
@@ -607,4 +642,19 @@ color: black;
 
 #home_list01{
   line-height: 2;
+}
+
+.sidebarAC{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logoutbtn{
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+ box-shadow: -50px -50px 0px -30px rgba(0,0,0,0)
+ ;
 }

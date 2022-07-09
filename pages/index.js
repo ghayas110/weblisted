@@ -34,7 +34,7 @@ export default function Home() {
 
   useEffect(() => {
     // Perform localStorage action
-    const users = localStorage.getItem('email')
+    const users = localStorage.getItem('displayName')
     console.log(users,"local storage")
     setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
   }, [])
@@ -73,75 +73,7 @@ const onChange = (date) => {
   
   console.log(date.toString());
 };
-  // useEffect(() => {
-  //   try {
-  //     getData();
-
-  //   }
-  //   catch (error) {
-  //     console.error(error)
-  //   }
-
-  // }, [])
-
-
-  // const getData = async () => {
-  //   const querySnapshot = await getDocs(collection(db, "subcategory"));
-  //   querySnapshot.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     //   console.log(doc.id, " => ", doc.data());
-  //     //   data.push({ id: doc.id, ...doc.data() });
-  //     data.push(Object.values(doc.data()));
-  //     // setUserData(userData=>[...userData,doc.data()])
-  //   })
-
-  //   setRadioData(data)
-
-  //   const housingOffered = await getDocs(collection(db, "housing offered"));
-  //   housingOffered.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     //   console.log(doc.id, " => ", doc.data());
-  //     //   data.push({ id: doc.id, ...doc.data() });
-  //     housing.push(Object.values(doc.data()));
-  //     // setUserData(userData=>[...userData,doc.data()])
-  //   })
-  //   setHousingOffered(housing)
-  //   // console.log(data[0],"hello")
-
-  //   const community = await getDocs(collection(db, "community"));
-  //   community.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     //   console.log(doc.id, " => ", doc.data());
-  //     //   data.push({ id: doc.id, ...doc.data() });
-  //     communitydata.push(Object.values(doc.data()));
-  //     // setUserData(userData=>[...userData,doc.data()])
-  //   })
-
-  //   setCommunity(communitydata)
-
-  //   const forSaleByOwner = await getDocs(collection(db, "for sale by owner"));
-  //   forSaleByOwner.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     //   console.log(doc.id, " => ", doc.data());
-  //     //   data.push({ id: doc.id, ...doc.data() });
-  //     saledata.push(Object.values(doc.data()));
-  //     // setUserData(userData=>[...userData,doc.data()])
-  //   })
-
-  //   setSale(saledata)
-
-  //   const gigsubcategory = await getDocs(collection(db, "gigsubcategory"));
-  //   gigsubcategory.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     //   console.log(doc.id, " => ", doc.data());
-  //     //   data.push({ id: doc.id, ...doc.data() });
-  //     servicesdata.push(Object.values(doc.data()));
-  //     // setUserData(userData=>[...userData,doc.data()])
-  //   })
-
-  //   setServices(servicesdata)
-  // }
-
+ 
   
 
   return (
@@ -153,7 +85,7 @@ const onChange = (date) => {
             <span>
               <img src="https://painting.demoapp-lc.com/wp-content/uploads/2022/05/weblisted-01.png" alt="" className={styles.img_logo} />
             </span>
-            <span>
+            <span className={styles.sidebarAC}>
             {((usersName!==null)&&(usersName!=="")) ?
             <a href="/Create_post" className={styles.a_1}>
             Create a posting
@@ -165,8 +97,8 @@ const onChange = (date) => {
           </a> }
           <br/>
           {((usersName!==null)&&(usersName!=="")) ?
-          <a href="/SignIn" className={styles.a_1}>
-       My Post
+          <a href="/Mypost" className={styles.a_1}>
+             My Post
           </a>
           : 
           ""
@@ -177,19 +109,18 @@ const onChange = (date) => {
               <p onClick={signOut} className={styles.a_1}>
               {usersName}
               <br/>
-              Logout
+               <button className={styles.logoutbtn}>Logout </button>
             </p>
               : 
-              
               <a href="/SignIn" className={styles.a_1}>
-           My account
+              My account
               </a> }
              
             </span>
             <span>
 
               <span className={styles.form_input}>
-                <input type="text"  className={styles.homesidebar} />
+                <input type="text" placeholder='Search' className={styles.homesidebar} />
               </span>
               <br />
             </span>
@@ -787,7 +718,7 @@ const onChange = (date) => {
                 <select id="" className={styles.home_select}>
                   <option value=""> adelaide</option>
                   <option value=""> bangladesh</option>
-                  <option value=""> beijing</option>
+                  <option value=""> beijing</option> 
                   <option value="">brisbane</option>
                   <option value="">canberra</option>
                   <option value="">christchurch</option>
