@@ -84,7 +84,7 @@ const city =async()=>{
     setCityName(address)
 setLocation(locations)
   }else{
-    setCityName(data.city.toLowerCase().replace(/\s/g, ''))
+    setCityName(data.city().replace(/\s/g, ''))
 
   }
 }
