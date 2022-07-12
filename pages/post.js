@@ -13,13 +13,23 @@ import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestor
 import { db } from '../firebase'
 import { useRouter } from 'next/router';
 import { Category } from 'styled-icons/boxicons-regular';
+import { CalendarDate } from 'styled-icons/bootstrap';
+
+
+
+
+
+
 function post() {
 
     const router = useRouter()
-    const { openCat,city } = router.query;
+    const { openCat,city,date } = router.query;
     const [on, setOn] = useState(true);
+    const [posttitle , setPosttitle ] = useState('');
+    const [calendarDate , setCalendarDate] = useState();
     const [job, setJob] = useState([]);
     const [selectData, setSelectData] = useState();
+    const [timeData, setTimeData] = useState();
     // const [cityName,setCityName] = useState();
     console.log("categor", openCat);
     console.log("categor", city);
@@ -32,16 +42,18 @@ function post() {
 
             query(collection(db, "Form"), where("subcategory", "==", openCat), where("city", "==", city)), (snapshot) => {
                 setJob(snapshot.docs)
+                
 
             })
     };
     console.log(job)
     const renderPost = () => {
         if (job && job?.length) {
-
-            console.log('state', job)
+            // setTimeData(job.map(item=>item.data().timestamp))
+            // console.log('state', timeData)
             return job.map((item, index) => {
                 // eslint-disable-next-line react/jsx-key
+                console.log(new Date(item.data().timestamp.seconds).toLocaleDateString(), "Date")
                 return <JobList
                     obj={item}
                 />
@@ -55,7 +67,7 @@ function post() {
         if(city){
             getPost();
         }
-
+        
     }, [city])
 
     const handleOn = () => {
@@ -63,7 +75,27 @@ function post() {
 
     };
 
-    console.log(city, "city")
+
+    const handleInputChange = (e) => {
+       
+        setPosttitle(e.target.value);
+    }
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        let searchQuerys = ''
+        if (posttitle && posttitle?.length) {
+          searchQuerys = posttitle
+        } 
+        onSnapshot(
+            query(collection(db,"Form"), where("posttitle", "==", searchQuerys)), (snapshot)=>{setPosttitle(snapshot.docs)
+            console.log(snapshot.docs);
+            }) 
+        
+    }
+
+
+    // console.log(city, "city")
+    
     return (
         <>
             <div id={styles.body}>
@@ -76,9 +108,9 @@ function post() {
                                 <FontAwesomeIcon icon={faAnglesRight} id={styles.icon} />
                             </a>
                             <div id={styles.right_side_post}>
-                                <input type="text" placeholder='Search artists' id={styles.rigth_side_input} />
+                                <input type="text" placeholder='Search artists' id={styles.rigth_side_input}  onChange={handleInputChange} />
                                 <div id={styles.search_div} >
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} id={styles.search_icon} />
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} id={styles.search_icon} onClick={handleSubmit} />
                                 </div>
                                 <a href="">save <br /> search</a>
                             </div>

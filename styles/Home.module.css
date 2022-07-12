@@ -118,6 +118,25 @@
      width: 100%;
 } */
 
+.form_input a{
+  text-align: center !important;
+  list-style: none !important;
+  color: white;
+  text-decoration: none !important;
+  font-size: 20px !important;
+
+}    
+.form_input a:hover{
+  color: white;
+}
+.form_input{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1;
+}
+
+
 @media screen and (max-width:992px) {
 
   .calendar{
@@ -133,7 +152,9 @@
 .homesidebar{
   width: 100% !important;
 }
-         
+
+
+
 }
 @media screen and (max-width:1200px) {
   .form_input input{

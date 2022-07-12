@@ -1,0 +1,56 @@
+.Searchdiv{
+    width: 50%;
+}
+
+.Searchdiv .icon{
+    float: right;
+    height: 25px;
+}
+
+
+#search input{
+    width: 93%;
+    border: none;
+}
+
+#search input:focus{
+    border: white;
+}
+
+
+#col12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+.recom{
+    border-top: 2px solid lightgray;
+}
+
+#divrecomm{
+    margin-top: 25px;
+}
+.recpost{
+    padding: 15px;
+    overflow-x: scroll;
+}
+
+.image{
+    height: 100px;
+}
+.cart{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
+}
+.text{
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-left: 3px;
+  font-family: 'Poppins', sans-serif;
+}

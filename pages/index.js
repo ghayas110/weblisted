@@ -20,7 +20,8 @@ import { async } from '@firebase/util';
  function Home() {
  
   const router = useRouter();
-
+  
+  const [calendarDate, setCalendarDate] = useState();
   const [details, setDetails] = useState(null);
   const [housingOffered, setHousingOffered] = useState([])
   const [community, setCommunity] = useState([])
@@ -49,7 +50,7 @@ import { async } from '@firebase/util';
   const postdata = (e) => { 
     // setSubcat(e.target.id)
     console.log(e.target.id)
-    router.push({ pathname: '/post', query: { openCat: e.target.id,city:cityName } })
+    router.push({ pathname: '/post', query: { openCat: e.target.id, city: cityName, date: calendarDate } })
   }
   const signOut=()=>{
     auth.signOut().then(()=>{
@@ -106,8 +107,16 @@ useEffect(() => {
 
 
 const onChange = (date) => {
-  
-  console.log(date.toString());
+  let calendarDate = new Date(date).toLocaleDateString();
+  console.log(calendarDate, "Date")
+ 
+
+};
+const currentDate = () => {
+  let calendarDate =new Date(Date.now());
+  // console.log(date.toString());
+  console.log(calendarDate.toLocaleDateString(), "Date")
+
 };
  
 
@@ -160,7 +169,8 @@ const onChange = (date) => {
             <span>
 
               <span className={styles.form_input}>
-                <input type="text" placeholder='Search' className={styles.homesidebar} />
+                <input type="text" placeholder='Search' className={styles.homesidebar} /> <br />
+                <a href="/Store">Store</a>
               </span>
               <br />
             </span>

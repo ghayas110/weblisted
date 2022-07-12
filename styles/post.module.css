@@ -202,6 +202,7 @@
     
 }
 #search_div{
+  cursor: pointer;
   border-radius: 6px;
   margin-left: 15px;
   border: 1PX solid black;
