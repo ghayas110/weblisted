@@ -16,28 +16,21 @@ import { Category } from 'styled-icons/boxicons-regular';
 function post() {
 
     const router = useRouter()
-    const { openCat } = router.query;
+    const { openCat,city } = router.query;
     const [on, setOn] = useState(true);
     const [job, setJob] = useState([]);
     const [selectData, setSelectData] = useState();
-    const [cityName,setCityName] = useState();
+    // const [cityName,setCityName] = useState();
     console.log("categor", openCat);
-
-    const city =()=>{
-
-        fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
-        .then(response =>response.json())
-        .then((data) => setCityName(data.city.toLowerCase().replace(/\s/g, '')))
-        .catch((error) => console.error(error))
-        
-    }
+    console.log("categor", city);
+  
     
     const getPost = () => {
 
 
         onSnapshot(
 
-            query(collection(db, "Form"), where("subcategory", "==", openCat), where("city", "==", cityName)), (snapshot) => {
+            query(collection(db, "Form"), where("subcategory", "==", openCat), where("city", "==", city)), (snapshot) => {
                 setJob(snapshot.docs)
 
             })
@@ -56,25 +49,21 @@ function post() {
         }
     };
 
-    useEffect(() => {
-        city();
-        // getPost(); 
-
-    }, [0])
+   
     useEffect(() => {
     
-        if(cityName){
+        if(city){
             getPost();
         }
 
-    }, [cityName])
+    }, [city])
 
     const handleOn = () => {
         setOn(!on);
 
     };
 
-    console.log(cityName, "city")
+    console.log(city, "city")
     return (
         <>
             <div id={styles.body}>
@@ -82,7 +71,7 @@ function post() {
                 <div id={styles.app}>
                     <aside id={on ? styles.to_right : ''}>
                         <div className='col-md-12' id={styles.cityName}> 
-                        <h1>{cityName}</h1>
+                        <h1>{city}</h1>
                             <a href="#" onClick={handleOn}>
                                 <FontAwesomeIcon icon={faAnglesRight} id={styles.icon} />
                             </a>

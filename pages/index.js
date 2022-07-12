@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import { db, storage } from "../firebase";
-import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp, updateDoc, doc, getDocs, where,query, onSnapshot, } from 'firebase/firestore';
 import styles from "../styles/Home.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,15 +15,21 @@ import DatePicker from 'sassy-datepicker';
 import { auth } from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
 import { logout, selectUser } from '../components/features/UderSlice.js';
-export default function Home() {
+import { async } from '@firebase/util';
+
+ function Home() {
  
   const router = useRouter();
+
+  const [details, setDetails] = useState(null);
   const [housingOffered, setHousingOffered] = useState([])
   const [community, setCommunity] = useState([])
   const [radioData, setRadioData] = useState([])
   const [services, setServices] = useState([])
   const [cityName,setCityName] = useState();
   const [sale, setSale] = useState([])
+  const [address, setAddress] = useState("")
+  const [location, setLocation] = useState("")
   const [selectData, setSelectData] = useState()
   const [subcat, setSubcat] = useState()
   var data = [];
@@ -34,6 +40,7 @@ export default function Home() {
 
   useEffect(() => {
     // Perform localStorage action
+
     const users = localStorage.getItem('displayName')
     console.log(users,"local storage")
     setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
@@ -42,7 +49,7 @@ export default function Home() {
   const postdata = (e) => { 
     // setSubcat(e.target.id)
     console.log(e.target.id)
-    router.push({ pathname: '/post', query: { openCat: e.target.id } })
+    router.push({ pathname: '/post', query: { openCat: e.target.id,city:cityName } })
   }
   const signOut=()=>{
     auth.signOut().then(()=>{
@@ -52,21 +59,50 @@ export default function Home() {
         router.push("/SignIn");
     })
 }
-const city =()=>{
 
-  fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
+
+const handleCapacity=(e)=>{
+  setCityName(e.target.value);
+}
+ 
+
+
+
+
+const checkData = (item) => {
+  setSelectData(item)
+
+}
+
+const city =async()=>{
+
+ await fetch("https://geolocation-db.com/json/0f761a30-fe14-11e9-b59f-e53803842572")
   .then(response =>response.json())
-  .then((data) => setCityName(data.city.toUpperCase().replace(/\s/g, '')))
+  .then((data) => {
+  const locations=''
+  if (address && address?.length) {
+    setCityName(address)
+setLocation(locations)
+  }else{
+    setCityName(data.city.toLowerCase().replace(/\s/g, ''))
+
+  }
+}
+  )
   .catch((error) => console.error(error))
   
 }
 useEffect(() => {
+
   city();
-  // getPost(); 
-
-}, [0])
 
 
+}, [])
+
+
+
+
+ 
 
 
 const onChange = (date) => {
@@ -74,6 +110,10 @@ const onChange = (date) => {
   console.log(date.toString());
 };
  
+
+
+
+
   
 
   return (
@@ -680,34 +720,34 @@ const onChange = (date) => {
                 <span>
                   USA
                 </span> <br />
-                <select id="" className={styles.home_select}>
-                  <option value=""> adelaide</option>
-                  <option value=""> bangladesh</option>
-                  <option value=""> beijing</option>
-                  <option value="">brisbane</option>
-                  <option value="">canberra</option>
-                  <option value="">christchurch</option>
-                  <option value="">darwin</option>
-                  <option value="">guangzhou</option>
-                  <option value=""> hangzhou</option>
-                  <option value="">hong kong</option>
-                  <option value="">indonesia</option>
-                  <option value=""> malaysia</option>
-                  <option value=""> malaysia</option>
-                  <option value="">  melbourne</option>
-                  <option value="">  micronesia</option>
-                  <option value="">osaka</option>
-                  <option value="">  perth</option>
-                  <option value=""> seoul</option>
-                  <option value=""> shanghai</option>
-                  <option value="">  singapore</option>
-                  <option value="">sydney</option>
-                  <option value="">taiwan</option>
-                  <option value=""> tasmania</option>
-                  <option value="">thailand</option>
-                  <option value=""> tokyo</option>
-                  <option value="">vietnam</option>
-                  <option value=""> wellington</option>
+                <select id="" className={styles.home_select} onClick={handleCapacity}>
+                  <option value="adelaide"  onChange={()=>checkData(item)}> adelaide</option>
+                  <option value="bangladesh"> bangladesh</option>
+                  <option value="beijing"> beijing</option>
+                  <option value="brisbane">brisbane</option>
+                  <option value="canberra">canberra</option>
+                  <option value="christchurch">christchurch</option>
+                  <option value="darwin">darwin</option>
+                  <option value="guangzhou">guangzhou</option>
+                  <option value="hangzhou"> hangzhou</option>
+                  <option value="hong kong">hong kong</option>
+                  <option value="indonesia">indonesia</option>
+                  <option value="malaysia"> malaysia</option>
+                  <option value="malaysia"> malaysia</option>
+                  <option value="melbourne">  melbourne</option>
+                  <option value="micronesia">  micronesia</option>
+                  <option value="osaka">osaka</option>
+                  <option value="perth">  perth</option>
+                  <option value="seoul"> seoul</option>
+                  <option value="shanghai"> shanghai</option>
+                  <option value="singapore">  singapore</option>
+                  <option value="sydney">sydney</option>
+                  <option value="taiwan">taiwan</option>
+                  <option value="tasmania"> tasmania</option>
+                  <option value="thailand">thailand</option>
+                  <option value="tokyo"> tokyo</option>
+                  <option value="vietnam">vietnam</option>
+                  <option value="wellington"> wellington</option>
 
                 </select>
               </div>
@@ -715,34 +755,34 @@ const onChange = (date) => {
                 <span>
                   Asia Pacific
                 </span> <br />
-                <select id="" className={styles.home_select}>
-                  <option value=""> adelaide</option>
-                  <option value=""> bangladesh</option>
-                  <option value=""> beijing</option> 
-                  <option value="">brisbane</option>
-                  <option value="">canberra</option>
-                  <option value="">christchurch</option>
-                  <option value="">darwin</option>
-                  <option value="">guangzhou</option>
-                  <option value=""> hangzhou</option>
-                  <option value="">hong kong</option>
-                  <option value="">indonesia</option>
-                  <option value=""> malaysia</option>
-                  <option value=""> malaysia</option>
-                  <option value="">  melbourne</option>
-                  <option value="">  micronesia</option>
-                  <option value="">osaka</option>
-                  <option value="">  perth</option>
-                  <option value=""> seoul</option>
-                  <option value=""> shanghai</option>
-                  <option value="">  singapore</option>
-                  <option value="">sydney</option>
-                  <option value="">taiwan</option>
-                  <option value=""> tasmania</option>
-                  <option value="">thailand</option>
-                  <option value=""> tokyo</option>
-                  <option value="">vietnam</option>
-                  <option value=""> wellington</option>
+                <select id="" className={styles.home_select} onClick={handleCapacity}>
+                  <option value="adelaide"> adelaide</option>
+                  <option value="bangladesh"> bangladesh</option>
+                  <option value="beijing"> beijing</option> 
+                  <option value="brisbane">brisbane</option>
+                  <option value="canberra">canberra</option>
+                  <option value="christchurch">christchurch</option>
+                  <option value="darwin">darwin</option>
+                  <option value="guangzhou">guangzhou</option>
+                  <option value="hangzhou"> hangzhou</option>
+                  <option value="hong kong">hong kong</option>
+                  <option value="indonesia">indonesia</option>
+                  <option value="malaysia"> malaysia</option>
+                  <option value="malaysia"> malaysia</option>
+                  <option value="melbourne">  melbourne</option>
+                  <option value="micronesia">  micronesia</option>
+                  <option value="osaka">osaka</option>
+                  <option value="perth">  perth</option>
+                  <option value="seoul"> seoul</option>
+                  <option value="shanghai"> shanghai</option>
+                  <option value="singapore">  singapore</option>
+                  <option value="sydney">sydney</option>
+                  <option value="taiwan">taiwan</option>
+                  <option value="tasmania"> tasmania</option>
+                  <option value="thailand">thailand</option>
+                  <option value="tokyo"> tokyo</option>
+                  <option value="vietnam">vietnam</option>
+                  <option value="wellington"> wellington</option>
 
                 </select>
               </div>
@@ -751,20 +791,20 @@ const onChange = (date) => {
                 <span>
                   Cl Worldwide
                 </span> <br />
-                <select name="" id="" className={styles.home_select}>
-                  <option value="">africa</option>
-                  <option value="">egypt</option>
-                  <option value="">ethiopia</option>
-                  <option value="">ghana</option>
-                  <option value="">morocco</option>
-                  <option value="">kenya</option>
-                  <option value="">south africa</option>
-                  <option value="">tunisia</option>
-                  <option value="">americas</option>
-                  <option value="">asia</option>
-                  <option value="">europe</option>
-                  <option value="">middle east</option>
-                  <option value="">oceania</option>
+                <select name="" id="" className={styles.home_select} onClick={handleCapacity} >
+                  <option value="africa">africa</option>
+                  <option value="egypt">egypt</option>
+                  <option value="ethiopia">ethiopia</option>
+                  <option value="ghana">ghana</option>
+                  <option value="morocco">morocco</option>
+                  <option value="kenya">kenya</option>
+                  <option value="south africa">south africa</option>
+                  <option value="tunisia">tunisia</option>
+                  <option value="americas">americas</option>
+                  <option value="asia">asia</option>
+                  <option value="europe">europe</option>
+                  <option value="middle east">middle east</option>
+                  <option value="oceania">oceania</option>
 
                 </select>
 
@@ -789,3 +829,5 @@ const onChange = (date) => {
     </>
   );
 }  
+
+export default Home;
