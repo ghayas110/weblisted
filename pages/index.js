@@ -84,7 +84,7 @@ const city =async()=>{
     setCityName(address)
 setLocation(locations)
   }else{
-    setCityName(data.city().replace(/\s/g, ''))
+    setCityName(data.city.toLowerCase().replace(/\s/g, ''))
 
   }
 }
@@ -721,7 +721,7 @@ const onChange = (date) => {
                   USA
                 </span> <br />
                 <select id="" className={styles.home_select} onClick={handleCapacity}>
-                  <option value="adelaide"  onChange={()=>checkData(item)}> adelaide</option>
+                  <option value="adelaide" > adelaide</option>
                   <option value="bangladesh"> bangladesh</option>
                   <option value="beijing"> beijing</option>
                   <option value="brisbane">brisbane</option>
