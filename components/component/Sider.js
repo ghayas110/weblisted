@@ -18,18 +18,18 @@ const SideBar = ({ openClass }) => {
         </li>
 
         <li>
-          <a id={styles.menu_item} href="/burgers">
+          <a id={styles.menu_item} href="">
             account/finance
           </a>
         </li>
 
         <li>
-          <a id={styles.menu_item} href="/pizzas">
+          <a id={styles.menu_item} href="">
             website designing
           </a>
         </li>
         <li>
-          <a id={styles.menu_item} href="/desserts">
+          <a id={styles.menu_item} href="">
             engineering 
           </a>
         </li>

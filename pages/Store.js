@@ -24,12 +24,14 @@ function Store() {
                     </div>
                     <div className="col-lg-12" id={styles.divrecomm}>
                       <span>Most  Recommended</span>
-                       <div className={styles.recom}></div>
-                       <div className={styles.recpost}>
+                       <div className={styles.recom} ></div>
+                       <div className={styles.recpost} id={styles.recpost1} >
                            <span className={styles.cart}>
                            <img src="/00v0v_6SFtGULNQ54z_0kE0dL_600x450.jpg" alt="" className={styles.image} />
                             <span className={styles.text}>Class Room</span>
                            </span>
+                          
+                           
                        </div>
                     </div>
                 </div>

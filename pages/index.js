@@ -16,13 +16,16 @@ import { auth } from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
 import { logout, selectUser } from '../components/features/UderSlice.js';
 import { async } from '@firebase/util';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
  function Home() {
  
   const router = useRouter();
   
-  const [calendarDate, setCalendarDate] = useState();
+const [Datecalendar, setDateCalender]= useState("");
   const [details, setDetails] = useState(null);
+  const [searchPost, setSearchPost] = useState()
   const [housingOffered, setHousingOffered] = useState([])
   const [community, setCommunity] = useState([])
   const [radioData, setRadioData] = useState([])
@@ -50,7 +53,7 @@ import { async } from '@firebase/util';
   const postdata = (e) => { 
     // setSubcat(e.target.id)
     console.log(e.target.id)
-    router.push({ pathname: '/post', query: { openCat: e.target.id, city: cityName, date: calendarDate } })
+    router.push({ pathname: '/post', query: { openCat: e.target.id, city: cityName, date: Datecalendar } })
   }
   const signOut=()=>{
     auth.signOut().then(()=>{
@@ -108,8 +111,10 @@ useEffect(() => {
 
 const onChange = (date) => {
   let calendarDate = new Date(date).toLocaleDateString();
-  console.log(calendarDate, "Date")
- 
+  // var timestamp2 = new Date(date)
+  // console.log(timestamp2.getUTCDate(), "Date")
+  setDateCalender(calendarDate)
+  console.log(Datecalendar, "Datess")
 
 };
 const currentDate = () => {
@@ -118,6 +123,11 @@ const currentDate = () => {
   console.log(calendarDate.toLocaleDateString(), "Date")
 
 };
+
+
+const handleSubmit = () => {
+  router.push({pathname: "/PostSearch", query: { cDate:Datecalendar ,sinput:searchPost}  })
+}
  
 
 
@@ -168,12 +178,15 @@ const currentDate = () => {
             </span>
             <span>
 
-              <span className={styles.form_input}>
-                <input type="text" placeholder='Search' className={styles.homesidebar} /> <br />
-                <a href="/Store">Store</a>
+              <span className='form-control' id={styles.siderSearch} >
+                <input onChange={(e) => setSearchPost(e.target.value)} value={searchPost} type="text" placeholder='Search' className={styles.homesidebar} />
+                 <button onClick={handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
+              </span>
+              <span id={styles.form_input}>
+              <a href="/Store">Store</a>
               </span>
               <br />
-            </span>
+            </span> 
             <span>
 
               <a href="http://google.com/" className={styles.a_2}>

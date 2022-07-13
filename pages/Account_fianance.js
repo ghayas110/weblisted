@@ -99,9 +99,12 @@ const Account_fianance = () => {
     }, [])
   
     const handleSubmit = async (e) => {
-        
+        let datae = new Date().getDate()
+        let month = new Date().getMonth()
+        let year = new Date().getFullYear()
         e.preventDefault()
         try {
+            
             const docRef = await addDoc(collection(db, 'Form'), {
 
                 serialNumber: serialNumber,
@@ -154,8 +157,9 @@ const Account_fianance = () => {
                 select: select,
                 subcategory, subcategory,
                 category: category,
-                timestamp:serverTimestamp(),
+                date: `${month + 1}/${datae}/${year}`,
                 cuser:usersName,
+                
             })
             alert("form submited")
             console.log(docRef)

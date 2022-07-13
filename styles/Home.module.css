@@ -118,18 +118,18 @@
      width: 100%;
 } */
 
-.form_input a{
+#form_input a{
   text-align: center !important;
   list-style: none !important;
   color: white;
   text-decoration: none !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
 
 }    
-.form_input a:hover{
+#form_input a:hover{
   color: white;
 }
-.form_input{
+#form_input{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -142,14 +142,14 @@
   .calendar{
      width: 100%;
 }
-.form_input input{
+#form_input input{
     width: 60%;
 }
-.form_input{
+#form_input{
   display: flex;
   justify-content: center;
 }
-.homesidebar{
+#homesidebar{
   width: 100% !important;
 }
 
@@ -157,7 +157,7 @@
 
 }
 @media screen and (max-width:1200px) {
-  .form_input input{
+  #form_input input{
     width: 172px;
   }
   
@@ -201,10 +201,22 @@
 
 
 .homesidebar{
-  width: 156px;
-  height: 30px;
   border-radius: 6px;
+  border: none !important;
 }
+.homesidebar:focus{
+  border: none!important;
+}
+.homesidebar:hover{
+  border: none!important;
+}
+
+#siderSearch button{
+  border: none;
+  background: transparent;
+
+}
+
 
 .react-calendar, .react-calendar *, .react-calendar *:before, .react-calendar *:after {
     box-sizing: border-box;

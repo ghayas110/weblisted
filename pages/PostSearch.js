@@ -20,15 +20,16 @@ import { CalendarDate } from 'styled-icons/bootstrap';
 
 
 
-function post() {
+function PostSearch() {
 
     const router = useRouter()
-    const { openCat,city,date } = router.query;
+    const { openCat,city,date,cDate,sinput} = router.query;
     const [on, setOn] = useState(true);
     const [posttitle , setPosttitle ] = useState('');
     const [calendarDate , setCalendarDate] = useState();
     const [job, setJob] = useState([]);
     const [selectData, setSelectData] = useState();
+    const [error , setError] = useState("Not found");
     const [timeData, setTimeData] = useState();
     // const [cityName,setCityName] = useState();
     console.log("categor", openCat);
@@ -36,39 +37,43 @@ function post() {
   
     
     const getPost = () => {
-
+        
 
         onSnapshot(
 
-            query(collection(db, "Form"), where("subcategory", "==", openCat), where("city", "==", city)), (snapshot) => {
+            query(collection(db, "Form"),where("posttitle", "==",sinput),where("date", "==", cDate)), (snapshot) => {
                 setJob(snapshot.docs)
                 
 
             })
+            
     };
-    console.log(job)
+    console.log(job,"asbfjasvfyhavfj")
+  
     const renderPost = () => {
+      
         if (job && job?.length) {
             // setTimeData(job.map(item=>item.data().timestamp))
             // console.log('state', timeData)
             return job.map((item, index) => {
                 // eslint-disable-next-line react/jsx-key
-                console.log(new Date(item.data().timestamp.seconds).toLocaleDateString(), "Date")
+                // console.log(new Date(item.data().timestamp.seconds).toLocaleDateString(), "Date")
                 return <JobList
                     obj={item}
                 />
             })
         }
+       
     };
 
    
     useEffect(() => {
     
-        if(city){
+       
             getPost();
-        }
+    
         
-    }, [city])
+    }, [])
 
     const handleOn = () => {
         setOn(!on);
@@ -124,7 +129,11 @@ function post() {
                             </div>
                             <div className='col-12' id={styles.line}></div>
                             <div className='col-lg-11 col-md-10' id={styles.text}>
-                                {renderPost()}
+                            <h1>{sinput}</h1>
+                            <h1>{cDate}</h1>
+                            
+                                {(job && job.length) ? renderPost() : error}
+                              
                             </div>
                             <div className='col-lg-10 col-md-9 ' id={styles.two_btn}>
                                 <button>back to top</button>
@@ -144,4 +153,4 @@ function post() {
     )
 }
 
-export default post;
+export default PostSearch;
