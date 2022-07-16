@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/Link'
 import Header from '../pages/Header'
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from '../styles/store.module.css'
