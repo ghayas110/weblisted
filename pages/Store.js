@@ -12,7 +12,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function Store() {
     return (
-        <>
+        <div className={styles.body}>
             <div className={styles.header00}>
                 <Header />
             </div>
@@ -62,7 +62,7 @@ function Store() {
 
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 col-sm-12 ">
                         <Carousel variant="dark">
                             <Carousel.Item className={styles.Carousel_Item} >
                                 <img
@@ -111,7 +111,7 @@ function Store() {
 
             <div className="container">
                 <div className="row" id={styles.rowmart}>
-                    <div className="col-lg-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>MART </span>
@@ -119,14 +119,14 @@ function Store() {
                         <FontAwesomeIcon icon={faChevronRight} className={styles.btnsIcon} />
 
                     </div>
-                    <div className="col-lg-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>FASHION</span>
                         </button>
                         <FontAwesomeIcon icon={faChevronRight} className={styles.btnsIcon} />
                     </div>
-                    <div className="col-lg-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>BEAUTY</span>
@@ -138,7 +138,7 @@ function Store() {
 
             <div className="container">
                 <div className="row" id={styles.Mall2}>
-                    <div className="col-lg-12 mt-5" id={styles.Mall}>
+                    <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>FLAT SALE</h5>
                         <div className={styles.mallborder}>
                             <div className={styles.cart}>
@@ -177,7 +177,7 @@ function Store() {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-12 mt-5" id={styles.Mall}>
+                    <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>CRAIGLIST MALL</h5>
                         <div className={styles.mallborder}>
                             <div className={styles.cart}>
@@ -218,7 +218,7 @@ function Store() {
             <div className="container">
                 <div className="row mt-5" id={styles.catrow}>
                     <h5>CATEGORY</h5>
-                    <div className='col-md-12' id={styles.category}>
+                    <div className='col-md-12 col-lg-12 col-sm-12  col-xs-12' id={styles.category}>
                         <div className="row">
                             <div className='col' id={styles.col}>
                                 <img src="/category.png" alt="" className={styles.catimg} />
@@ -291,7 +291,7 @@ function Store() {
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
                     <h3>FOR SALE</h3>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -304,7 +304,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -317,7 +317,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -330,7 +330,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -343,7 +343,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -356,92 +356,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div className="container">
-                <div className="row mt-4" id={styles.forsale}>
-                    <h3>FOR SALE</h3>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2' id={styles.fscol}>
-                        <div className={styles.forsaleCart}>
-                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
-                            <div className={styles.FsaleCart}>
-                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
-                                <span className={styles.cartPrice}>$ 99</span> <br />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -460,8 +375,7 @@ function Store() {
 
             <div className="container">
                 <div className="row mt-4" id={styles.forsale}>
-                    <h3>FOR SALE</h3>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -474,7 +388,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -487,7 +401,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -500,7 +414,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -513,7 +427,7 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -526,7 +440,91 @@ function Store() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-2' id={styles.fscol}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="container">
+                <div className="row mt-4" id={styles.forsale}>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
+                        <div className={styles.forsaleCart}>
+                            <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
+                            <div className={styles.FsaleCart}>
+                                <span>Mini Hair  Straightener And Straightener | Mini Hair.. </span><br />
+                                <span className={styles.cartPrice}>$ 99</span> <br />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                                <FontAwesomeIcon icon={faStar} className={styles.IconRating} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-2 col-md-2 col-sm-2 col-xs-2' id={styles.fscol}>
                         <div className={styles.forsaleCart}>
                             <img src="/Forsales.webp" alt="" className={styles.forsaleCartImg} />
                             <div className={styles.FsaleCart}>
@@ -545,33 +543,67 @@ function Store() {
 
             <div className="container-fluid">
                 <div className="row mt-4" id={styles.footrtstore}>
-                    <div className="col-lg-3" id={styles.footerlist}>
-                    <div className={styles.listdiv}>
-                        <span>Customer Care</span>
-                        <ul className={styles.footerul}>
-                            <li>Help Center</li>
-                            <li>How to Buy</li>
-                            <li>Corporate & Bulk Purchasing</li>
-                            <li>Returns & Refunds</li>
-                            <li>Daraz Shop</li>
-                            <li>Contact Us</li>
-                            <li>Purchase Protection</li>
-                            <li>Daraz Pick up Points</li>
-                            <li>Fulfilled by Daraz FBD</li>
-                           </ul>  
-                           <br />
-                        <span>Make Money With Us</span>
-                        <ul className={styles.footerul}>
-                            <li>Daraz University </li>
-                            <li>Sell on Daraz</li>
-                            <li>Join Daraz Affiliate Program</li>
-                        </ul>
+                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.footerlist}>
+                        <div className={styles.listdiv}>
+                            <span>Customer Care</span>
+                            <ul className={styles.footerul}>
+                                <li>Help Center</li>
+                                <li>How to Buy</li>
+                                <li>Corporate & Bulk Purchasing</li>
+                                <li>Returns & Refunds</li>
+                                <li>Daraz Shop</li>
+                                <li>Contact Us</li>
+                                <li>Purchase Protection</li>
+                                <li>Daraz Pick up Points</li>
+                                <li>Fulfilled by Daraz FBD</li>
+                            </ul>
+                            <br />
+                        </div>
+                        <div className={styles.listdiv}>
+                            <span>Make Money With Us</span>
+                            <ul className={styles.footerul}>
+                                <li>Daraz University </li>
+                                <li>Sell on Daraz</li>
+                                <li>Join Daraz Affiliate Program</li>
+                            </ul>
 
+                        </div>
+                    </div>
+                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.footerlist}>
+                        <div className={styles.listdiv}>
+                            <span>Craiglist</span>
+                            <ul className={styles.footerul}>
+                                <li>Digital Payments </li>
+                                <li>Daraz Cares </li>
+                                <li>Daraz Blog </li>
+                                <li>Terms & Conditions</li>
+                                <li>Privacy Policy</li>
+                                <li>Privacy Policy</li>
+                                <li>Online Shopping App</li>
+                                <li>Online Grocery Shopping</li>
+                                <li>Daraz Exclusive</li>
+                                <li> How to shop on Daraz</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-6">
+                        <div className={styles.footlinks}>
+                           <img src="/barstore.png" alt="" className={styles.footImg} />
+                           <div className={styles.footlinktext}>
+                           <span>happy shopping </span>
+                            <span>Download App</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="/linkimg.png" alt="" className={styles.footImglink} />
+                            <img src="/linkimg.png" alt="" className={styles.footImglink} />
+                            <img src="/linkimg.png" alt="" className={styles.footImglink} />
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

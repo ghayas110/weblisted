@@ -1,3 +1,6 @@
+.body{
+    background:whitesmoke;
+}
 
 .Searchdiv{
     width: 50%;
@@ -120,8 +123,8 @@
 }
 
 .storelogo{
-    width: 10%;
-    height: 55px;
+    width: 15%;
+    height: 71px;
     margin-right: 10px;
 }
 
@@ -148,6 +151,8 @@
     box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
     border-radius: 6px;
     border: 1px solid lightgray;
+    background: white;
+
          
 }
 
@@ -200,6 +205,7 @@
 .Carousel_Item{
     animation: myAnim 2s ease 0s 2 normal forwards;
 }
+
 
 .Carousel_Caption{
     -webkit-backface-visibility: visible;
@@ -278,12 +284,17 @@
 
 
 .Carousel_Caption h1{
-    color: white;
-    font-weight: 600;
+    font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 70px;
 } 
 .Carousel_Caption p{
-    color: white;
-    font-weight: 600;
+    color: rgba(0, 0, 0, 0.384);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+    background: transparent;
 } 
 #banner{
     display: flex;
@@ -347,9 +358,14 @@ justify-content: center;
 }
 
 .forsaleCart{
-    border: 1px solid black;
     height: 300px ;
     
+}
+.forsaleCart:hover{
+    background: #ffffffcc;
+    box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    border: 1px solid lightgray;
 }
 
 .forsaleCartImg{
@@ -386,17 +402,14 @@ justify-content: center;
 }
 #footerlist{
     padding: 19px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#footerlist span{
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 
 }
+
 #footerlist ul{
     list-style: none;
     color: white;
@@ -405,11 +418,37 @@ justify-content: center;
     font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
 
 }
-
 .listdiv span{
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     font-weight: 400;
-    align-items: center;
     font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+    margin-left: 30px;
+
+}
+
+.footImg{
+    height:100px;
+    border-radius:8px ;
+}
+
+.footlinks{
+
+    padding: 20px;
+    display: flex;
+}
+
+.footlinktext{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 5px;
+    font-weight: 400;
+    font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+    justify-content: end;
+    font-size: 14px;
+}
+
+.footImglink{
+    height: 40px;
 }
