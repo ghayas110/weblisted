@@ -10,9 +10,10 @@ import { updateDoc, collection, onSnapshot, orderBy, query, doc, getDocs, where,
 import { app } from '../../firebase';
 
 
-export default function FormSignin() {
+export default function FormSeller() {
 
   const [email, setEmail] = useState("")
+  const [select, setSelect] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
@@ -69,6 +70,11 @@ export default function FormSignin() {
         <form id={styles.login_form}>
           <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <select name="" id="" onChange={(e) => setSelect(e.target.value)}>
+          <option value="">Select Account</option>
+          <option value="User">As User</option>
+          <option value="Seller">As Seller</option>
+          </select>
           <button onClick={logintoApp}>login</button>
           <p id={styles.message}>Not registered? <Link href="/Signup">Create an account</Link></p>
         </form>
@@ -77,4 +83,3 @@ export default function FormSignin() {
 
   )
 }
-

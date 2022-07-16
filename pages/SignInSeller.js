@@ -2,11 +2,11 @@ import React from 'react'
 import Link from 'next/link';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from '../styles/Signin.module.css'
-import FormSignin from '../components/component/FormSignin'
+import FormSeller from '../components/component/FormSeller'
 
 
 
-export default function SignIn() {
+export default function SignInSeller() {
     return (
         <div className={styles.bodySignin}>
             <div className={styles.body}>
@@ -18,12 +18,11 @@ export default function SignIn() {
                             </div>
                             <div id={styles.btn_signin}>
                                 <button id={styles.btn2}><Link href="/Signup">Sign Up</Link></button>
-                                <button id={styles.btn3}><Link href="/SignInSeller">Sign As Seller</Link></button>
                             </div>
                         </div>
 
                         <div>
-                            <FormSignin />
+                            <FormSeller />
                         </div>
                     </div>
                 </div>

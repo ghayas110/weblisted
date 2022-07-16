@@ -13,6 +13,7 @@ function FormSignup() {
 
 
   const [email, setEmail] = useState("")
+  const [select, setSelect] = useState("")
   const [password, setPassword] = useState("")
   const [name, setName] = useState("");
   const [uid, setUids] = useState("");
@@ -35,6 +36,7 @@ function FormSignup() {
           email:email,
           password:password,
           name:name,
+          type:select,
         
          
         })
@@ -58,6 +60,11 @@ function FormSignup() {
             <input type="text" onChange={(e) => setName(e.target.value)} placeholder="Enter Your Name" />
             <input type="text" onChange={(e) => setEmail(e.target.value)} placeholder="Enter Your Email" />
             <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Enter Your Password" />
+            <select name="" id="" onChange={(e) => setSelect(e.target.value)}>
+            <option value="">Select Account</option>
+            <option value="User">As User</option>
+            <option value="Seller">As Seller</option>
+            </select>
             <button onClick={registers}>create</button>
        
         </div>

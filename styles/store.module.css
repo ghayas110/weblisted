@@ -1,10 +1,50 @@
+
 .Searchdiv{
     width: 50%;
+    display: flex;
+    
 }
 
 .Searchdiv .icon{
     float: right;
     height: 25px;
+  
+}
+.iconCart{
+    height: 25px;
+    float: right;
+    margin-left: 10px;
+    color: black;
+
+}
+
+.storeheadul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+
+.storeheadul li{
+    list-style: none;
+    text-align: center !important;
+    font-size: 12px;
+    margin: 10px;
+    color: rgb(71, 67, 67);
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.storeheadul li:hover{
+    color: black;
+}
+#collist{
+    background-color: #afcce7;
+    height: 35px;
+    
+  
 }
 
 
@@ -22,7 +62,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:50px;
+    margin-top:10px;
 }
 .recom{
     border-top: 2px solid lightgray;
@@ -47,22 +87,92 @@
     height: 100px;
 }
 .cart{
+    margin-top: 5px;
     margin-left: 10px;
     width: 15%;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
+    align-items: center;
+    justify-content: center;
+  
+
 }
-.text{
-  font-size: 12px;
-  font-weight: 600;
-  margin-top: 4px;
-  margin-left: 3px;
-  font-family: 'Poppins', sans-serif;
+.cart:hover{   
+     background: #ffffffcc;
+     box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
+     border-radius: 6px;
+     border: 1px solid lightgray;
+}
+.cart img{
+    width: 100%;
+}
+.cart span{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
+.text{
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+.mallborder{
+    border-top: 2px solid white;
+    display: flex;
+   
+}
+
+.storelogo{
+    width: 10%;
+    height: 55px;
+    margin-right: 10px;
+}
+
+#Mall h5{
+    color: #3a8cd8;
+}
+#Mall{
+    background: #ffffff;
+}
+.catimg{
+ height: 80px;
+ width: 60%;
+
+}
+#col{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:150px;
+    border: 1px solid lightgrey;
+}
+#col:hover{
+    box-shadow: 7px 5px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    border: 1px solid lightgray;
+         
+}
+
+#col span{
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+#category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+#catrow{
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width:992px) {
     .Searchdiv .icon{
@@ -84,4 +194,192 @@
         bottom: 20px;
     
     }
+}
+
+
+
+
+
+/* -----------------slider-------------- */
+.Carousel_Item{
+    animation: myAnim 2s ease 0s 2 normal forwards;
+}
+
+.Carousel_Caption{
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes flip {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+    80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+    }
+    @keyframes flip {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+    80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    }
+}
+
+
+.Carousel_Caption h1{
+    color: white;
+    font-weight: 600;
+} 
+.Carousel_Caption p{
+    color: white;
+    font-weight: 600;
+} 
+#banner{
+    display: flex;
+justify-content: center;
+ justify-content: space-evenly;
+ margin-top: 15px;
+ border: 1px solid burlywood;
+ border-radius: 18px;
+}
+    
+
+
+.header00{
+    overflow-x: hidden;
+}
+#sliderImg{
+    height: 400px;
+    margin-top: 10px;
+}
+
+.btns{
+   
+    border: none;
+    width: 100%;
+    height: 30px;
+    background: white;
+     align-items: center;
+    display: flex;
+}
+
+
+.btns img{
+    height: 30px;
+    float:left ;
+
+}
+.btns span{
+    margin-left: 5px;
+    color:black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btnsIcon{ 
+   height: 20px;
+   float: right;
+   display: flex !important;
+   align-self: center !important;
+   cursor: pointer;
+}
+.btnsIcon:hover{
+    visibility: visible !important;
+    color: black;
+}
+
+#rowmart{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.forsaleCart{
+    border: 1px solid black;
+    height: 300px ;
+    
+}
+
+.forsaleCartImg{
+ width: 100%;
+
+}
+.IconRating{
+    width: 10%;
+    height: 12px;
+    color: rgb(218, 173, 91);
+}
+.FsaleCart{
+    padding: 0px 4px;
+}
+
+.FsaleCart span{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cartPrice{
+    color: orange;
+    font-size: 16px !important;
+}
+
+.fscol{
+    display: flex;
+    flex-direction: row;
 }

@@ -47,6 +47,22 @@
     
 }
 
+#btn3{
+    color: black;
+    width: 110px !important;
+}
+
+#btn3 a{
+    text-decoration: none !important;
+    color: black;
+
+}
+#btn3 a:hover{
+    text-decoration:none  !important;  
+    color: white;
+}
+
+
 @media screen and (max-width: 700px) {
     .Signin_text img{
         width: 150px;
