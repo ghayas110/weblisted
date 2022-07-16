@@ -8,7 +8,6 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
-import Image from "next/image"
 
 
 function Store() {
