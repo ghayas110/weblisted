@@ -114,7 +114,7 @@ function Store() {
                     <div className="col-lg-3" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
-                            <span>Mart</span>
+                            <span>MART </span>
                         </button>
                         <FontAwesomeIcon icon={faChevronRight} className={styles.btnsIcon} />
 
@@ -542,8 +542,37 @@ function Store() {
 
                 </div>
             </div>
+
+            <div className="container-fluid">
+                <div className="row mt-4" id={styles.footrtstore}>
+                    <div className="col-lg-3" id={styles.footerlist}>
+                    <div className={styles.listdiv}>
+                        <span>Customer Care</span>
+                        <ul className={styles.footerul}>
+                            <li>Help Center</li>
+                            <li>How to Buy</li>
+                            <li>Corporate & Bulk Purchasing</li>
+                            <li>Returns & Refunds</li>
+                            <li>Daraz Shop</li>
+                            <li>Contact Us</li>
+                            <li>Purchase Protection</li>
+                            <li>Daraz Pick up Points</li>
+                            <li>Fulfilled by Daraz FBD</li>
+                           </ul>  
+                           <br />
+                        <span>Make Money With Us</span>
+                        <ul className={styles.footerul}>
+                            <li>Daraz University </li>
+                            <li>Sell on Daraz</li>
+                            <li>Join Daraz Affiliate Program</li>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
 
-export default Store
+export default Store;
