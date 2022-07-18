@@ -111,7 +111,7 @@ function Store() {
 
             <div className="container">
                 <div className="row" id={styles.rowmart}>
-                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-4 col-sm-4" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>MART </span>
@@ -119,14 +119,14 @@ function Store() {
                         <FontAwesomeIcon icon={faChevronRight} className={styles.btnsIcon} />
 
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-4 col-sm-4" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>FASHION</span>
                         </button>
                         <FontAwesomeIcon icon={faChevronRight} className={styles.btnsIcon} />
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-3" id={styles.banner}>
+                    <div className="col-lg-3 col-md-4 col-sm-4" id={styles.banner}>
                         <button className={styles.btns} >
                             <img src="/martlogo.png" alt="" />
                             <span>BEAUTY</span>
