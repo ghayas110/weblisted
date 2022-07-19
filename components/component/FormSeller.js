@@ -46,7 +46,7 @@ export default function FormSeller() {
            localStorage.setItem('email', filterData[0].email);
           localStorage.setItem('accid', filterData[0].accId);
            localStorage.setItem('displayName', filterData[0].name);
-         router.push('/')
+         router.push('/Dashboard/SellerDashboard')
       
           }
           else{
