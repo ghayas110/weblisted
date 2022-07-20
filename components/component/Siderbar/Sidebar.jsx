@@ -30,7 +30,7 @@ function Sidebar() {
                         </li>
                         <li className={styles.sidebarListitem}>
                             <TrendingUp className={styles.sidebarIcon} />
-                            Sales
+                              Sales
                         </li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@ function Sidebar() {
                     <ul className={styles.sidebarList}>
                         <li className={`${styles.sidebarListitem}`}>
                             <PermIdentity className={styles.sidebarIcon} />
-                            Users   
+                        <a href="/UserList">Users</a>        
                         </li>
                         <li className={styles.sidebarListitem}>
                             <Storefront className={styles.sidebarIcon} />

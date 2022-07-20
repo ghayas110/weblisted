@@ -46,7 +46,10 @@
     display: flex !important;
     align-items: center !important;
     font-weight: 600;
-}
-.WidgetLgDate{
 
 }
+.WidgetLgDate,.WidgetLgAmount{
+
+    font-weight: 300;
+}
+

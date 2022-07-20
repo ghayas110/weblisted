@@ -3,6 +3,7 @@ import Sidebar from '../../components/component/Siderbar/Sidebar'
 import Topbar from '../../components/component/Topbar/Topbar'
 import styles from '../../styles/SellerDashboard.module.css'
 import Home from '../Home/Home'
+import UserList from '../UserList/UserList';
 
 
 function SellerDashboard() {
@@ -11,7 +12,7 @@ function SellerDashboard() {
       <Topbar />
       <div className="container" id={styles.container}>
         <Sidebar />
-        <Home />
+        <Home />  
       </div>
 
     </div>

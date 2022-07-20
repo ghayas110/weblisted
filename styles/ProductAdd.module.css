@@ -1,0 +1,14 @@
+.productAddHeading{
+    text-align: center;
+}
+#ProductAddForm{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+}
+.ProductDescription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

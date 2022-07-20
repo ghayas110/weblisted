@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../../../craiglist/styles/DashboardHome.module.css'
 import Chart from '../../components/component/Chart/Chart';
 import FeaturedInfo from '../../components/component/FeaturedInfo/FeaturedInfo'
@@ -10,10 +9,10 @@ function Home() {
     return (
         <div className={styles.home}>
             <FeaturedInfo  />
-            <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
+    <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
             <div className={`${styles.homeWidgets}`}>
-                <WidgetSm />
-                <WidgetLg />
+               <WidgetSm />
+                <WidgetLg /> 
             </div>
         </div>
     )

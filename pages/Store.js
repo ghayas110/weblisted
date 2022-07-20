@@ -45,8 +45,13 @@ function Store() {
                                 <FontAwesomeIcon icon={faSearch} className={styles.icon} />
                             </div>
                         </div>
+                        <div className={styles.storeAddProduct}>
                         <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
+                        <button><a href="/ProductAdd/ProductAdd">Add Product</a></button>
+                        </div>
+
                     </div>
+
                     {/*<div className="col-lg-12" id={styles.divrecomm}>
                         <span>Most  Recommended</span>
                         <div className={styles.recom} ></div>
