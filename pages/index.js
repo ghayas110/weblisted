@@ -136,7 +136,7 @@ const handleSubmit = () => {
     <>
     
 
-      <div className="container" id={styles.fluid}>
+      <div className="container-fluid" id={styles.fluid}>
         <div className='row' id={styles.home_row}>
           <div className='col-lg-3 col-md-12 col-sm-12' id={styles.bg_1}>
             <span>
@@ -260,8 +260,9 @@ const handleSubmit = () => {
           <div className="col-lg-7 col-md-12 col-sm-12" id={styles.index_content}>
             <h1 className={styles.Head}>{cityName}</h1>
                 <div className="row" id={styles.slider}>
-                <Slider />
                 <BannerBox />
+
+                <Slider />
                 </div>
                 
             <div className="row">

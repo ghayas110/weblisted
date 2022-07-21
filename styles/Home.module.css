@@ -692,10 +692,12 @@ color: black;
  ;
 }
 
-.BannerBox{
-  
+.BannerBox Card{
 
 }
+.CardIndex{
+}
+
 .MainBannerBox{
   padding: 1px;
   margin-bottom: 5px;
@@ -703,4 +705,19 @@ color: black;
 
 #slider{
   margin-bottom: 8px;
+}
+.indexproduct{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+.productImg{
+  width: 200px;
+  height: 200px;
+  position: relative !important;
+  right: 50 !important;
+
+ }
+.Typography{
+    text-align: left !important;
 }
