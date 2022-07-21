@@ -16,13 +16,13 @@ function ProductAdd() {
             <div className="container">
                 <div className="row">
                     <h3 className={styles.productAddHeading}>Product Add</h3>
-                    <div className="con-lg-12" id={styles.ProductAddForm} >
-                        <div className="container">
+                    <div className="con-lg-12">
+                        <div className="container" id={styles.ProductAddForm}>
                             <section className="panel panel-default">
                                 <div className="panel-heading">
                                 </div>
                                 <div className="panel-body">
-                                    <form action="designer-finish.html" className="form-horizontal" role="form">
+                                    <div action="designer-finish.html" className="form-horizontal" role="form">
                                         <div className="form-group">
                                             <label for="name" className="col-sm-3 control-label">Title</label>
                                             <div className="col-sm-9">
@@ -82,7 +82,7 @@ function ProductAdd() {
                                                 <button type="submit" className="btn btn-primary">Submit</button>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </section>
                         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BannerBox from '../components/component/BannerBox'
 import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link'
@@ -18,6 +19,7 @@ import { logout, selectUser } from '../components/features/UderSlice.js';
 import { async } from '@firebase/util';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Slider from '../components/component/Slider'
 
  function Home() {
  
@@ -129,14 +131,10 @@ const handleSubmit = () => {
   router.push({pathname: "/PostSearch", query: { cDate:Datecalendar ,sinput:searchPost}  })
 }
  
-
-
-
-
-  
-
   return (
+
     <>
+    
 
       <div className="container" id={styles.fluid}>
         <div className='row' id={styles.home_row}>
@@ -261,6 +259,11 @@ const handleSubmit = () => {
 
           <div className="col-lg-7 col-md-12 col-sm-12" id={styles.index_content}>
             <h1 className={styles.Head}>{cityName}</h1>
+                <div className="row" id={styles.slider}>
+                <Slider />
+                <BannerBox />
+                </div>
+                
             <div className="row">
               <div className="col-lg-9">
                 <div className="row">
