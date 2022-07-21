@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../pages/Header'
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from '../styles/store.module.css'
@@ -8,9 +8,40 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
-
-
+import ProductSale from '../components/component/ProductSale'
+import { collection, onSnapshot, orderBy, query,where } from 'firebase/firestore';
+import { db, storage } from '../firebase';
+import { useSelector,useDispatch } from 'react-redux';
+import { selectItems } from '../components/features/BasketSlice';
 function Store() {
+    const items=useSelector(selectItems);
+    const [product, setProduct] = useState([])
+
+    useEffect(() => {
+    getProduct()    
+
+    }, [])
+   
+    const  renderProductSale = () => {
+       
+          return product.map((item, index) => {
+            // eslint-disable-next-line react/jsx-key
+            return <ProductSale
+              obj={item}
+            />
+            
+          })
+        }
+ 
+    const getProduct = () => {
+    
+
+        onSnapshot(
+          query(collection(db,"addProduct"), where("category", "==", "gigOffered")), (snapshot)=>{setProduct(snapshot.docs)
+          console.log(snapshot.docs);
+          })
+      };
+   
     return (
         <div className={styles.body}>
             <div className={styles.header00}>
@@ -47,8 +78,9 @@ function Store() {
                         </div>
                         <div className={styles.storeAddProduct}>
                         <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
-                        <button><a href="/ProductAdd/ProductAdd">Add Product</a></button>
+                        <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
+                        {items.length}
 
                     </div>
 
@@ -146,36 +178,8 @@ function Store() {
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>FLAT SALE</h5>
                         <div className={styles.mallborder}>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
+                      {renderProductSale()}
+                  {/*Add Conts*/}
                         </div>
                     </div>
                 </div>
