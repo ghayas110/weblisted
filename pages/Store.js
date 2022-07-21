@@ -74,7 +74,7 @@ function Store() {
                                     className="d-block w-100"
                                     src="/weblisted_banner1.jpg"
                                     alt="First slide"
-                                    id={styles.sliderImg}
+                                    id={styles.sliderImgz}
                                 />
                            
                             </Carousel.Item>

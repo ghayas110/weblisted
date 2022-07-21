@@ -260,9 +260,11 @@ const handleSubmit = () => {
           <div className="col-lg-7 col-md-12 col-sm-12" id={styles.index_content}>
             <h1 className={styles.Head}>{cityName}</h1>
                 <div className="row" id={styles.slider}>
-                <BannerBox />
-
                 <Slider />
+                <BannerBox />
+                <BannerBox />
+                
+               
                 </div>
                 
             <div className="row">
