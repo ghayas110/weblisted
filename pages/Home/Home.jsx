@@ -1,28 +1,33 @@
+import React,{useState} from 'react';
 import styles from '../../../craiglist/styles/DashboardHome.module.css'
 import Chart from '../../components/component/Chart/Chart';
 import FeaturedInfo from '../../components/component/FeaturedInfo/FeaturedInfo'
 import WidgetLg from '../../components/component/WidgetLg/WidgetLg';
 import WidgetSm from '../../components/component/WidgetSm/WidgetSm';
 import DashboardProductAddForm from '../../components/component/DashboardProductAddForm/DashboardProductAddForm';
-import { userData } from '../DummyData'
+import { userData } from '../../components/component/DummyData'
 
 function Home() {
+  
 
 
+  const [isopen , setIsopen] = useState(true)
+  
   return (
-    <div className="container" id={styles.home}>
+    <>
+ <div className="container" id={styles.home}>
       <div className="row">
         <div className="col-lg-12 col-md-12 col-sm-12">
-          <FeaturedInfo />
+        <FeaturedInfo /> 
         </div>
       </div>
       <div className="row" id={styles.Chart}>
         <div className="col-lg-12 col-md-12 col-sm-12">
-         {/* <Chart data={userData} title="User Analytics" grid dataKey="Active User"  /> */}
-         <DashboardProductAddForm />
+         <Chart data={userData} title="User Analytics" grid dataKey="Active User"  />
+         
         </div>
       </div>
-      <div className="row">
+    {/*  <div className="row">
         <div className="col-lg-6" id={`${styles.homeWidgets}`}>
           <WidgetSm />
         </div>  
@@ -30,9 +35,14 @@ function Home() {
           <WidgetLg />
         </div>
 
-      </div>
+  </div> */}
 
     </div>
+
+
+
+
+  </>
   )
 }
 

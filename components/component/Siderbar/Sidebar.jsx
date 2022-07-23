@@ -15,18 +15,12 @@ import {
     Report,
     Menu
 } from '@material-ui/icons'
+import DashboardProductAddForm from '../DashboardProductAddForm/DashboardProductAddForm'
 
 function Sidebar() {
 
 
-
-    // useEffect(() => {
-    //    if(on !== true){
-    //         setOn(false)
-    //    }else{
-    //    }
-
-    // }, )
+    const [isopen , setIsopen] = useState(true)
 
 
     return (
@@ -41,13 +35,13 @@ function Sidebar() {
                             <ul className={styles.sidebarList}>
                                 <span className={`${styles.sidebarListitem} ${styles.active}`}  >
                                     <LineStyle className={styles.sidebarIcon} />
-                                    Home
+                                <a href="/Dashboard/SellerDashboard"> Home</a>   
                                 </span>
-                                <span  className={styles.sidebarListitem}>
+                                <span  className={`${styles.sidebarListitem}`}>
                                     <Timeline className={styles.sidebarIcon} />
-                                    Analytics
+                               <a  href='/Dashboard/ProductAddPage'>Add product</a> 
                                 </span>
-                                <span  className={styles.sidebarListitem}>
+                                 <span  className={styles.sidebarListitem}>
                                     <TrendingUp className={styles.sidebarIcon} />
                                     Sales
                                 </span>
