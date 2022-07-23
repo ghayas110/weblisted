@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../pages/Header'
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from '../styles/store.module.css'
@@ -8,9 +8,42 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-bootstrap/Carousel';
-
-
+import ProductSale from '../components/component/ProductSale'
+import { collection, onSnapshot, orderBy, query,where } from 'firebase/firestore';
+import { db, storage } from '../firebase';
+import { useSelector,useDispatch } from 'react-redux';
+import { selectItems } from '../components/features/BasketSlice';
+import Link from 'next/link'
+import HeaderStore from '../components/component/HeaderStore';
 function Store() {
+    const items=useSelector(selectItems);
+    const [product, setProduct] = useState([])
+
+    useEffect(() => {
+    getProduct()    
+
+    }, [])
+   
+    const  renderProductSale = () => {
+       
+          return product.map((item, index) => {
+            // eslint-disable-next-line react/jsx-key
+            return <ProductSale
+              obj={item}
+            />
+            
+          })
+        }
+
+    const getProduct = () => {
+    
+
+        onSnapshot(
+          query(collection(db,"addProduct"), where("category", "==", "gigOffered")), (snapshot)=>{setProduct(snapshot.docs)
+          console.log(snapshot.docs);
+          })
+      };
+   
     return (
         <div className={styles.body}>
             <div className={styles.header00}>
@@ -34,7 +67,8 @@ function Store() {
                 </div>
 
             </div>
-            <div className="container">
+            <HeaderStore/>
+    {/*        <div className="container">
                 <div className="row">
                     <div className='col-lg-12' id={styles.col12}>
                         <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
@@ -46,25 +80,21 @@ function Store() {
                             </div>
                         </div>
                         <div className={styles.storeAddProduct}>
-                            <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
-                            <button><a href="/ProductAdd/ProductAdd">Add Product</a></button>
+                       
+                        <span>
+                        <Link to='/CheckOut'><FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </Link>
+                        
+                        </span>
+                        <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
+                        {items.length}
 
                     </div>
 
-                    {/*<div className="col-lg-12" id={styles.divrecomm}>
-                        <span>Most  Recommended</span>
-                        <div className={styles.recom} ></div>
-                        <div className={styles.recpost} id={styles.recpost1} >
-                            <span className={styles.cart}>
-                                <img src="/00v0v_6SFtGULNQ54z_0kE0dL_600x450.jpg" alt="" className={styles.image} />
-                                <span className={styles.text}>Class Room</span>
-                            </span>
-                        </div>
-    </div>*/}
+          
                 </div>
             </div>
-
+    */}
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 ">
@@ -135,36 +165,8 @@ function Store() {
                     <div className="col-lg-12 col-md-12 col-sm-12 mt-5" id={styles.Mall}>
                         <h5>FLAT SALE</h5>
                         <div className={styles.mallborder}>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
-                            <div className={styles.cart}>
-                                <img src="/cartpic.jpg" alt="" />
-                                <span>mini bluethoot</span>
-                                <span className={styles.text}>$:5</span>
-                            </div>
+                      {renderProductSale()}
+                  {/*Add Conts*/}
                         </div>
                     </div>
                 </div>

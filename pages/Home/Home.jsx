@@ -1,17 +1,13 @@
-import React,{useState} from 'react';
-import styles from '../../../craiglist/styles/DashboardHome.module.css'
+import styles from '../../styles/DashboardHome.module.css';
 import Chart from '../../components/component/Chart/Chart';
 import FeaturedInfo from '../../components/component/FeaturedInfo/FeaturedInfo'
 import WidgetLg from '../../components/component/WidgetLg/WidgetLg';
 import WidgetSm from '../../components/component/WidgetSm/WidgetSm';
-import DashboardProductAddForm from '../../components/component/DashboardProductAddForm/DashboardProductAddForm';
-import { userData } from '../../components/component/DummyData'
+import {userData} from '../../components/component/DummyData'
 
 function Home() {
   
 
-
-  const [isopen , setIsopen] = useState(true)
   
   return (
     <>
@@ -38,10 +34,6 @@ function Home() {
   </div> */}
 
     </div>
-
-
-
-
   </>
   )
 }
