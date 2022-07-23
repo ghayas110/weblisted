@@ -55,3 +55,7 @@
 #container{
     display:flex;
 }
+
+@media screen and (min-width:992px) {
+    
+}

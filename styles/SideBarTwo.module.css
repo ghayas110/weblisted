@@ -1,5 +1,5 @@
 .sidebar{
-    height:calc(100vh - -25px);
+    height:calc(100vh - 50px);
     position: sticky ;
    background-color: #235789 !important;
     top: 0px;
@@ -23,8 +23,7 @@
 
 .sidebarTitle{
     font-size: 16px;
-    color: rgb(167, 223, 255);
-    font-weight: 600;
+    color: rgb(0, 0, 0);
 }
 
 .sidebarList{
@@ -37,8 +36,8 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    border-radius: 10px; 
     color: white;
+    border-radius: 10px;
 }
 .sidebarListitem.active, .sidebarListitem:hover{
     background-color: rgb(166, 166, 197);
@@ -54,20 +53,7 @@
 .sidebarMenuIcon{
     margin-right: 5px;
     font-size: 30px !important;
-    z-index: -1 !important ;
     background-color: "red";margin-bottom: 50px;
-    /* visibility: hidden; */
-
-}
-
-#MenuBARIcon{
-    height:30px;
-    
-}
-
-.sidebarListitem a{
-    text-decoration: none;
-    color: white;
 
 }
 
@@ -80,31 +66,14 @@
         float: left;
     }
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width:576px) {
     .sidebar{
-        position: relative;
+        position: absolute;
+        top: 80px;
+        visibility: hidden;
     }
     .sidebarMenuIcon{
         visibility: visible;
         float: left;
     }
-}
-
-@media screen and (max-width:992px) {
-    .sidebar{
-        height: calc(100vh - -30px );
-        height: calc(100vh - -30px );
-    position: absolute;
-    top: 87px;
-    z-index: 999;
-
-
-
-    }
-    .sidebarMenuIcon{
-        visibility: visible;
-        float: left;
-    }
-    
-    
 }
