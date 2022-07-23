@@ -27,9 +27,9 @@ function CheckoutPro({ img, title,category,description, price, itemid, remail, q
         <div className="row" id={styles.row}>{title}</div>
     </div>
     <div className="col" id={styles.col} >
-        <a href="#" onClick={() => UpdateQuantity(itemid, itemAction = false, quantity)}>-</a><a href="#" className="border"></a><a href="#" onClick={() => UpdateQuantity(itemid, itemAction = true, quantity)} >+</a>
+        <span onClick={() => UpdateQuantity(itemid, itemAction = false, quantity)}  >-</span><a href="#" className="border">{quantity}</a><span onClick={() => UpdateQuantity(itemid, itemAction = true, quantity)} >+</span>
     </div>
-    <div className="col" id={styles.col}>${price} <span className={styles.close}>&#10005;</span></div>
+    <div className="col" id={styles.col} onClick={() => removeItemFromBasket(itemid)}>${price} <span className={styles.close} >&#10005;</span></div>
 </div>
    )
 }

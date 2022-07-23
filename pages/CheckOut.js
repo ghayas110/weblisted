@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect }from 'react'
 import styles from '../styles/CheckOut.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -6,12 +6,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CheckoutPro from './CheckoutPro'
 import { selectItems, selectTotal } from '../components/features/BasketSlice';
 import { useSelector } from 'react-redux'
+import HeaderStore from '../components/component/HeaderStore';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import axios from 'axios';
 function CheckOut() {
     const items = useSelector(selectItems);
     const total = useSelector(selectTotal);
+    const [usersName, setUsersName ] = useState("");
+    const [usersEmail, setUsersEmail ] = useState("");
+    const stripePromise = loadStripe("pk_test_51KosFhFwyx0lKIchAhCk1Lua6CU9NQlovXtmseEEmTP02yAILBK9sLNFjehxXq9bhfHQt3U3ZR4HuASJHMJhBAYt00XZvsEuMM")
+useEffect(() => {
+// Perform localStorage action
+const users = localStorage.getItem('displayName')
+const usersemail = localStorage.getItem('email')
+console.log(users,"local storage")
+setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
+setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Login")
+}, [])
+    const createCheckoutSession = async () => {
+        const stripe = await stripePromise;
+        const checkoutSession =
+         await axios.post('/api/create-checkout-session',
+            {
+               
+                items: items,
+                email: usersEmail,
+                
+                
+            })
+        const result = await stripe.redirectToCheckout({
+            sessionId: checkoutSession.data.id
+        }
+
+        )
+        if (result.error) alert(result.error.message)
+    }
     return (
+        <>
+        <HeaderStore/>
         <div className={styles.card} >
-        
+      
         <div className="row" id={styles.row}>
             <div className="col-md-8" id={styles.cart}>
                 <div className={styles.title}>
@@ -22,6 +57,7 @@ function CheckOut() {
                 </div>    
             
                 <div className="row" id={styles.row}>
+               
                 {items && items?.length ? items.map((item, i) => {
                     return <CheckoutPro
                     key={i}
@@ -52,11 +88,12 @@ function CheckOut() {
                     <div className="col" id={styles.col}>TOTAL PRICE</div>
                     <div className="col text-right">${total}</div>
                 </div>
-                <button className={styles.btn}>CHECKOUT</button>
+                <button className={styles.btn} onClick={createCheckoutSession}>CHECKOUT</button>
             </div>
         </div>
         
     </div>
+    </>
     )
 }
 

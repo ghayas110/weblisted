@@ -34,7 +34,7 @@ function Store() {
             
           })
         }
- 
+
     const getProduct = () => {
     
 

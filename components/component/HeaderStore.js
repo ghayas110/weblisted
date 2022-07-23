@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect }from 'react'
 import styles from '../../styles/store.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,23 @@ import Link from 'next/link'
 function HeaderStore() {
     const items=useSelector(selectItems);
     const route = useRouter();
+    const [usersName, setUsersName ] = useState("");
+    const [usersEmail, setUsersEmail ] = useState("");
+useEffect(() => {
+// Perform localStorage action
+const users = localStorage.getItem('displayName')
+const usersemail = localStorage.getItem('email')
+console.log(users,"local storage")
+setUsersName(((users!==null)&&(users!==undefined)) ? users : "")
+setUsersEmail(((usersemail!==null)&&(usersemail!==undefined)) ? usersemail : "Login")
+}, [])
+const signOut=()=>{
+    if(usersName!=="logged Out"){
+      localStorage.clear();
+      const users = null;
+        route.push("/");
+    }
+    }
   return (
     <div className="container">
                 <div className="row">
@@ -22,6 +39,16 @@ function HeaderStore() {
                                 <input type="text" placeholder='SEARCH' name="" id="" />
                                 <FontAwesomeIcon icon={faSearch} className={styles.icon} />
                             </div>
+                            {((usersName!==null)&&(usersName!=="")) ?
+                            <p onClick={signOut} className={styles.a_1}>
+                            {usersName}
+                            <br/>
+                             <button className={styles.logoutbtn}>Logout </button>
+                          </p>
+                            : 
+                            <a href="/SignIn" className={styles.a_1}>
+                            Login
+                            </a> }
                         </div>
                         <div className={styles.storeAddProduct}>
                        
@@ -32,7 +59,7 @@ function HeaderStore() {
                         <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
                         {items.length}
-
+                       
                     </div>
 
                     {/*<div className="col-lg-12" id={styles.divrecomm}>

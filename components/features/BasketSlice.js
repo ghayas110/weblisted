@@ -53,19 +53,29 @@ export const basketSlice = createSlice({
 
         },
         updateBasket: (state, action) => {
-            const index = current(state.items).findIndex(
-                (basketItem) => basketItem.itemid === action.payload.itemid)
+        
+                const index = current(state.items).findIndex(
+                    (basketItem) => basketItem.itemid === action.payload.itemid)
+                    console.log(index)
+              
 
-            let newBasket = [...state.items];
-            let currentCounter = newBasket[index].quantity;
-            console.log(newBasket[index].quantity, "currentCounter")
+                   let newBasket = [...state.items];
+                   let currentCounter = newBasket[index].quantity;
+                   (newBasket[index].quantity === undefined ? currentCounter = 2
+                    : (++currentCounter) )
+                    newBasket[index].quantity = currentCounter;
+                    newBasket[index].price_total = newBasket[index].quantity * newBasket[index].price
+                    state.items = newBasket;
+                
+       
+
 
 
             if (action.payload.itemAction === true) {
                 (newBasket[index].quantity === undefined ? currentCounter = 2
                     : (++currentCounter) )
                 newBasket[index].quantity = currentCounter;
-                newBasket[index].price = newBasket[index].quantity * newBasket[index].price
+                newBasket[index].price_total = newBasket[index].quantity * newBasket[index].price
 
             } else if (action.payload.itemAction === false) {
                 // newBasket[index].quantity -= 1
@@ -73,11 +83,11 @@ export const basketSlice = createSlice({
                     : (--currentCounter) )
                     newBasket[index].quantity = currentCounter;
                     console.log(action.payload.itemAction, "remove")
-                newBasket[index].price = newBasket[index].quantity * newBasket[index].price
+                newBasket[index].price_total = newBasket[index].quantity * newBasket[index].price
                 console.log(newBasket[index], "remove")
             }
 
-            
+            console.log(current(state.items), "mai data hn")
 
 
 
