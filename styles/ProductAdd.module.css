@@ -3,8 +3,6 @@
 }
 #ProductAddForm{
     display: flex !important;
-    flex-direction: column;
-    justify-content: center !important;
     align-items: center;
 }
 .ProductDescription{

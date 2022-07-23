@@ -69,6 +69,7 @@ function ProductAdd() {
                 dateStart: dateStart,
                 dateend: dateend,
                 category: category,
+                remail: "ghayas110@gmail.com",
                 time: serverTimestamp(),
             })
 
@@ -84,7 +85,7 @@ function ProductAdd() {
                     const downloadUrl = await getDownloadURL(ImageRef);
                     await updateDoc(doc(db, "addProduct", docRef.id), {
                         image: downloadUrl,
-
+                        itemid:docRef.id
                     })
                 }
 
@@ -109,7 +110,7 @@ function ProductAdd() {
                                 <div className="panel-heading">
                                 </div>
                                 <div className="panel-body">
-                                    <form action="designer-finish.html" className="form-horizontal" role="form">
+                                    <div action="designer-finish.html" className="form-horizontal" role="form">
                                         <div className="form-group">
                                             <label for="name" className="col-sm-3 control-label">Title</label>
                                             <div className="col-sm-9">
@@ -185,7 +186,7 @@ function ProductAdd() {
                                                 <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </section>
                         </div>

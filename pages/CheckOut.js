@@ -1,0 +1,63 @@
+import React from 'react'
+import styles from '../styles/CheckOut.module.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CheckoutPro from './CheckoutPro'
+import { selectItems, selectTotal } from '../components/features/BasketSlice';
+import { useSelector } from 'react-redux'
+function CheckOut() {
+    const items = useSelector(selectItems);
+    const total = useSelector(selectTotal);
+    return (
+        <div className={styles.card} >
+        
+        <div className="row" id={styles.row}>
+            <div className="col-md-8" id={styles.cart}>
+                <div className={styles.title}>
+                    <div className="row" id={styles.row}>
+                        <div className="col" id={styles.col} ><h4><b>Shopping Cart</b></h4></div>
+                        <div className="col align-self-center text-right text-muted">{items?.length} items</div>
+                    </div>
+                </div>    
+            
+                <div className="row" id={styles.row}>
+                {items && items?.length ? items.map((item, i) => {
+                    return <CheckoutPro
+                    key={i}
+                    img={item?.image || ''}
+                    title={item?.title||''} 
+                    price={item?.price||''}
+                    quantity={item?.quantity ? item?.quantity : 1}
+                    price_total={item.price_total||''}
+                    description={item?.description}
+                   
+                />
+                }
+                ) : null}
+                {console.log("CartItems",items)}
+                </div>
+               
+                <div className={styles.back_to_shop}><a href="#"><FontAwesomeIcon icon={faArrowCircleLeft } /></a><span className="text-muted">Back to shop</span></div>
+            </div>
+            <div className="col-md-4" id={styles.summary}>
+                <div><h5><b>Summary</b></h5></div>
+                <hr />
+                <div className="row"id={styles.row}> 
+                    <div className="col" id={styles.col} >ITEMS {items?.length}</div>
+                    <div className="col text-right">$ {total}</div>
+                </div>
+               
+                <div className="row" id={styles.row}>
+                    <div className="col" id={styles.col}>TOTAL PRICE</div>
+                    <div className="col text-right">${total}</div>
+                </div>
+                <button className={styles.btn}>CHECKOUT</button>
+            </div>
+        </div>
+        
+    </div>
+    )
+}
+
+export default CheckOut

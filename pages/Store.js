@@ -13,6 +13,8 @@ import { collection, onSnapshot, orderBy, query,where } from 'firebase/firestore
 import { db, storage } from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
 import { selectItems } from '../components/features/BasketSlice';
+import Link from 'next/link'
+import HeaderStore from '../components/component/HeaderStore';
 function Store() {
     const items=useSelector(selectItems);
     const [product, setProduct] = useState([])
@@ -65,7 +67,8 @@ function Store() {
                 </div>
 
             </div>
-            <div className="container">
+            <HeaderStore/>
+    {/*        <div className="container">
                 <div className="row">
                     <div className='col-lg-12' id={styles.col12}>
                         <img src="/weblisted-store-logo.png" alt="" className={styles.storelogo} />
@@ -77,26 +80,21 @@ function Store() {
                             </div>
                         </div>
                         <div className={styles.storeAddProduct}>
-                        <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
+                       
+                        <span>
+                        <Link to='/CheckOut'><FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </Link>
+                        
+                        </span>
                         <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
                         {items.length}
 
                     </div>
 
-                    {/*<div className="col-lg-12" id={styles.divrecomm}>
-                        <span>Most  Recommended</span>
-                        <div className={styles.recom} ></div>
-                        <div className={styles.recpost} id={styles.recpost1} >
-                            <span className={styles.cart}>
-                                <img src="/00v0v_6SFtGULNQ54z_0kE0dL_600x450.jpg" alt="" className={styles.image} />
-                                <span className={styles.text}>Class Room</span>
-                            </span>
-                        </div>
-    </div>*/}
+          
                 </div>
             </div>
-
+    */}
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 ">
