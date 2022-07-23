@@ -46,8 +46,8 @@ function Store() {
                             </div>
                         </div>
                         <div className={styles.storeAddProduct}>
-                        <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
-                        <button><a href="/ProductAdd/ProductAdd">Add Product</a></button>
+                            <a href='' > <FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </a>
+                            <button><a href="/ProductAdd/ProductAdd">Add Product</a></button>
                         </div>
 
                     </div>
@@ -76,7 +76,7 @@ function Store() {
                                     alt="First slide"
                                     id={styles.sliderImgz}
                                 />
-                           
+
                             </Carousel.Item>
                             <Carousel.Item className={styles.Carousel_Item}>
                                 <img
@@ -86,7 +86,7 @@ function Store() {
                                     id={styles.sliderImg}
 
                                 />
-                       
+
                             </Carousel.Item>
                             <Carousel.Item className={styles.Carousel_Item}>
                                 <img
@@ -96,7 +96,7 @@ function Store() {
                                     id={styles.sliderImg}
 
                                 />
-                                
+
                             </Carousel.Item>
                         </Carousel>
                     </div>
@@ -583,10 +583,10 @@ function Store() {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className={styles.footlinks}>
-                           <img src="/barstore.png" alt="" className={styles.footImg} />
-                           <div className={styles.footlinktext}>
-                           <span>happy shopping </span>
-                            <span>Download App</span>
+                            <img src="/barstore.png" alt="" className={styles.footImg} />
+                            <div className={styles.footlinktext}>
+                                <span>happy shopping </span>
+                                <span>Download App</span>
                             </div>
                         </div>
                         <div>
