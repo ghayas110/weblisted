@@ -9,9 +9,9 @@ const app = !admin.apps.length ? admin.initializeApp({
 
 // Stripe
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const stripe = require('stripe')("sk_test_51KosFhFwyx0lKIchKIkRQtQU7HgMbZNknXsKPJCh9Lb48kXP3wg4Ym7FhcPaKWnbOBsMejYD3l44dVruGvDb0GzW00eECo5APo")
 
-const endpointSecurit = process.env.STRIPE_SIGNING_SECRET
+const endpointSecurit = "whsec_936d10d15b258a8b9a7be76054c3d0c7ed001de8a82279fbe11878b51ec90c3d"
 
 const fullfillOrder = async (session) => {
     console.log('Fullfilling Order!!!')

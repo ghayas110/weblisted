@@ -104,9 +104,9 @@ function Store() {
                                     className="d-block w-100"
                                     src="/weblisted_banner1.jpg"
                                     alt="First slide"
-                                    id={styles.sliderImg}
+                                    id={styles.sliderImgz}
                                 />
-                           
+
                             </Carousel.Item>
                             <Carousel.Item className={styles.Carousel_Item}>
                                 <img
@@ -116,7 +116,7 @@ function Store() {
                                     id={styles.sliderImg}
 
                                 />
-                       
+
                             </Carousel.Item>
                             <Carousel.Item className={styles.Carousel_Item}>
                                 <img
@@ -126,7 +126,7 @@ function Store() {
                                     id={styles.sliderImg}
 
                                 />
-                                
+
                             </Carousel.Item>
                         </Carousel>
                     </div>
@@ -585,10 +585,10 @@ function Store() {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className={styles.footlinks}>
-                           <img src="/barstore.png" alt="" className={styles.footImg} />
-                           <div className={styles.footlinktext}>
-                           <span>happy shopping </span>
-                            <span>Download App</span>
+                            <img src="/barstore.png" alt="" className={styles.footImg} />
+                            <div className={styles.footlinktext}>
+                                <span>happy shopping </span>
+                                <span>Download App</span>
                             </div>
                         </div>
                         <div>
