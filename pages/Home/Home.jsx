@@ -1,4 +1,4 @@
-import styles from '../../../craiglist/styles/DashboardHome.module.css'
+import styles from '../../styles/DashboardHome.module.css';
 import Chart from '../../components/component/Chart/Chart';
 import FeaturedInfo from '../../components/component/FeaturedInfo/FeaturedInfo'
 import WidgetLg from '../../components/component/WidgetLg/WidgetLg';
