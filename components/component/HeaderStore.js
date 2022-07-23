@@ -56,7 +56,7 @@ const signOut=()=>{
                         <span onClick={()=>route.push('/CheckOut')} ><FontAwesomeIcon icon={faCartShopping} className={styles.iconCart} /> </span>
                         
                         </span>
-                        <button><a href="/ProductAdd/ProductAdd">Add product</a></button>
+                        <button className={styles.logoutbtn}><a href="/ProductAdd/ProductAdd">Add product</a></button>
                         </div>
                         {items.length}
                        
