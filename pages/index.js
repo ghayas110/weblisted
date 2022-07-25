@@ -842,7 +842,7 @@ const handleSubmit = () => {
           </div>
         </div>
       </div>
-      <div className="container" id={styles.footer}>  
+      <div className="container-fluid" id={styles.footer}>  
         <div className={styles.footer_home}>
           <ul className={styles.clfooter_home}>
             <li>© 2022  <span className={styles.desktop}>craigslist </span><span className={styles.mobile}>CL</span></li>&nbsp;&nbsp;
