@@ -180,9 +180,9 @@ const handleSubmit = () => {
                 <input onChange={(e) => setSearchPost(e.target.value)} value={searchPost} type="text" placeholder='Search' className={styles.homesidebar} />
                  <button onClick={handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
               </span>
-              <span id={styles.form_input}>
+             {/* <span id={styles.form_input}>
               <a href="/Store">Store</a>
-              </span>
+        </span> */}
               <br />
             </span> 
             <span>

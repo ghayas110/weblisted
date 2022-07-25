@@ -33,13 +33,13 @@ function Sidebar() {
                         <div className={styles.sidebarMenu}>
                             <h3 className={styles.sidebarTitle}>Dashboard</h3>
                             <ul className={styles.sidebarList}>
-                                <span className={`${styles.sidebarListitem} ${styles.active}`}  >
+                                <span className={`${styles.sidebarListitem} `}  >
                                     <LineStyle className={styles.sidebarIcon} />
-                                <a href="/Dashboard/SellerDashboard"> Home</a>   
+                                <a href="/Dashboard/SellerDashboard" > Home</a>   
                                 </span>
-                                <span  className={`${styles.sidebarListitem}`}>
+                                <span  className={`${styles.sidebarListitem} `}>
                                     <Timeline className={styles.sidebarIcon} />
-                               <a  href='/Dashboard/ProductAddPage'>Add product</a> 
+                               <a  href='/Dashboard/ProductAddPage' >Add product</a> 
                                 </span>
                                  <span  className={styles.sidebarListitem}>
                                     <TrendingUp className={styles.sidebarIcon} />
