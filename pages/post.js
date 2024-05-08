@@ -53,7 +53,7 @@ function post() {
             // console.log('state', timeData)
             return job.map((item, index) => {
                 // eslint-disable-next-line react/jsx-key
-                console.log(new Date(item.data().timestamp.seconds).toLocaleDateString(), "Date")
+             
                 return <JobList
                     obj={item}
                 />

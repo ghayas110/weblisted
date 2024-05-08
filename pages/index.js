@@ -17,8 +17,7 @@ import { auth } from '../firebase';
 import { useSelector,useDispatch } from 'react-redux';
 import { logout, selectUser } from '../components/features/UderSlice.js';
 import { async } from '@firebase/util';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import Slider from '../components/component/Slider';
 
  function Home() {
@@ -178,7 +177,7 @@ const handleSubmit = () => {
 
               <span className='form-control' id={styles.siderSearch} >
                 <input onChange={(e) => setSearchPost(e.target.value)} value={searchPost} type="text" placeholder='Search' className={styles.homesidebar} />
-                 <button onClick={handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
+                 <button onClick={handleSubmit}>S</button>
               </span>
              {/* <span id={styles.form_input}>
               <a href="/Store">Store</a>
@@ -261,9 +260,7 @@ const handleSubmit = () => {
             <h1 className={styles.Head}>{cityName}</h1>
                 <div className="row" id={styles.slider}>
                 <Slider />
-                <BannerBox />
-                <BannerBox />
-                
+            
                
                 </div>
                 

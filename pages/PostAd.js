@@ -12,7 +12,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { selectOpenResturant } from '../components/features/ResSlice';
 export default function postadd() {
     const selectJob = useSelector(selectOpenResturant);
-
+console.log(selectJob?.data(),"")
     return (
         <section id={styles.section}>
         <div class="navbar fixed-top navbar-expand-sm" id={styles.navhead}>
@@ -46,18 +46,16 @@ export default function postadd() {
                         </span> 
                         <span className={styles.jovalue}><FontAwesomeIcon icon={faLocationDot} />{selectJob?.data().city}</span>
                       </span>
+                     
                       <span className={styles.jovalue}><span className={styles.jobclass_type_job_category}>
                         </span> 
-                        <span className={styles.jovalue}><FontAwesomeIcon icon={faDollar} />{selectJob?.data().compensation}</span>
+                        <span className={styles.jovalue}><FontAwesomeIcon icon={faDollar} />33</span>
                       </span>
                       <span className={styles.jovalue}><span className={styles.jobclass_type_job_type}>
                         </span> 
                         <span className={styles.jovalue}><FontAwesomeIcon icon={faHeader} />{selectJob?.data().posttitle}</span>
                       </span>
-                      <span className={styles.jobclass}><span className={styles.jobclass_type_working_hours}>
-                        </span> 
-                        <span className={styles.jovalue}><FontAwesomeIcon icon={faCheckCircle} />{selectJob?.data().select}</span>
-                      </span>
+            
                     </p>
                     <p>{selectJob?.data().discription}</p>
                 </div>
