@@ -41,7 +41,7 @@ function PostSearch() {
 
         onSnapshot(
 
-            query(collection(db, "Form"),where("posttitle", "==",sinput),where("date", "==", cDate)), (snapshot) => {
+            query(collection(db, "Form"),where("posttitle", "==",sinput)), (snapshot) => {
                 setJob(snapshot.docs)
                 
 
